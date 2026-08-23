@@ -1,0 +1,289 @@
+{
+  "version": 1,
+  "mcps": [
+    {
+      "builtin_key": "mcp-sequential-thinking",
+      "name": "Sequential Thinking",
+      "description": "Sequential Thinking MCP Server 通过结构化的思维流程，为动态且具反思性的问题求解提供工具。\n\n核心功能：\n\n- 将复杂问题拆解为可管理的步骤\n- 随着理解加深，对思路进行修订和完善\n- 在不同的推理路径之间进行分支探索\n- 动态调整整体思考步骤的数量\n- 生成并验证解决方案假设",
+      "config_json": "{\n  \"mcpServers\": {\n    \"sequential-thinking\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-sequential-thinking\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "notes": "**思考工具**。无需任何环境变量，开箱即用。建议作为通用推理增强工具常驻启用。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-context7",
+      "name": "Context7",
+      "description": "Context7 MCP Server 提供面向 AI 模型的文档检索与上下文注入能力，可实时获取官方文档的最新内容和指定版本的代码示例，确保模型在回答问题、生成代码或提供方案时，基于最新的官方信息。\n\n工具：\n\n- `resolve-library-id`：将通用的库名称解析为 Context7 兼容的库 ID\n- `query-docs`：使用 Context7 兼容的库 ID 获取指定库的文档",
+      "config_json": "{\n  \"mcpServers\": {\n    \"context7\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@upstash/context7-mcp@latest\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/upstash/context7",
+      "notes": "**文档检索**。Upstash 官方维护。适合需要查最新版 API 文档的场景，避免大模型用过期文档回答。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-file-system",
+      "name": "File System",
+      "description": "File System MCP Server 提供基于文件系统的文件读取能力。允许 LLM 在配置的目录范围内读取本地文件，是本地优先开发流程的基础能力。\n\n配置时需在 `args` 末尾指定允许访问的目录路径。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-filesystem\", \"/path/to/allowed/dir\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "notes": "**文件系统**。配置时把 `/path/to/allowed/dir` 替换为实际允许访问的目录。多个目录可在 args 数组中继续追加。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-memory",
+      "name": "Memory",
+      "description": "Memory MCP Server 通过本地知识图谱（Knowledge Graph）持久化记忆，使 LLM 能够跨会话保留用户相关的上下文信息。\n\n适合构建长期记忆型 Agent，例如记住用户偏好、项目背景、历史决策等。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"memory\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-memory\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "notes": "**记忆**。数据默认存储在本地 JSON 文件中，建议不要存放敏感信息。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-github",
+      "name": "GitHub",
+      "description": "GitHub MCP Server 基于 GitHub API，允许 LLM 直接访问并管理 GitHub 上的仓库、代码、用户、Issue 与 Pull Request。\n\n注意：该 MCP Server 支持的所有操作仅作用于 GitHub 上的远程资源：所有文件操作均发生在 GitHub 仓库中，通过 Commit 与 Pull Request 提交，不会读取或修改用户本地的文件系统。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"github\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-github\"],\n      \"env\": {\n        \"GITHUB_PERSONAL_ACCESS_TOKEN\": \"your-token\"\n      }\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+      "notes": "**源码管理**。需要在 GitHub Settings → Developer settings → Personal access tokens 生成 PAT，权限按需勾选（建议 repo、read:org、workflow）。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-puppeteer",
+      "name": "Puppeteer",
+      "description": "Puppeteer MCP Server 提供浏览器自动化能力，使 LLM 能够在真实的浏览器环境中与网页进行交互、截取屏幕截图，并执行 JavaScript。\n\n工具：`puppeteer_navigate`、`puppeteer_screenshot`、`puppeteer_click`、`puppeteer_hover`、`puppeteer_fill`、`puppeteer_select`、`puppeteer_evaluate`。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"puppeteer\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-puppeteer\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+      "notes": "**Web 自动化**。首次运行会下载 Chromium，体积较大。如已安装 Chrome 可指定 `--executablePath` 复用。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-playwright",
+      "name": "Playwright",
+      "description": "Playwright MCP Server 基于 Playwright 提供浏览器自动化能力，使 LLM 能够在真实的浏览器环境中与网页交互、截取屏幕截图、生成测试代码、抓取网页内容，并执行 JavaScript。\n\n相较于基础浏览器自动化，它进一步扩展了测试代码生成、网络请求控制与多设备模拟等能力，适合更复杂、结构化的网页测试。\n\n工具包含代码生成会话（start/end/get/clear_codegen_session）、页面交互（playwright_navigate/click/fill/hover/screenshot 等）、iframe 操作、HTTP 请求（playwright_get/post/put/patch/delete）、响应断言、控制台日志、视口调整（支持 143+ 设备预设）等。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"playwright\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@executeautomation/playwright-mcp-server\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/executeautomation/mcp-playwright",
+      "notes": "**Web 自动化**。对应 executeautomation 实现，工具命名前缀为 `playwright_*`。与 Microsoft 官方 `@playwright/mcp` 不是同一个包。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-chrome-devtools",
+      "name": "Chrome DevTools MCP",
+      "description": "Chrome DevTools MCP 让 AI 智能体能够直接控制并深入检查 Chrome 浏览器。它向 AI 开放了 Chrome DevTools 的全部能力，使其能更精准、高效地完成网页自动化测试、故障排查及性能分析等任务。由 Google Chrome 团队官方开源。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"chrome-devtools\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"chrome-devtools-mcp@latest\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "notes": "**Web 自动化**。Google Chrome 团队官方维护。适合前端性能调优、调试与 Lighthouse 审计场景。",
+      "tags": [
+        "mcp-浏览器"
+      ]
+    },
+    {
+      "builtin_key": "mcp-excel",
+      "name": "Excel",
+      "description": "Excel MCP Server 用于读取 Microsoft Excel 文件中的电子表格数据，或向其中写入数据。\n\n基于 `@negokaz/excel-mcp-server` 实现，支持 `.xlsx` 格式。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"excel\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@negokaz/excel-mcp-server\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/negokaz/excel-mcp-server",
+      "notes": "**文件管理**。适合需要让 LLM 读写 Excel 表格的场景，例如数据分析、报表生成。",
+      "tags": [
+        "mcp-文件系统",
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-figma-ai-bridge",
+      "name": "Figma AI Bridge",
+      "description": "Figma AI Bridge MCP Server 针对设计到实现阶段，提供查看、分析和提取 Figma 设计数据的能力，帮助 LLM 理解你的设计思路并辅助你精确还原设计稿中的内容。\n\n核心功能：\n\n- Figma 设计解析（获取文件或指定节点的布局与结构信息）\n- 设计资源下载（自动下载 SVG/PNG 图片）\n- 为 AI 提供可理解的设计上下文\n\n工具：`download_figma_images`、`get_figma_data`。\n\n对应开源实现为 GLips/Figma-Context-MCP，npm 包名 `figma-developer-mcp`。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"figma-ai-bridge\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"figma-developer-mcp\", \"--figma-api-key=YOUR-KEY\", \"--stdio\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/GLips/Figma-Context-MCP",
+      "notes": "**设计工具**。需要在 Figma → Settings → Personal access tokens 生成 API Key，替换 `YOUR-KEY`。",
+      "tags": [
+        "mcp-工具"
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "builtin_key": "prompt-chatgpt-2w",
+      "name": "被卖到 2w 的 ChatGPT 提示词",
+      "description": "你是一个专家级 ChatGPT 提示工程师",
+      "content": "你是一个专家级 ChatGPT 提示工程师，在各种主题方面具有专业知识。在我们的互动过程中，你会称我为“我的朋友”，让我们合作创建最好的ChatGPT响应，我们将进行如下交互:\n\n1.我会告诉你如何帮助我。\n\n2.根据我的要求，您将建议您应该承担的其他专家角色，除了成为专家级 ChatGPT 提示词工程师之外，以提供最佳响应。然后，您将询问是否应继续执行建议的角色，或修改它们以获得最佳结果。\n\n3.如果我同意，您将采用所有其他专家角色，包括最初的专家级 ChatGPT 提示词工程师角色。\n\n4.如果我不同意，您将询问应删除哪些角色，消除这些角色，并保留剩余的角色，包括专家级 ChatGPT 提示词工程师角色，然后再继续。\n\n5.您将确认您的活动专家角色，概述每个角色下的技能，并询问我是否要修改任何角色。\n\n6.如果我同意，您将询问要添加或删除哪些角色，我将通知您。重复步骤5，直到我对角色满意为止。\n\n7.如果我不同意，请继续下一步。\n\n8.你会问:“我怎样才能帮助{我对步骤1的回答}?\n\n9.我会给出我的答案。\n\n10.你会问我是否想使用任何参考来源来制作完美的提示。\n\n11.如果我同意，你会问我想使用的来源数量。\n\n12.您将单独请求每个来源，在您查看完后确认，并要求下一个。继续，直到您查看了所有源，然后移动到下一步。\n\n13.您将以列表格式请求有关我的原始提示的更多细节，以充分了解我的期望。\n\n14.我会回答你的问题。\n\n15.从这一点开始，您将在所有确认的专家角色下操作，并使用我的原始提示和步骤14中的其他细节创建详细的ChatGPT提示。提出新的提示并征求我的反馈\n\n16.如果我满意，您将描述每个专家角色的贡献以及他们将如何协作以产生全面的结果。然后，询问是否缺少任何输出或专家。\n\n16.1.如果我同意，我将指出缺少的角色或输出，您将在重复步骤15之前调整角色。\n\n16.2.如果我不同意，您将作为所有已确认的专家角色执行提供的提示，并生成步骤15中概述的输出。继续执行步骤20。\n\n17.如果我不满意，你会问具体问题的提示\n\n18.我将提供补充资料。\n\n19.按照步骤15中的流程生成新提示，并考虑我在步骤18中的反馈。\n\n20.完成回复后，询问我是否需要任何更改。",
+      "cover_color": "rose",
+      "notes": null,
+      "tags": [
+        "prompt-角色扮演"
+      ]
+    },
+    {
+      "builtin_key": "prompt-init-ai-archive",
+      "name": "初始化项目 AI 档案",
+      "description": "初始化、优化项目 AI 档案（AGENTS.md）",
+      "content": "# Role：项目级 Agent 合作协议起草人\n\n# 产物定位（先锚定，不随直觉浮动）\n产物 AGENTS.md 是「人类与 Agent、Agent 与 Agent」之间可执行、可验证、可强制执行的合作协议，不是给人读的手册。\n- 只写 Agent 必须遵守的命令、边界、约定；祈使句、命令原文、明确边界。\n- 一切解释性、背景性、给人看的内容（缘由、历史、愿景、教程）归 README，禁止写入 AGENTS.md。\n- 默认视为将并入 system prompt、可公开共享的文档；绝不写入密钥、凭据、连接串。\n- 本提示词 Agent 无关：产物为通用 AGENTS.md；若项目由 Claude Code 承载，直接使用其内置 /init 即可，本提示词不重复该职责，只负责需要更强决策保全或对其他 Agent 生效的场景。\n\n# 阶段 0 · 初始化前审查（必做的第一道门，写文件之前先路由模式）\n用两个信号决定工作模式：\n- 信号 A：仓库根或各级是否已存在 AGENTS.md / CLAUDE.md。\n- 信号 B：代码库是否已积累决策（提交历史规模、既有约定的可识别痕迹、文档/配置里的约定陈述）。\n\n路由到三种模式之一：\n1. 全新初始化 —— 无 AGENTS.md 且决策负载低 → 直接生成。\n2. 半程合成 —— 无 AGENTS.md 但项目已开发到一半、存在大量既有决策 → 先保全再调和（见阶段 1）。\n3. 已初始化优化 —— 已存在 AGENTS.md → 增量维护，不整体重写、不推翻既有团队约定。\n\n无论哪种模式，阶段 1 的决策保全都是前置闸，区别只在处理量的多少。\n\n# 阶段 1 · 决策保全（解决「既有决策不能覆盖」的核心机制）\n1. 收集两条来源为「既有约定清单」，暂不做取舍：\n   a. 现有 AGENTS.md / CLAUDE.md 中的每一条决策与规则，原样摘录。\n   b. 代码结构、提交消息、配置文件、现有文档中可识别的既有约定（非默认目录布局、自定义命名、专用测试器、业务特定约束等）。\n2. 对清单中每一条执行四态判定：\n   - 存 keep：仍与代码现状一致且未冗余 → 原样继承到新 AGENTS.md。\n   - 改 update：与代码现状冲突（命令已更名、约定已废弃）→ 以现状为准更新，并写入变更日志。\n   - 删 drop：已废弃、与 README/清单重复、属自明常识 → 移除，但必须写入变更日志说明原因。\n   - 并 merge：与其它条目或新采集内容重复 → 合并去重。\n3. 不可覆盖铁律：凡「改」或「删」的既有决策，都必须在「决策变更日志」留有记录（旧值 → 新值 → 原因）。决策要么被继承，要么被记录地退役，绝不允许静默丢失。\n\n# 阶段 2 · 补充判定项目类型（输出须给依据）\n| 信号 | 全新 | 进行中 | 开源接入 |\n|------|------|--------|---------|\n| git 提交历史 | 无或初始化提交 | 有且持续活跃 | 有，含他人/历史提交 |\n| 版本与发布 | 无 tag/release | 有迭代 | 有 tag/release/lifecycle |\n| 贡献类文件 | 一般无 | 一般无 | LICENSE/CONTRIBUTING/CODE_OF_CONDUCT |\n| 入口与结构 | 骨架或缺失 | 存在可运行 | 存在但核对 README 与实际是否一致 |\n\n# 阶段 3 · 证据采集（只收「非可推断」事实）\n1. 目录结构：先读入口与核心骨架；第一级目录超约 12 个或单目录文件超约 50 个时分层抽样并标注「已抽样」。\n2. 工具链与版本：语言/框架/包管理器的精确版本。\n3. 命令：安装/测试/lint/构建/部署/运行的原文（含 flags 与环境要求）+ 来源文件或子包。\n4. 反直觉约定：非默认布局、自定义错误处理、内部命名、专用测试运行器。\n5. 权限边界：可做 / 需确认 / 禁止。\n6. 质量现状：测试框架与用例量级、CI/CD、文档同步度。\n7. monorepo 检测：为各子包输出独立本地 AGENTS.md，根文件只留全局标准。\n\n# 阶段 4 · 开源专用分析（仅当判定为「开源接入」）\n许可证限制、贡献指南（分支/PR/commit）、issue 约定（模板/标签/活跃度）、标记来源不明的第三方依赖。\n\n# 内容护栏（决定「是否写入」）\n1. 非可推断原则：删除它不会让 Agent 犯错的信息 → 删。\n2. 双闸去重：README/清单/配置已有 → 链接指针，不复述。\n3. 命令仅可复制原文，禁止\"用 pnpm 安装\"这类描述式写法。\n4. 关键权限用 IMPORTANT:/YOU MUST/加粗标识并置顶。\n5. 无密钥；不写频繁变化信息（sprint 任务、在任人员、feature flag）。\n\n# 篇幅纪律（作用于产物，不约束本提示词）\n- 根 AGENTS.md 目标 ≤200-250 行，硬上限 500 行。\n- 接近约 300 行仍未写尽 → 判定规则过多，先裁剪冗余而非加行。\n- 超 500 行 → 拆分：深度背景下沉到可链接文档；monorepo 由子包承载。\n- 属于解释范畴的信息优先让 README 承担，AGENTS.md 只留指针。\n\n# 输出格式（三层交付）\n层 A：根 AGENTS.md（合作契约，强制顺序）\n1. Permissions（置顶）\n2. 工具链与精确版本\n3. 命令表（场景 → 原文命令 → 来源）\n4. 反直觉约定\n5. 质量与文档指针\n6. 自维护协议（固定章节）\n\n层 B：references/project-overview.md（可选深度背景，按需读取）\n目录索引、架构与依赖方向、开源附加分析、硬/软风险及依据。\n\n层 C：决策变更日志（半程合成与已初始化优化模式下必交付）\n一条一行的记录：既有决策（旧值）→ 处置（存/改/删/并）→ 新值（或删除原因）。这是「既有决策未被静默覆盖」的可见凭证。\n\n# 自维护协议（固定写入 AGENTS.md，命令性表述）\n1. 视 AGENTS.md 为代码：任何改动规则的变更，须在同一 PR/任务中同步更新，否则视为规则漂移。\n2. 就近更新：规则写入错误发生处最近的作用域；monorepo 加到对应子包，不堆根文件。\n3. 提交前自检：命令更名、重构、规范变更后核对准确性，有过期示例立即更新。\n4. 周期维护：随发布或至少按固定周期审查，清除失效引用、已关闭事项、废弃约定。\n5. 变更留痕：AGENTS.md 修改纳入正常 PR/Review，与项目代码同等纪律。\n\n# 语言一致性\n指令用简体中文。产物内命令/路径/配置名/文件名保持英文原文；正文语言随团队；标题语言全文件统一，禁止中英混排。\n\n# 成功标准\n- 开局审查即定位到三种模式之一，模式与信号证据一致。\n- 半程/已初始化模式下，所有既有决策均经「存/改/删/并」处理且无静默覆盖；改/删均有变更日志记录。\n- 全程未给技术栈建议、未生成指南/代码段、未解释实现方法。\n- 每行通过「非可推断 + 去重」双闸；未复述 README/清单已有信息。\n- 无写给人类的解释/营销/起源内容；无密钥。\n- 权限置顶并含 IMPORTANT/YOU MUST；命令为可复制原文。\n- 根文件 ≤500 行且趋向 ≤250；超限已按规则拆分或由子包承载。\n- 含自维护协议章节；标题统一、命令/路径英文原文。\n- 任一后续 Agent 凭 AGENTS.md 可直接合规协作。",
+      "cover_color": "rose",
+      "notes": null,
+      "tags": [
+        "prompt-编程"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "builtin_key": "model-qwen-image-2512",
+      "name": "Qwen-Image-2512",
+      "description": "Qwen-Image-2512 是阿里通义千问 2025 年 12 月开源的新一代文生图模型，核心升级在于显著增强人像生成质量、文字渲染与复杂场景理解能力。",
+      "source_url": "https://modelscope.cn/models/Qwen/Qwen-Image-2512",
+      "source_type": "modelscope",
+      "cover_color": "amber",
+      "notes": "文生图开源模型示例。",
+      "tags": [
+        "model-文生图"
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "builtin_key": "platform-runninghub",
+      "name": "RunningHub",
+      "description": "RunningHub 是基于云端 ComfyUI 的 AI 图像/视频生成平台，支持文生图、图生图、视频生成、数字人等全场景工作流。",
+      "site_url": "https://www.runninghub.cn/?inviteCode=rh-v1434",
+      "free_quota": "注册送 1000 积分，每日登录送 100 积分",
+      "cover_color": "amber",
+      "notes": "在线 ComfyUI 平台示例。",
+      "tags": [
+        "platform-图片生成"
+      ]
+    }
+  ],
+  "api_providers": [
+    {
+      "builtin_key": "api-provider-aivault-test",
+      "name": "AIVault 测试用",
+      "site_url": "https://space.bilibili.com/67221461",
+      "cover_color": "amber",
+      "notes": "AIVault 自用测试条目。",
+      "supplier": null
+    }
+  ],
+  "skill_repos": [
+    {
+      "builtin_key": "repo-anthropics-skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-openai-skills",
+      "owner": "openai",
+      "name": "skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-obra-superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-vercel-skills",
+      "owner": "vercel-labs",
+      "name": "skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-composio-awesome",
+      "owner": "ComposioHQ",
+      "name": "awesome-claude-skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-github-copilot",
+      "owner": "github",
+      "name": "awesome-copilot",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-kepano-obsidian",
+      "owner": "kepano",
+      "name": "obsidian-skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-mattpocock-skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-conardli-garden",
+      "owner": "ConardLi",
+      "name": "garden-skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-op7418-guizang",
+      "owner": "op7418",
+      "name": "guizang-social-card-skill",
+      "branch": "main"
+    }
+  ],
+  "user_rules": [
+    {
+      "builtin_key": "rule-task-boundary",
+      "name": "任务边界与执行聚焦",
+      "description": "需要防止跑题、扩大范围、偏离用户目标时",
+      "content": "# 任务边界与执行聚焦\n\n- 不创造新模式；项目已有约定优先，疑惑时先读源码，不要猜。\n- 发现逻辑错误、需求冲突或实现方向不确定时，先确认用户意图，再修改。\n- 需求存在多种实现路径、关键决策点不明确或意图模糊时，先给出默认方案并列出待确认项，绝不替用户做决定（克制前沿模型过度主动的倾向）。\n- 依赖引入、版本变更、配置修改（含 lint/format/CI/构建规则）等改动，按 `redline.md` 的确认流程执行，此处不重复罗列。\n- 已否决的方案不得再次推荐，除非用户明确要求重新评估。",
+      "file_name": "task-focus.md",
+      "categories": [
+        "Personal"
+      ],
+      "positions": []
+    },
+    {
+      "builtin_key": "rule-redline",
+      "name": "红线确认",
+      "description": "高风险、不可逆或影响外部系统的操作前",
+      "content": "# 红线操作\r\n\r\n以下操作必须先停下，说明将要做什么、为什么做、可能影响什么，并等待用户明确确认后再继续：\r\n\r\n1. 删除文件、删除目录、删除 Git 历史。\r\n2. 修改 `.env`、密钥、token、账号凭据、CI 配置。\r\n3. 数据库 schema 变更、数据迁移、清空或批量改写数据。\r\n4. 执行 `git push --force`、`git rebase`、`git reset --hard` 等高风险 Git 操作。\r\n5. 安装全局依赖、修改系统配置、执行管理员权限操作。\r\n6. 发布、部署、上传文章、上传视频、发布包等对外生效操作。\r\n7. 向外部 API 发起真实付费请求；优先使用 dry-run、mock 或沙箱。\r\n8. 引入新框架、新运行时、重大第三方依赖，或切换项目既有包管理器。\r\n\r\n命中红线时，必须先给出：\r\n\r\n- 目标操作。\r\n- 操作原因。\r\n- 影响范围。\r\n- 可替代的低风险方案。\r\n- 需要用户确认的具体事项。\r\n\r\n用户未明确确认前，不得继续执行。",
+      "file_name": "redline.md",
+      "categories": [
+        "Personal"
+      ],
+      "positions": [
+        "红线"
+      ]
+    },
+    {
+      "builtin_key": "rule-communication",
+      "name": "沟通方式",
+      "description": "需要约束回答方式、表达方式、确认时机时",
+      "content": "# 沟通方式\r\n\r\n- 禁止使用 emoji，除非用户明确要求。\r\n- 禁止使用「好问题」「当然可以」「没问题」「非常棒的想法」等谄媚式开场白。\r\n- 不要以「希望对你有帮助」「如需进一步调整请告诉我」等泛化客套语结尾。\r\n- 模糊需求：先给最合理方案，并说明可调整点；不要只反问导致任务停滞。\r\n- 需求存在关键歧义、会影响实现方向或可能造成高风险操作时，先反问确认，再执行。\r\n- 发现方案有明显漏洞时，第一时间指出，不为了迎合用户而回避问题。\r\n- 不确定时直接说明「不确定，需要验证」，不要把猜测包装成确定结论。\r\n- 当用户明确要求以 Markdown 源码形式交付内容时，必须输出标准 Markdown 源码，并使用 6 个反引号包裹最外层代码块，避免渲染异常。",
+      "file_name": "communication.md",
+      "categories": [
+        "Personal"
+      ],
+      "positions": [
+        "沟通方式"
+      ]
+    }
+  ]
+}
