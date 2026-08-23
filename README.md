@@ -1,22 +1,10 @@
 # updates-dist
 
-> AI Vault 系列应用的**更新分发仓库**——软件自动更新清单、内置资产清单与安装包统一从这里发布，客户端（Tauri updater）启动时静默检查，发现新版本一键下载安装。
-
-**目录结构**：
-
-```
-updates-dist/
-├── aivault/
-│   ├── updates.json          # AI Vault 软件更新清单（Tauri updater manifest）
-│   └── builtin-assets.json   # AI Vault 内置资产清单（MCP / 提示词 / 模型 / 平台 / 供应商 / 技能仓库 / 规则）
-└── <future-project>/         # 后续项目各占一个目录，endpoints 指向各自的 updates.json
-```
-
-**工作原理**：每个项目在 `tauri.conf.json` 的 `plugins.updater.endpoints` 中指向本仓库对应目录的 `updates.json`；安装包发布在本仓库的 GitHub Releases（tag 带项目前缀，如 `aivault-v0.1.1`，多项目共仓不冲突）。GitHub + Gitee 双源镜像，国内用户可用 Gitee 地址访问清单。
-
----
+> AI Vault 系列应用的更新分发仓库——软件自动更新清单、内置资产清单与安装包统一从这里发布。
 
 ## AI Vault
+
+![AI Vault](./images/aivault-cover.png)
 
 > 本地优先、Agent-centric 的 AI 创作者工作台：统一管理 Skill / Prompt / MCP / ComfyUI 工作流 / 模型 / 在线平台 / API 供应商，并向各 Agent 的 skills 目录分发。**AI Vault 是 updates-dist 服务的第一个项目。**
 
@@ -32,7 +20,7 @@ updates-dist/
 
 > **macOS 平台说明**：未启用 Apple 代码签名（免费软件策略），首次打开请 **右键 → 打开** 绕过 Gatekeeper。
 
-**软件自动更新**：客户端启动时静默检查本仓库 `aivault/updates.json`，发现新版本后侧边栏显示更新徽章，点击「更新到 vX.Y.Z」一键下载安装并重启，无需手动访问本页。
+**软件自动更新**：客户端启动时静默检查 `aivault/updates.json`，发现新版本后侧边栏显示更新徽章，一键下载安装并重启，无需手动访问本页。
 
 ## 作者信息
 
