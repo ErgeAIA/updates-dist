@@ -1,11 +1,15 @@
 {
   "version": "0.1.1",
   "notes": "AI Vault 0.1.1",
-  "pub_date": "2026-08-23T08:08:17.694Z",
+  "pub_date": "2026-08-23T08:29:02.115Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXNDVW5rOTBzT1VwN3B2Y0JzeWJiOTcvdEdFbnp3VGZmT0doeCtlWDdzMWc4M1Q4dnExdzFnQ2RybnBKczhrYTQ0MVNsNTBSWlhmLy9McEtJMkcvV3c0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NDcyMzg3CWZpbGU6QUkgVmF1bHRfMC4xLjFfeDY0LXNldHVwLmV4ZQphd25BNktjTTlxdHFtNUNsZmJNRTlQc2JQWHgvbDZZblBaMzNzdFE3WURYSzRTbXMzZmpaS2lJWkFRTWQ5aXd5QlFkZ0FiQ1Uwd0FDTkwwK0tzTW9BQT09Cg==",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXN5UE5jaWE3L0VCTzgxbktKTS95bm15YkQvRGk5clY0cE1qVkF6aWJTNlM0dVgyMUZoOStsMklaR0hhYWQ2UlNZdFN0L25VZ3haaGVFbDQyQkJ0akFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NDczNzIwCWZpbGU6QUkgVmF1bHRfMC4xLjFfeDY0LXNldHVwLmV4ZQp4dTlEWUZvRWRsbDFTbDh4cTRFMWdQRjlHNzg5Nkx1MUh3cjRVZUltMFNOUGdmOWp4aXVqQ1NjVWVBZGVQdkp5MXM0K210QXl1bVVIL1RGYmxtNGxEdz09Cg==",
       "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.1.1/AI%20Vault_0.1.1_x64-setup.exe"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXJOZzg0ZmJXa1NTQWc4bDRvUWpqZzlJR1JqUFpEVnJaRER3VEM2V3V0RFhrbWpyVVVhaXVEbXV4dk9vSUJSakwxd1J3dnRjamIvc2VDZnJTbGlhVmdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NDczMzY4CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negoyQU9PM3JWWlJiclVEYys4dklKeUNYdUZMWUhQYktISlNCdkM1K3B0cXcyS3FUeE9VYnFzTktmWE1ZRW5xTEJBTHBZSnlYQitacHFLMThieDVtakpBdz09Cg==",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.1.1/AI%20Vault.app.tar.gz"
     }
   }
 }
