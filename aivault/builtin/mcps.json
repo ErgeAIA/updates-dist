@@ -1,0 +1,126 @@
+{
+  "version": "20260827",
+  "items": [
+    {
+      "builtin_key": "mcp-sequential-thinking",
+      "name": "Sequential Thinking",
+      "description": "Sequential Thinking MCP Server 通过结构化的思维流程，为动态且具反思性的问题求解提供工具。\n\n核心功能：\n\n- 将复杂问题拆解为可管理的步骤\n- 随着理解加深，对思路进行修订和完善\n- 在不同的推理路径之间进行分支探索\n- 动态调整整体思考步骤的数量\n- 生成并验证解决方案假设",
+      "config_json": "{\n  \"mcpServers\": {\n    \"sequential-thinking\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-sequential-thinking\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "notes": "**思考工具**。无需任何环境变量，开箱即用。建议作为通用推理增强工具常驻启用。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-context7",
+      "name": "Context7",
+      "description": "Context7 MCP Server 提供面向 AI 模型的文档检索与上下文注入能力，可实时获取官方文档的最新内容和指定版本的代码示例，确保模型在回答问题、生成代码或提供方案时，基于最新的官方信息。\n\n工具：\n\n- `resolve-library-id`：将通用的库名称解析为 Context7 兼容的库 ID\n- `query-docs`：使用 Context7 兼容的库 ID 获取指定库的文档",
+      "config_json": "{\n  \"mcpServers\": {\n    \"context7\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@upstash/context7-mcp@latest\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/upstash/context7",
+      "notes": "**文档检索**。Upstash 官方维护。适合需要查最新版 API 文档的场景，避免大模型用过期文档回答。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-file-system",
+      "name": "File System",
+      "description": "File System MCP Server 提供基于文件系统的文件读取能力。允许 LLM 在配置的目录范围内读取本地文件，是本地优先开发流程的基础能力。\n\n配置时需在 `args` 末尾指定允许访问的目录路径。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-filesystem\", \"/path/to/allowed/dir\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "notes": "**文件系统**。配置时把 `/path/to/allowed/dir` 替换为实际允许访问的目录。多个目录可在 args 数组中继续追加。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-memory",
+      "name": "Memory",
+      "description": "Memory MCP Server 通过本地知识图谱（Knowledge Graph）持久化记忆，使 LLM 能够跨会话保留用户相关的上下文信息。\n\n适合构建长期记忆型 Agent，例如记住用户偏好、项目背景、历史决策等。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"memory\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-memory\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "notes": "**记忆**。数据默认存储在本地 JSON 文件中，建议不要存放敏感信息。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-github",
+      "name": "GitHub",
+      "description": "GitHub MCP Server 基于 GitHub API，允许 LLM 直接访问并管理 GitHub 上的仓库、代码、用户、Issue 与 Pull Request。\n\n注意：该 MCP Server 支持的所有操作仅作用于 GitHub 上的远程资源：所有文件操作均发生在 GitHub 仓库中，通过 Commit 与 Pull Request 提交，不会读取或修改用户本地的文件系统。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"github\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-github\"],\n      \"env\": {\n        \"GITHUB_PERSONAL_ACCESS_TOKEN\": \"your-token\"\n      }\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+      "notes": "**源码管理**。需要在 GitHub Settings → Developer settings → Personal access tokens 生成 PAT，权限按需勾选（建议 repo、read:org、workflow）。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-puppeteer",
+      "name": "Puppeteer",
+      "description": "Puppeteer MCP Server 提供浏览器自动化能力，使 LLM 能够在真实的浏览器环境中与网页进行交互、截取屏幕截图，并执行 JavaScript。\n\n工具：`puppeteer_navigate`、`puppeteer_screenshot`、`puppeteer_click`、`puppeteer_hover`、`puppeteer_fill`、`puppeteer_select`、`puppeteer_evaluate`。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"puppeteer\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-puppeteer\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+      "notes": "**Web 自动化**。首次运行会下载 Chromium，体积较大。如已安装 Chrome 可指定 `--executablePath` 复用。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-playwright",
+      "name": "Playwright",
+      "description": "Playwright MCP Server 基于 Playwright 提供浏览器自动化能力，使 LLM 能够在真实的浏览器环境中与网页交互、截取屏幕截图、生成测试代码、抓取网页内容，并执行 JavaScript。\n\n相较于基础浏览器自动化，它进一步扩展了测试代码生成、网络请求控制与多设备模拟等能力，适合更复杂、结构化的网页测试。\n\n工具包含代码生成会话（start/end/get/clear_codegen_session）、页面交互（playwright_navigate/click/fill/hover/screenshot 等）、iframe 操作、HTTP 请求（playwright_get/post/put/patch/delete）、响应断言、控制台日志、视口调整（支持 143+ 设备预设）等。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"playwright\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@executeautomation/playwright-mcp-server\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/executeautomation/mcp-playwright",
+      "notes": "**Web 自动化**。对应 executeautomation 实现，工具命名前缀为 `playwright_*`。与 Microsoft 官方 `@playwright/mcp` 不是同一个包。",
+      "tags": [
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-chrome-devtools",
+      "name": "Chrome DevTools MCP",
+      "description": "Chrome DevTools MCP 让 AI 智能体能够直接控制并深入检查 Chrome 浏览器。它向 AI 开放了 Chrome DevTools 的全部能力，使其能更精准、高效地完成网页自动化测试、故障排查及性能分析等任务。由 Google Chrome 团队官方开源。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"chrome-devtools\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"chrome-devtools-mcp@latest\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "notes": "**Web 自动化**。Google Chrome 团队官方维护。适合前端性能调优、调试与 Lighthouse 审计场景。",
+      "tags": [
+        "mcp-浏览器"
+      ]
+    },
+    {
+      "builtin_key": "mcp-excel",
+      "name": "Excel",
+      "description": "Excel MCP Server 用于读取 Microsoft Excel 文件中的电子表格数据，或向其中写入数据。\n\n基于 `@negokaz/excel-mcp-server` 实现，支持 `.xlsx` 格式。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"excel\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@negokaz/excel-mcp-server\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/negokaz/excel-mcp-server",
+      "notes": "**文件管理**。适合需要让 LLM 读写 Excel 表格的场景，例如数据分析、报表生成。",
+      "tags": [
+        "mcp-文件系统",
+        "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-figma-ai-bridge",
+      "name": "Figma AI Bridge",
+      "description": "Figma AI Bridge MCP Server 针对设计到实现阶段，提供查看、分析和提取 Figma 设计数据的能力，帮助 LLM 理解你的设计思路并辅助你精确还原设计稿中的内容。\n\n核心功能：\n\n- Figma 设计解析（获取文件或指定节点的布局与结构信息）\n- 设计资源下载（自动下载 SVG/PNG 图片）\n- 为 AI 提供可理解的设计上下文\n\n工具：`download_figma_images`、`get_figma_data`。\n\n对应开源实现为 GLips/Figma-Context-MCP，npm 包名 `figma-developer-mcp`。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"figma-ai-bridge\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"figma-developer-mcp\", \"--figma-api-key=YOUR-KEY\", \"--stdio\"]\n    }\n  }\n}",
+      "source": "market",
+      "market_url": "https://github.com/GLips/Figma-Context-MCP",
+      "notes": "**设计工具**。需要在 Figma → Settings → Personal access tokens 生成 API Key，替换 `YOUR-KEY`。",
+      "tags": [
+        "mcp-工具"
+      ]
+    }
+  ]
+}

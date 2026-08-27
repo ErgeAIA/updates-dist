@@ -1,0 +1,29 @@
+{
+  "version": "20260827",
+  "items": [
+    {
+      "builtin_key": "model-qwen-image-2512",
+      "name": "Qwen-Image-2512",
+      "description": "Qwen-Image-2512 是阿里通义千问 2025 年 12 月开源的新一代文生图模型，核心升级在于显著增强人像生成质量、文字渲染与复杂场景理解能力。",
+      "source_url": "https://modelscope.cn/models/Qwen/Qwen-Image-2512",
+      "source_type": "modelscope",
+      "cover_color": "amber",
+      "notes": "文生图开源模型示例。",
+      "tags": [
+        "model-文生图"
+      ]
+    },
+    {
+      "builtin_key": "model-zaoxiang-zimage",
+      "name": "造相-Z-Image",
+      "description": "Z-Image 是基础模型⚡️- 该图像系列专为高质量、强大的生成多样性、广泛的艺术风格覆盖以及精准的提示词遵循而设计。尽管 Z-Image-Turbo 侧重于速度，但 Z-Image 是一款全容量、未经蒸馏的 Transformer 模型，旨在成为创作者、研究人员和开发者的核心支柱，满足他们对最高级别创作自由的需求。",
+      "source_url": "[{\"url\":\"https://pan.quark.cn/s/3f7485e39369?pwd=R14S\",\"type\":\"netdisk\"},{\"url\":\"https://www.modelscope.cn/models/Tongyi-MAI/Z-Image\",\"type\":\"modelscope\"}]",
+      "source_type": "netdisk",
+      "cover_color": "brand",
+      "notes": "建议网盘，模型齐全",
+      "tags": [
+        "model-文生图"
+      ]
+    }
+  ]
+}

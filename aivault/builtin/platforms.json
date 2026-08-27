@@ -1,0 +1,41 @@
+{
+  "version": "20260827",
+  "items": [
+    {
+      "builtin_key": "platform-runninghub",
+      "name": "RunningHub",
+      "description": "RunningHub 是基于云端 ComfyUI 的 AI 图像/视频生成平台，支持文生图、图生图、视频生成、数字人等全场景工作流。",
+      "site_url": "https://www.runninghub.cn/?inviteCode=rh-v1434",
+      "free_quota": "注册送 1000 积分，每日登录送 100 积分",
+      "cover_color": "amber",
+      "notes": "在线 ComfyUI 平台示例。",
+      "tags": [
+        "platform-图片生成"
+      ]
+    },
+    {
+      "builtin_key": "platform-runninghub-cn",
+      "name": "Runninghub CN 站",
+      "description": "RunningHub 是基于云端 ComfyUI 的 AI 图像/视频生成平台，支持文生图、图生图、视频生成、数字人等全场景创作。集成 9000+ 预置节点与 40000+ 热门模型（Stable Diffusion、Flux、Seedance 等），提供 10 万+ 工作流一键复用，无需本地显卡，浏览器即可完成专业级出图。支持 API 调用与工作流定制，适用于电商素材、短视频、平面设计、影视分镜等创作场景。​",
+      "site_url": "https://www.runninghub.cn/?inviteCode=rh-v1434",
+      "free_quota": "注册送1000积分，每日登录送100积分",
+      "cover_color": "brand",
+      "notes": "基于云端 ComfyUI 架构，支持拖拽节点构建工作流，集成了超 9000 个预置节点和 4 万+ 热门模型，覆盖文生图、图生图、图生视频、数字人生成、3D 内容等多模态生成，并提供 100,000+ 现成工作流和一键 AI 应用。",
+      "tags": [
+        "platform-图片生成"
+      ]
+    },
+    {
+      "builtin_key": "platform-labnana",
+      "name": "Labnana",
+      "description": "Nano Banana、GPT-Image-2 与 Seedream 5.0 Pro AI 图像生成器",
+      "site_url": "http://labnana.com?aff=a95c64a59b5b4f54",
+      "free_quota": "每日签到积分",
+      "cover_color": "brand",
+      "notes": null,
+      "tags": [
+        "platform-图片生成"
+      ]
+    }
+  ]
+}
