@@ -1,0 +1,65 @@
+{
+  "version": "20260827",
+  "items": [
+    {
+      "builtin_key": "repo-anthropics-skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-openai-skills",
+      "owner": "openai",
+      "name": "skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-obra-superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-vercel-skills",
+      "owner": "vercel-labs",
+      "name": "skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-composio-awesome",
+      "owner": "ComposioHQ",
+      "name": "awesome-claude-skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-github-copilot",
+      "owner": "github",
+      "name": "awesome-copilot",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-kepano-obsidian",
+      "owner": "kepano",
+      "name": "obsidian-skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-mattpocock-skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-conardli-garden",
+      "owner": "ConardLi",
+      "name": "garden-skills",
+      "branch": "main"
+    },
+    {
+      "builtin_key": "repo-op7418-guizang",
+      "owner": "op7418",
+      "name": "guizang-social-card-skill",
+      "branch": "main"
+    }
+  ]
+}
