@@ -1,0 +1,19 @@
+{
+  "version": "0.4.4",
+  "notes": "\n### 新增\n\n- **应用内自动更新**：接入 Tauri 官方 updater——收到更新提示后可直接在应用内下载（带进度条）并静默安装重启，无需再跳转浏览器下载安装包手动重装；更新清单经 GitHub / Gitee 双源分发（静态镜像，不受 API 限流影响），国内用户走 Gitee 通路；所有更新包均经 minisign 签名验证\n\n### 修复\n\n- **GitHub 更新源规避匿名 API 限流**：本机装有 GitHub CLI（gh）并登录时，更新检查自动复用其登录凭证（认证额度 5000/h 且独立于匿名共享出口 IP 的 60/h 额度）；未安装 gh 时静默回退匿名请求\n\n",
+  "pub_date": "2026-09-10T15:08:55.031Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYWpseU1SUituWDBtR0xzSW1saU5oaVRmSGtVWnRTdVg0NjFGS1BUbE5SQlNqOVZ1ME5hb3pXUG5adCt5ZnN2bmhtTFpEbnVCNUtJQnJNNTlLakJhTmd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MDUyOTEwCWZpbGU6RXJnZU1EXzAuNC40X3g2NC1zZXR1cC5leGUKaEp4eHdkU0pLdGJxaFRpM25ETUE4ejhtUjFSSjA4YmQ2RlEwOWt4SkhMUnpDWEpwS0hLTHgxNkZQOC82dDZPbnE0a0hGR0R6bEEzazFQN3RBTjE3RFE9PQo=",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.4.4/ErgeMD_0.4.4_x64-setup.exe"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYWcvWjA0QWZGRnNibzhneUUyV2NiNE1hc3hzcktDeHV4MjlubXZHUUhlQm16TDkxclJma3dIeldqdzdzOUtKaWxhMUdyeUY3TmJjbTIvazM2WE9DUFFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MDUyODIwCWZpbGU6RXJnZU1ELmFwcC50YXIuZ3oKYmFVdFlzbUxwcE5EaUtPbnpoMXVRZktPeDU4QzFwTU1Kalk5VGV1SVBXbkZmZEVoYTE1T1dRTVg1ajl1V3hSVDAyWHpjR21ySmNRejY1dkVMY0ZoQ2c9PQo=",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.4.4/ErgeMD_0.4.4_aarch64.app.tar.gz"
+    },
+    "linux-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYXVtLzB2dXUybXpZOFJ1WmJtQU1Odm1VUWN2bDlja3IrT2RJSXdGRlR2UmtCN3ZVNWdjWS9vTHVrWTROWTBBall2b2NqLzZaY203NFpKRThCdnY5Unc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MDUyNzg2CWZpbGU6RXJnZU1EXzAuNC40X2FtZDY0LkFwcEltYWdlCm1ibHdKcEpIaVBxUGJWbTEwRXZmUkxEbkhPdGxxZXdhRStYbHhic1pCYWFNSlFKN2Q0bjBMOWlrMWFVZzRmREFESjFKSmVuVElWdjZSdHhQaENET0FnPT0K",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.4.4/ErgeMD_0.4.4_amd64.AppImage"
+    }
+  }
+}
