@@ -1,19 +1,19 @@
 {
-  "version": "0.2.1",
-  "notes": "### 新增\n\n- **左上角菜单官方文档入口**：接通官网使用文档（快速上手/技能管理/本地引擎/设置与数据安全等 13 页）；快捷入口补齐本地引擎组（引擎/模型管理/对话，与右键菜单一致）。\n\n### 修复\n\n- **内置资产更新双源回退**：更新源 GitHub 不通时自动切换 Gitee 镜像（对齐软件更新的双源机制），国内网络环境也可正常更新内置资产。\n- mmproj 视觉投影文件不再可作为主模型新建配置——模型管理页置灰 + 悬停说明。\n- 悬停提示主题化补漏（本地引擎「AI 分析」「自动滚动」、在线平台「打开平台」徽章）+ 默认宽度放宽至 384px，长说明换行更少。\n- 引擎指南「AI 分析」描述修正——复制提示词与日志发任意 AI 对话窗口即可分析。",
-  "pub_date": "2026-09-10T15:21:59.129Z",
+  "version": "0.2.2",
+  "notes": "### 新增\n\n- **技能详情页作者信息**：显示技能作者（读取技能文件自述的作者，未标注时显示来源仓库作者），本地导入技能标注了作者同样可见。\n- **技能详情页上游更新时间**：显示技能在上游的最近更新日期（安装、更新及检查更新发现新版本时自动记录；尚无记录时显示\"—\"）。\n- **技能列表排序**：列表顶部新增排序切换（名称 A-Z / 最近安装 / 最近更新），「最近更新」按技能内容在上游的更新时间排序，本地技能排在末尾。\n- **技能搜索增强**：输入名称各单词的首字母即可定位技能（如 nb → news-briefing、bci → baoyu-cover-image，支持跳词）；有完全匹配时只显示完全匹配，不再被描述里的相近字样淹没。\n\n### 修复\n\n- 修复升级版本后首次启动可能闪退的问题（数据库升级前的自动备份环节缺陷）。\n- 修复部分仓库的技能无法检测更新（仓库默认分支不是 main 时检查请求始终失败），现与安装行为一致自动尝试常见分支。\n- 详情页时间统一为「年-月-日」绝对日期（悬停可查看完整时间）。",
+  "pub_date": "2026-09-12T15:38:44.242Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWlJNldIdlA4ekFZOW9QSUVFZnYzcVZxbElNUXN0ZUVDOTlRMVIrSEFWRFpPVGFCeTdaV2VqSDNhZGJ1VE1aVjlSQlY5NkZtenlmZnZyUUFRVFJQL2drPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MDUzNTkxCWZpbGU6QUkgVmF1bHRfMC4yLjFfeDY0LXNldHVwLmV4ZQpRRTVacGQyZ2VQMnNaYWpzVzY4eVJ5UDg3TzdnbUg5VFdUQS9xdkRCdHJ0Z1MvQ1pIbFdpZmxwV2xzUTlPNmNseFVDSm5JTkdhVzB1RzVOdXRLNHRCQT09Cg==",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.1/AI-Vault_0.2.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWdCWmQ3bFBWT3drRGsveC8yNFN2dkQ5Y241MUZQaDdudUFjbDRQZTFRZ0kvMFNvTHN3amVyeUF5dmp1YjRucTFTQ24yN2xpZmJSTHNicm5aalM2d1F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MjI3MzkxCWZpbGU6QUkgVmF1bHRfMC4yLjJfeDY0LXNldHVwLmV4ZQp2TS9IaGtVMzNrc0RwNHVWMXBrOGxCYkp5QUpQS2hmbmVqRFJDNUxDcFpGWWlTcmJIWEs2b1lYaGprWmhiRlNwbDJzdFNTMUtGaEtQVlNVbXlhVGFDdz09Cg==",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.2/AI-Vault_0.2.2_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXB3bkt1SXoyNTZvQ2NvVzJZWkVzU2VsSWJYcURqLzRyQ3lvQUF0cWRWaWFTakRUZVo5MnJvRk43Ky9HN09KR3c3TVh1YWhUTjJtWmFEdUt0WVBsVGdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MDUzMTA3CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negorcWJBNVR6NC9BMWxFWTRldW9XZmlxSmQyL2tyVVR2dUVLb1ZWdTF2R28vNW8wQ1VjUVlMMlY5SjFmK0JJU1BEc01aNmtJQzhXU2hxRmgrSEtjRC9CUT09Cg==",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.1/AI-Vault_0.2.1_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUW5aQjNFQ1hZR3BhWHZ6STBNbkY3ditIR1Y5OVptSXllOUlNalAvZTd5Wm5sYTlId2NWSlFjMmt2eEp4bUFTQWZoaDRZY2I2Q2FwQ0xZemNOa0hYRkEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MjI2NDE2CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpvSUx5NmU2amNvQVRuc1h0dnBwNWkwWmlITXgzQ3hOUWNhdU4rdmpxRS9SempuRUdnMWlCY1FxLzdwV0Y5ekxQa2I3VHdVVXYvdW15Mll6SVRHeHhEdz09Cg==",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.2/AI-Vault_0.2.2_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUW9QUUlOTHd5cURpVkQ3a1RqOTI1TUlEVm1qN3VZQU8yVDU5cDFOU254dk40M0hBeXNrN0xWLzZVYU1LbzJycFJvRnh5NHRiYktldThTSHhncndLS1E0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MDUzMDc4CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negphcktaeHlrcDFPVFBLdHFkZGpOc1dQWWNsZzZJSTJrci9SVEI4YzhhU2NLbUliaEVMYjQ1VVhOQ0lybjZxYk5ERXFvNEZmb2lic1VFd3dFZUVwVjFEQT09Cg==",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.1/AI-Vault_0.2.1_x86_64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWlBMThXN2tJckptWWJYNXN3eHB1MjU0NkRtSFB4akFIa1RiOExnSitkclpYbGtsRThrb0d3cGlYNDcyOFp1SWJ6WGJWdnpTTHFFZmg1SXpXQ2VDRXdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MjI2NDE3CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpLNXg2RFRMT1hQditucEwxYjhiemQ2RXZOUXRjRmY3TnNQK2Y5S1FONXIzRHhzWVM0WXNKMlRVRmU0eVFpcmV4S0hNR21IOTI0eGJKN2ZEUlFiSkVCUT09Cg==",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.2/AI-Vault_0.2.2_x86_64.app.tar.gz"
     }
   }
 }
