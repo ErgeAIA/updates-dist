@@ -1,19 +1,19 @@
 {
-  "version": "0.2.2",
-  "notes": "### 新增\n\n- **技能详情页作者信息**：显示技能作者（读取技能文件自述的作者，未标注时显示来源仓库作者），本地导入技能标注了作者同样可见。\n- **技能详情页上游更新时间**：显示技能在上游的最近更新日期（安装、更新及检查更新发现新版本时自动记录；尚无记录时显示\"—\"）。\n- **技能列表排序**：列表顶部新增排序切换（名称 A-Z / 最近安装 / 最近更新），「最近更新」按技能内容在上游的更新时间排序，本地技能排在末尾。\n- **技能搜索增强**：输入名称各单词的首字母即可定位技能（如 nb → news-briefing、bci → baoyu-cover-image，支持跳词）；有完全匹配时只显示完全匹配，不再被描述里的相近字样淹没。\n\n### 修复\n\n- 修复升级版本后首次启动可能闪退的问题（数据库升级前的自动备份环节缺陷）。\n- 修复部分仓库的技能无法检测更新（仓库默认分支不是 main 时检查请求始终失败），现与安装行为一致自动尝试常见分支。\n- 详情页时间统一为「年-月-日」绝对日期（悬停可查看完整时间）。",
-  "pub_date": "2026-09-12T16:16:16.584Z",
+  "version": "0.2.3",
+  "notes": "### 新增\n\n- **本地引擎配置参数搜索**：「新建 / 编辑配置」窗口顶部新增参数搜索框，可在近 200 个参数中按名称、命令行参数名或下拉选项值查找（如输入 mtp 可定位「推测类型」的 draft-mtp 选项）；支持「模糊 / 精确」两种匹配模式，结果下拉列出所属分组，点击后自动切到对应页签、滚动定位到该参数并短暂高亮。搜索只匹配参数本身，不含参数当前填写的数值。\n- **关于页新增个人网站入口**：设置 → 关于 中的作者联系方式新增「个人网站」徽章，点击在浏览器打开作者主页。\n\n### 修复\n\n- 修复技能更新可能未真正获取最新版本的问题：同一仓库短时间内多次安装或更新时，可能复用过期的下载缓存导致更新后仍是旧内容。\n- 修复左侧导航栏的技能数量与技能管理页显示的数量不一致（导航侧曾把已卸载的技能一并计入）。\n- 修复各资产分类导航计数在增删后偶发不同步的问题，现已统一由一处取数并在切页时自动校准。\n- 修复本地模型标注重启后无法读取、Vault 迁移功能不可用的问题。\n- 修复「按标签筛选」与「只看收藏」同时启用时列表查询报错的问题（模型/提示词/MCP/平台/工作流）。\n- 优化备份/恢复、资产导入导出、技能分享与批量添加仓库等操作期间的界面响应（不再阻塞操作）。",
+  "pub_date": "2026-09-15T07:24:54.307Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWdCWmQ3bFBWT3drRGsveC8yNFN2dkQ5Y241MUZQaDdudUFjbDRQZTFRZ0kvMFNvTHN3amVyeUF5dmp1YjRucTFTQ24yN2xpZmJSTHNicm5aalM2d1F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MjI3MzkxCWZpbGU6QUkgVmF1bHRfMC4yLjJfeDY0LXNldHVwLmV4ZQp2TS9IaGtVMzNrc0RwNHVWMXBrOGxCYkp5QUpQS2hmbmVqRFJDNUxDcFpGWWlTcmJIWEs2b1lYaGprWmhiRlNwbDJzdFNTMUtGaEtQVlNVbXlhVGFDdz09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.2/AI-Vault_0.2.2_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWtlc1VieXJyWXhRcXdUL1NxeTlpc3FKaktQY3l2Z21lYWd1elo5NE1YVVVCYzhRL0NqdFcrUmRJbnVLNVE0UFlCUktqUmF2WjcrUkVWSjg0aHdIMHcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NDU1Mjk2CWZpbGU6QUkgVmF1bHRfMC4yLjNfeDY0LXNldHVwLmV4ZQptakRsZ2dRbFlMdm4wcC9EWlF4YkQ3azIwZU10K25GUU5ZZ0NBSWc5WHZYZ2ZHT3FFY2Y2MmtBbmxFNTBDQko2ZVNRcFBwUXZmNDZWMmFTOWNZbFBBQT09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.3/AI-Vault_0.2.3_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUW5aQjNFQ1hZR3BhWHZ6STBNbkY3ditIR1Y5OVptSXllOUlNalAvZTd5Wm5sYTlId2NWSlFjMmt2eEp4bUFTQWZoaDRZY2I2Q2FwQ0xZemNOa0hYRkEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MjI2NDE2CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpvSUx5NmU2amNvQVRuc1h0dnBwNWkwWmlITXgzQ3hOUWNhdU4rdmpxRS9SempuRUdnMWlCY1FxLzdwV0Y5ekxQa2I3VHdVVXYvdW15Mll6SVRHeHhEdz09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.2/AI-Vault_0.2.2_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXFqMHlvaFhMZHhkVFhhTlFJY3RGVXdZV2ZFQmdhNkRIYlpMYU8vNThJZmM2NkJqY1U0UGNmdnVHT1VZTmdLbUVFSmRVejJ2ajVTSlROZjdNc1p6c3dJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NDU0MzMzCWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpVOUs0LzdYNlAzQ2IzQTc0czRLWHlSejRlUWJ2N09MS1ZHNkl6WmdPQml2aUdGaGlTVURHSFNIN1pIQlRWMTVTYXArU1p1aGJ5K2tzTlVMdXhwZGhDdz09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.3/AI-Vault_0.2.3_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWlBMThXN2tJckptWWJYNXN3eHB1MjU0NkRtSFB4akFIa1RiOExnSitkclpYbGtsRThrb0d3cGlYNDcyOFp1SWJ6WGJWdnpTTHFFZmg1SXpXQ2VDRXdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MjI2NDE3CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpLNXg2RFRMT1hQditucEwxYjhiemQ2RXZOUXRjRmY3TnNQK2Y5S1FONXIzRHhzWVM0WXNKMlRVRmU0eVFpcmV4S0hNR21IOTI0eGJKN2ZEUlFiSkVCUT09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.2/AI-Vault_0.2.2_x86_64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUW5Cd1Bxck1UM3g3SjFFakczcGJvb0NULzdIZUIwUEtpN0xkWmRwY2dSNjhNd1JPM1h6RTlGZGplWnlCMnQxR09OUkxneWFEc1A0NFpBUkVYQkROWEFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NDU0MzM1CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negphSUJrTXRUMEVLK0dmazg2L1N1TGw0MElaVkJreFZvbE5XWkMwdmFEbW9LVFdHQzQ1UVZGRWtYV3NrenNkTGpoZ09LZ2F2RWl6WXdjb0FDQk1iTWFCQT09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.3/AI-Vault_0.2.3_x86_64.app.tar.gz"
     }
   }
 }
