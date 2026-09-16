@@ -52,5 +52,5 @@ description: >
 ### 建议
 
 - ~~README.md 声明「最新版本：v0.1.5」与下载链接，但远端清单已为 0.2.3~~ → 2026-09-16 已解决：README 同步为 v0.2.3（release tag `aivault-v0.2.3`，资产名与清单 URL 逐条核对）
-- `aivault/builtin/` 与 `aivault/aivault/builtin/` 两处并存同类清单：逐条比较后字符串内容一致，差异仅在行尾（外层 LF、内层 CRLF）与内层缺 `index.json`。哪一处是权威源待用户裁决。
-- `codegraph init` 已创建空索引目录 `.codegraph/`；若纳入 Git 追踪，可考虑加入 `.gitignore`（本技能不代改）。
+- ~~`aivault/builtin/` 与 `aivault/aivault/builtin/` 两处并存同类清单~~ → 2026-09-16 已解决：保留 aivault/builtin/，删除冗余副本 aivault/aivault/builtin/（依据：外层为 96a12b9 首发且含 index.json，内层由 5effdd6 快照带入、无独立维护记录）
+- ~~`codegraph init` 创建的空索引目录 `.codegraph/`~~ → 2026-09-16 已解决：按用户要求删除 `.codegraph/`（本仓无源码可索引，159973 字节）

@@ -46,6 +46,7 @@ YOU MUST 每次只推进一个阶段，完成即停，等用户验证
 | Tauri updater 清单 | 只改 aivault/updates.json、aivault/updates-gitee.json、ergemd/updates.json 的 version / notes / pub_date / platforms 字段 |
 | Gitee 镜像清单 | 与 GitHub 清单同版本发布，改一处必须同步另一处 |
 | 内置资产清单为 per-type 日期版 | 改 aivault/builtin/<类型>.json 的 version 后，同步 aivault/builtin/index.json |
+| 内置资产清单只有 aivault/builtin/ 一处有效 | 只改 aivault/builtin/<类型>.json 与 index.json；出现 aivault/aivault/ 嵌套副本时视为冗余，先核对内容一致再删 |
 | 安装包不入仓 | 提交前确认无安装包；安装包只挂 Releases |
 | README 版本与 release 同步 | 改 aivault/updates.json 或 aivault/updates-gitee.json 的 version 时，同步改 README.md 的「最新版本」与下载链接；tag 与安装包文件名以本次 release 的 tag 和资产名为准 |
 | 提交信息带前缀 | release: / ergemd: / builtin: / docs: / chore: / init: |

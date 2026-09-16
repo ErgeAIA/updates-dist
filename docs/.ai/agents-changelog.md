@@ -32,3 +32,7 @@ description: >
 ## 2026-09-16 README 版本同步约定
 
 - 新增约定「README 版本与 release 同步」→ add → AGENTS.md Conventions（来源：用户 2026-09-16 要求；本轮 README 由 v0.1.5 滞后修正为 v0.2.3）
+
+## 2026-09-16 内置资产清单唯一路径约定
+
+- 新增约定「内置资产清单只有 aivault/builtin/ 一处有效」→ add → AGENTS.md Conventions（来源：用户 2026-09-16 要求保留一份；冗余副本 aivault/aivault/builtin/ 已删除）

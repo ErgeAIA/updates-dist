@@ -25,8 +25,11 @@ description: >
   - 快进本地 main 到 origin/main（纳入 release v0.2.3 的两个提交）
   - README.md：最新版本与三平台下载链接由 v0.1.5 同步为 v0.2.3，链接以 release aivault-v0.2.3 资产名为准
   - AGENTS.md Conventions 新增「README 版本与 release 同步」一行，已留痕 agents-changelog.md
+  - 删除工具目录 .codegraph/（159973 字节，含 codegraph.db）
+  - 删除冗余副本 aivault/aivault/builtin/（7 个文件；与 aivault/builtin/ 内容逐字一致，原文件仍在 git 历史中）
+  - AGENTS.md Conventions 新增「内置资产清单只有 aivault/builtin/ 一处有效」一行，已留痕 agents-changelog.md
   - 建立 AGENTS.md（半程合成，8 条既有约定保全）
   - 建立 docs/.ai/ 五份过程文档与 experience/、docs/handoff/ 空目录
   - 执行 codegraph init，结果为无源码可索引
-- **下一步**：本轮改动提交并推送 origin 与 gitee；待用户裁决 README 外的 P2 项
+- **下一步**：本轮改动提交并推送 origin 与 gitee（2026-09-16 已完成）
 - **本阶段禁止**：<本阶段明确不做的事，逗号分隔>
