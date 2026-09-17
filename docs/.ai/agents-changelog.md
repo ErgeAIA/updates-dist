@@ -41,3 +41,9 @@ description: >
 
 - Toolchain「Tauri updater 清单（AI Vault）v0.2.2」→ update → v0.2.4（与 aivault/updates.json 实际内容对齐）
 - Toolchain「Tauri updater 清单（AI Vault Gitee 镜像）v0.2.2」→ update → v0.2.4（与 aivault/updates-gitee.json 实际内容对齐）
+
+## 2026-09-16 禁止冗余路径 + 发版版本号工作流
+
+- 新增约定「禁止 aivault/aivault 冗余路径」→ add → AGENTS.md Conventions + scripts/verify-dist-layout.sh（根因：AIVault release.yml 曾写 `$DIST/aivault/builtin`，v0.2.0/v0.2.4 两次复发）
+- 新增章节「发版版本号同步工作流（AI Vault）」→ add → AGENTS.md（CI 写清单与 README，人工核对 + Toolchain 登记）
+- README 同步能力 → update → 发版 CI 调用 AIVault `scripts/sync-dist-readme.mjs` 自动改 README

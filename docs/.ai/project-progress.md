@@ -21,6 +21,11 @@ description: >
 - **阶段**：<当前阶段>
 - **代码**：本仓为清单仓，已发布 aivault 更新清单 v0.2.4（GitHub / Gitee 双份）、ergemd 更新清单 v0.4.4、aivault/builtin 内置资产清单 20260827（7 类型 + index.json）
 - **工具链**：<已建立的工具链；未建立时写明无哪些>
+- **最后更新**：2026-09-16 根治 aivault/aivault 冗余路径 + 发版版本号工作流
+  - **根因**：AIVault `.github/workflows/release.yml` 在 `DIST=updates-dist/aivault` 下又 `mkdir -p "$DIST/aivault/builtin"`，产物落到 `aivault/aivault/builtin`（v0.2.0 / v0.2.4 两次由 CI 带回）
+  - **修复（AIVault）**：路径改为 `$DIST/builtin`；提交前 `rm -rf $DIST/aivault` + 存在性断言；新增 `scripts/sync-dist-readme.mjs` 随发版同步 README 版本与下载链接
+  - **机制（本仓）**：删除当前 `aivault/aivault/`；AGENTS.md 增加禁止冗余路径约定与「发版版本号同步工作流」；新增 `scripts/verify-dist-layout.sh`（冗余路径 / README 与 updates.json 同版本 / Gitee 清单同版本）
+  - **校验**：`bash scripts/verify-dist-layout.sh` 通过（无冗余、README=v0.2.4=双清单）
 - **最后更新**：2026-09-16 README 版本同步到 v0.2.4
   - 快进本地 main 到 origin/main（纳入 release v0.2.4 的 633b206 / c20cb61）
   - README.md：最新版本与三平台下载链接由 v0.2.3 同步为 v0.2.4，链接以 release aivault-v0.2.4 资产名为准（API 已核对三资产均存在）
