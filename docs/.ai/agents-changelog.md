@@ -36,3 +36,8 @@ description: >
 ## 2026-09-16 内置资产清单唯一路径约定
 
 - 新增约定「内置资产清单只有 aivault/builtin/ 一处有效」→ add → AGENTS.md Conventions（来源：用户 2026-09-16 要求保留一份；冗余副本 aivault/aivault/builtin/ 已删除）
+
+## 2026-09-16 Toolchain 版本登记对齐 v0.2.4
+
+- Toolchain「Tauri updater 清单（AI Vault）v0.2.2」→ update → v0.2.4（与 aivault/updates.json 实际内容对齐）
+- Toolchain「Tauri updater 清单（AI Vault Gitee 镜像）v0.2.2」→ update → v0.2.4（与 aivault/updates-gitee.json 实际内容对齐）
