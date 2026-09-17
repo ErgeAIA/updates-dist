@@ -1,19 +1,19 @@
 {
-  "version": "0.2.4",
-  "notes": "### 新增\n\n- **本地模型哈希索引与下载防重**：模型管理新增完整 SHA-256 扫描；本地模型改名后仍可与 Hugging Face / ModelScope 的远端哈希比对，命中时直接阻止重复下载并提示本地路径。已下载模型行新增哈希操作，可直接复制缓存哈希或计算保存。\n- **在线模型搜索分页加载更多**：下载 Tab 的搜索结果底部新增「加载更多」，每次主动请求下一页 50 条并追加展示，避免一次拉取全量导致接口限流；切换关键词 / 来源 / 作者时重置分页。\n- **启动配置导出为 Markdown 启动说明书**：「快速启动」列表每行新增「导出」按钮，面板头部新增「导出全部」；导出的 MD 含模型名、可直接复制执行的启动命令（与「启动」实际下发完全一致，`api_key` 不进命令行），并附关键参数说明表。\n\n### 修复\n\n- 修复移除模型目录后「新建配置」的模型下拉仍列出已删除目录里模型文件的问题；此时改为明确提示尚未添加模型目录。\n- 修复「Llama.cpp 引擎」页在尚未创建任何启动配置时没有新建入口的问题（原提示为「点此新建」但界面上没有按钮），现空状态直接提供「新建配置」按钮。\n- 「Llama.cpp 引擎」页「快速启动」空态新增「添加目录」按钮，复用模型管理页的同一添加目录动作（选目录 → `add_llama_models_dir`），无需跳转模型管理页。\n- 修复关于页「个人网站」入口指向错误的站点根路径，现跳转到实际部署的官网地址；作者相关外链同时统一走应用内的打开与失败提示流程。\n- 修复在线模型下载对合法 GGUF 的错误校验与已有完整文件误报问题；下载完成后会按远端 SHA-256 校验，并在模型行提供标准化的标注、打开目录、复制路径与哈希操作。",
-  "pub_date": "2026-09-16T17:12:48.034Z",
+  "version": "0.2.5",
+  "notes": "### 新增\n\n- **启动配置一键复制 OpenAI 兼容 API 地址**：「新建 / 编辑配置」的「常用 → 基础 → 端口」输入框右侧新增复制徽章，点击即复制 `http://127.0.0.1:{端口}/v1`，方便粘贴到其它客户端或 Agent 工具。\n- **在线模型文件行复制下载地址**：模型管理「下载」页展开仓库后的文件名旁新增复制徽章，点击复制该文件的直链地址（悬停仍可预览完整链接）。\n- **启动前资源释放（Windows）**：引擎页「快速启动」标题行新增「释放资源」入口，弹窗可关闭无关应用并压缩工作集，为本地模型腾出内存。列表按进程名聚合（同名子进程合并为一行，显示合计占用与进程数），支持全选/全不选；有 N 卡时展示各候选显存占用；「同时压缩工作集」带悬浮说明。默认开启「启动前每次都提示」——点「启动」会先走同一弹窗，可选「释放并启动」或「仅启动，不释放」。关闭进程前会做 PID 复验，系统关键进程与 llama-server 永不列入。\n- **配置参数 hover 显示 CLI 命令行参数**：新建/编辑配置时，参数说明首行以等宽字体展示对应命令行参数（如 `--host`）；参数搜索也可按 flag 命中。\n\n### 修复\n\n- 在线模型搜索结果文件名不再「点击即下载」，下载只通过行尾「下载」按钮触发，避免浏览列表时误触开始下载大模型。\n\n### 变更\n\n- 前端包管理器声明升级为 pnpm 12.4.2，并同步 `pnpm-lock.yaml`（开发者请使用对应版本安装依赖）。",
+  "pub_date": "2026-09-17T18:10:08.949Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXBpcldqWFZGYVB1emhPUENGSUpwTHRkazN0SGhKTFdNTjFLZHJYSHp5Skd1V3dWNy9EVklxRVVvRld0a05hTjRzV2FZbkRQYkdGMUx5LzZCbUFjM1FVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NTc3OTIxCWZpbGU6QUkgVmF1bHRfMC4yLjRfeDY0LXNldHVwLmV4ZQowN2c0dHg2Zk1wc0JNTGNxNWk2SVNGd1FoVzBmMm1YeHZjLzZFcG1aSTNDU2lRSDVUSHR4SUhna1Y2RHVZbUZvY0I5aEZ6NTlvZzRrdWtETEYyOFBBUT09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.4/AI-Vault_0.2.4_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXVla2hOaXd3T3VRV2JFVFhhc1lkTUlJR1JPa21wVlJ4ZytCNWxnZi9RRVE5RDJWc2gvbFlzQW1SUUNwYmdiM1pWVDRBNnlYMTVGRmRMSmpkdWJYV3dRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NjY4NDI2CWZpbGU6QUkgVmF1bHRfMC4yLjVfeDY0LXNldHVwLmV4ZQplYnc3TjNwUmtEUnFUeWZBMXlYZzQvV3FEbk9TY2F0VVJLSXJxbUVuMnFHdUZNdG9XTXhFenY3L09JZ3kxMmFBT1FKVnBFY09LaDdmS0RMcjNSZ0FDQT09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.5/AI-Vault_0.2.5_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWwwemFjN05PMm54OXI5QWF5enJQdXkvaFBac2l4dEF3RmsxdkRzcTNoYmhaaWdjNkx6RXllWExYUDB1S2JucS9xQXM3aFpTZnZMRGs0N1FQb25pVHdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NTc2OTQ2CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5nego5UFd4Rm5lelp3NVRSM0NhUmN1c05vSnBHcDRuNjJ6TTQxMWZydlIvcjhDcVdEMjhZSGNvV0VLOWw2bGlEd2hhUnNpNU5DUm03enptYXNWVTNGL2lBdz09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.4/AI-Vault_0.2.4_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXRPYlV6U2xPbGdjNFFqZVQxWkZGWnpzcjhMaUxQcXFTeW44N1VkcVRKbjdOaFNVSFgwclIrdWM3K2ZqaWZvQWVWaHRpYmVaNDRnRG1pL1M2enVjMFFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NjY3NjUyCWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negovQXVhS2o2eXE5aHJLSDBiaUltL212V1ZLcWNGUUJKbkRJU3VQSUVrQnh0UENEb3VVN1RRalFCSnVHcTkxVTU3U0ZxaDdRNTIrUkkzNGhkRDQ3bFVEQT09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.5/AI-Vault_0.2.5_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWo0czhHZmRyTTlRZi9XVXV0U2VUWXRKK1l5SlF4T3JJSnV1bitJb2wzRFhGMlJoNHRCTWVrcE5WYnZIL2FVTlZ0VGtMTjUrOXZKR1Z0VlVML09oS2cwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NTc2OTU3CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpVTCtyemVzRzZRN3BWdFk4cWpZRklqRkxGU3ZsRGx2OGRIY0U3ZEtiMDgzWTZCdmdGTFk3ajVFYVRicGs1UFAxOVZjZ3RlNnEwdVorZktNaER3MUpCZz09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.4/AI-Vault_0.2.4_x86_64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXFLbWVQMDVDRWRpR1Qxa1hPUE9lbUJhNzkwY2tZcGFoTklYOHVoMTBOOFFucnlIeGdFUWtFRW1KeUFHUzEzMm1jVnRod05UNVFzUVh1K2JrdHhPYlFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NjY3NjQwCWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negp4M0laeFo1TXloOHptYnFxZXhqYm9rcWswWG5GTGRqSElZU0lPRXNBNGZzSXhvdXlpa1JvcndKS0JiQ0VlSnN1RFl6SzRWRG5LZnJqbmwyRW1DYzNCdz09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.5/AI-Vault_0.2.5_x86_64.app.tar.gz"
     }
   }
 }
