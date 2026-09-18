@@ -10,7 +10,7 @@
 
 | 产品 | 一句话 | 获取 |
 |------|--------|------|
-| [**AI Vault**](#ai-vault) | 本地优先的 AI 创作者工作台：Skill / Prompt / MCP / 工作流 / 模型统一管理，分发到 46+ Agent | [本仓下载](#ai-vault) · [官网](https://ergeaia.github.io/aivault-site/) · [源码](https://github.com/ErgeAIA/AI-Vault) |
+| [**AI Vault**](#ai-vault) | 本地优先的 AI 创作者工作台：Skill / Prompt / MCP / 工作流 / 模型统一管理，分发到 46+ Agent | [本仓下载](#ai-vault) · [官网 / 文档](https://ergeaia.github.io/aivault-site/) |
 | [**ErgeMD**](#ergemd) | 专注 Markdown 阅读的桌面应用：极致渲染 + 丝滑阅读 + Mermaid 兼容 | [仓库](https://github.com/ErgeAIA/ErgeMD) |
 | [**ErgeHash**](#ergehash) | 跨平台文件哈希校验：本地优先、零上传、批量极速 | [仓库 / 下载](https://github.com/ErgeAIA/ErgeHash) |
 | [**Catapult-CN**](#catapult-cn) | llama.cpp 桌面启动器（汉化分支，已停更）→ 继任者 [AI Vault](#ai-vault) | [仓库](https://github.com/ErgeAIA/catapult-cn) |
@@ -47,7 +47,6 @@
 **软件自动更新**：客户端启动时静默检查 `aivault/updates.json`，发现新版本后侧边栏显示更新徽章，一键下载安装并重启。
 
 - 官网 / 文档：[ergeaia.github.io/aivault-site](https://ergeaia.github.io/aivault-site/) · [使用文档](https://ergeaia.github.io/aivault-site/docs/)
-- 源码与 Releases 备份：[github.com/ErgeAIA/AI-Vault](https://github.com/ErgeAIA/AI-Vault)
 
 ---
 
