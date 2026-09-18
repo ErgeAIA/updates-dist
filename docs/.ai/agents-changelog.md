@@ -2,7 +2,7 @@
 title: AGENTS.md Changelog
 type: agents-changelog
 project: updates-dist
-updated: 2026-09-16
+updated: 2026-09-17
 description: >
   AGENTS.md 的变更记录，AGENTS.md 每改动一次就追加一行，不随日常开发更新。
   只追加，不删除或改写历史。AI 在本文件新增或修改任何条目后，必须同步更新 frontmatter 的 updated 字段为当日日期（YYYY-MM-DD）。
@@ -47,3 +47,10 @@ description: >
 - 新增约定「禁止 aivault/aivault 冗余路径」→ add → AGENTS.md Conventions + scripts/verify-dist-layout.sh（根因：AIVault release.yml 曾写 `$DIST/aivault/builtin`，v0.2.0/v0.2.4 两次复发）
 - 新增章节「发版版本号同步工作流（AI Vault）」→ add → AGENTS.md（CI 写清单与 README，人工核对 + Toolchain 登记）
 - README 同步能力 → update → 发版 CI 调用 AIVault `scripts/sync-dist-readme.mjs` 自动改 README
+
+## 2026-09-17 README 改为多产品橱窗 + Toolchain v0.2.5
+
+- README 信息架构 → update → 顶栏个人网站 + 产品一览表 + AI Vault/ErgeMD/ErgeHash/Catapult-CN 四区块（名称/界面/功能/下载）；ErgeMD 安装包引流至源仓；AI Vault 安装包仍在本仓 Releases
+- Toolchain AI Vault 清单 v0.2.4 → update → v0.2.5（与 updates.json / updates-gitee.json 对齐）
+- 产品封面 → add → images/ergemd-cover.png、images/ergehash-ui.png、images/catapult-cn-dashboard.png（自本地源项目拷入）
+

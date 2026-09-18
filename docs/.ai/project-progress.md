@@ -2,7 +2,7 @@
 title: Project Progress
 type: project-progress
 project: updates-dist
-updated: 2026-09-16
+updated: 2026-09-17
 description: >
   项目开发进度实时记录：阶段、分支、代码状态、最近进展。每次会话更新。
   AI 在本文件新增进展或修改当前状态后，必须同步更新 frontmatter 的 updated 字段为当日日期（YYYY-MM-DD）。
@@ -19,8 +19,13 @@ description: >
 
 - **当前分支**：main
 - **阶段**：<当前阶段>
-- **代码**：本仓为清单仓，已发布 aivault 更新清单 v0.2.4（GitHub / Gitee 双份）、ergemd 更新清单 v0.4.4、aivault/builtin 内置资产清单 20260827（7 类型 + index.json）
-- **工具链**：<已建立的工具链；未建立时写明无哪些>
+- **代码**：本仓为清单仓，已发布 aivault 更新清单 v0.2.5（GitHub / Gitee 双份）、ergemd 更新清单 v0.4.4、aivault/builtin 内置资产清单（7 类型 + index.json）；README 为多产品橱窗（个人站 + 四产品）
+- **工具链**：无构建命令；校验用 `scripts/verify-dist-layout.sh`
+- **最后更新**：2026-09-17 README 多产品橱窗
+  - 顶部个人网站 https://ergeaia.github.io/；产品一览表互链
+  - 区块：AI Vault（本仓下载表 v0.2.5）/ ErgeMD（引流源仓）/ ErgeHash / Catapult-CN（停更指路 AI Vault）
+  - 界面图：aivault-cover.png 既有；ergemd-cover / ergehash-ui / catapult-cn-dashboard 自本地源项目拷入 images/
+  - AGENTS Toolchain 登记 v0.2.5；changelog 已留痕
 - **最后更新**：2026-09-16 根治 aivault/aivault 冗余路径 + 发版版本号工作流
   - **根因**：AIVault `.github/workflows/release.yml` 在 `DIST=updates-dist/aivault` 下又 `mkdir -p "$DIST/aivault/builtin"`，产物落到 `aivault/aivault/builtin`（v0.2.0 / v0.2.4 两次由 CI 带回）
   - **修复（AIVault）**：路径改为 `$DIST/builtin`；提交前 `rm -rf $DIST/aivault` + 存在性断言；新增 `scripts/sync-dist-readme.mjs` 随发版同步 README 版本与下载链接
@@ -42,3 +47,4 @@ description: >
   - 执行 codegraph init，结果为无源码可索引
 - **下一步**：README 改动提交并推送 origin 与 gitee；确认是否清理 aivault/aivault/builtin/
 - **本阶段禁止**：<本阶段明确不做的事，逗号分隔>
+

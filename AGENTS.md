@@ -21,8 +21,8 @@ YOU MUST 每次只推进一个阶段，完成即停，等用户验证
 
 | 工具 | 精确版本 | 锁定位置 |
 | ---- | -------- | -------- |
-| Tauri updater 清单（AI Vault） | v0.2.4 | aivault/updates.json |
-| Tauri updater 清单（AI Vault Gitee 镜像） | v0.2.4 | aivault/updates-gitee.json |
+| Tauri updater 清单（AI Vault） | v0.2.5 | aivault/updates.json |
+| Tauri updater 清单（AI Vault Gitee 镜像） | v0.2.5 | aivault/updates-gitee.json |
 | Tauri updater 清单（ErgeMD） | v0.4.4 | ergemd/updates.json |
 | 内置资产清单（per-type 日期版） | 20260827 | aivault/builtin/index.json |
 
