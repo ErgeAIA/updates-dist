@@ -1,19 +1,19 @@
 {
-  "version": "0.2.6",
-  "notes": "### 修复\n\n- 修复引擎「启动前资源释放」弹窗中「仅启动，不释放」点击后引擎不启动的问题，现点击后不释放资源、直接开始启动。\n- 修复「启动前资源释放」弹窗点「确认释放」后应用窗口可能卡死白屏的问题：不再误关应用自身的界面进程，扫描与释放的重负载操作移出界面线程，窗口不再卡顿无响应。",
-  "pub_date": "2026-09-18T18:14:08.639Z",
+  "version": "0.2.7",
+  "notes": "### 新增\n\n- **自定义运行时支持第三方 llama.cpp 变体**：引擎页「自定义运行时」升级为选择目录，自动扫描并默认选中启动程序（官方 llama-server 优先、可改选），自动识别 CUDA / Vulkan 后端并显示导入日期；第三方运行时（如 llama-kvmem-server）的残留进程清理与「释放资源」保护同步兼容。\n- **运行时选择面板应用内操作**：不再弹系统文件夹对话框——面板内浏览目录（只显示文件夹与可执行文件、支持返回上级），或直接**把文件夹 / exe 拖入窗口**自动定位扫描；候选行显示完整路径，后端徽章标注 CUDA / Vulkan。",
+  "pub_date": "2026-09-19T16:35:29.783Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXFKTlNPcXYxN2JhYStVekFRa0VjMFYweEZhLzVNMVJYRlhsallFb2lvcW81WGRQRjNSTi84VDBJMVhjNDM5T2pId2lneDd4MTNCSkpZcjA3RkQzbFFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NzU0OTg0CWZpbGU6QUkgVmF1bHRfMC4yLjZfeDY0LXNldHVwLmV4ZQpKQjdkTWxleVBQazZwV2k1WHFtcEIvSUYvNXR5MjRiZ1o3dUNmZG02YXRKTndOdTBOV0xNaWRwb1R3TmpOZFRpZHNqRkpkcHk0K25iek1TQWJ0ZHpDZz09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.6/AI-Vault_0.2.6_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUW9EY1I4bWc4cm1FL0pFQ3c3RWc4bmtVbFNha0I0Q3JCdTNOSFFZbkkrdnloeEZXbG95MlA0QzZtcEFLZitaYnFha1FrcWtqNkZHL1pvdCtBclVyckFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5ODM0MTU2CWZpbGU6QUkgVmF1bHRfMC4yLjdfeDY0LXNldHVwLmV4ZQpPNTEyUWp6dkpxYjlTbjRqMS94OHR2ejJYVm9wU3hjWmgzSzRpOUovaWhqUkVzR2t4Ri84RW9ZeUZXSXVOMi9qOFkxeGZEaEJOZC9LZ1F3ZERSZDFCdz09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.7/AI-Vault_0.2.7_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUW9PTG1WbjdvZ3ZQQ1ptbHBTR1Radk1xZFBUZGh2dmhzcW9NOG1La0ZoVEVFb3pqaUxIODBRdjF0cnM4WktaQVFVb1NiZmFTbkNIbzg0a1NqRDJ4MXdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NzU0MDc3CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpQMEtwK3N5bGV5RUl0dXBBYS8wdjNhUFJJOCtlNEYrUW9mOUtTV0pkVkpTQndKRWRadDFZRjQxN21zdjhqdWNqOWVIUnBSTzB3ZTdIc1FZbFZFQjdBZz09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.6/AI-Vault_0.2.6_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWgvdG5KMkZiUGw3VGROZ1BqY3c0UThJMlhjek95ak9VQWcxZ2JLTWVhWkIzeTErZ3F4NHVNcTZjT2ZGSzRNSFZUeHM0Z2QxVitoeEk3MEpFenNNckE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5ODMzMTg2CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpKWUtQRERWSkdvWjl5NTZ5ZDYwN1lPbHRQZ0RCbW9oREVpVmtVOFNqMytLRmo5UnlqQ1Q3dTdBRG5PN1h1VWpaYW12SW53UmdjWVNZeDMwdFp0TWZCQT09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.7/AI-Vault_0.2.7_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXFtK2V6eHhzN1ZtVkNUYkhBdFJFK251RWNQOUlYQU42cE5iUTJCR0E1NXJNWFVGTDZxV0xXNmVsRndUSC9LcjRDVDVLT3RyUGZQNE8wQXkzOW12MmdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NzU0MDM1CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpOdlUvRTJaYUxaK1YyTUJOZVZNN2x1cW1CRHYwZUQ0UVE3TU9JSDBHbWlMWkFkOWQxMUFxOHdqUVdkQmdmQkRuUDhKK1FkOGJZVEE4NktqSXR6Z2VBQT09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.6/AI-Vault_0.2.6_x86_64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWdLdURTcGdYWndoZmw5RUYwSEV2dTFoV2pLbGZic1BNcnMyd3hZOXRuN09ORnZBOEwrUmVpeTlnbUx4Z1JtemgxQktiZlRqUG1UYytpVHBFd3lLM1FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5ODMzMTg4CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5nego4TDNqNVlxQS9sWCt0WEpJK1oxNEpBaGVOcTNvNkFsV0gzdDZId3oxWGN0b3dFU2lBWW9BNHFvQWpLWTY1dVBwaFZidDlOTzhEdkFrVWlQN2JLS1NBQT09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.7/AI-Vault_0.2.7_x86_64.app.tar.gz"
     }
   }
 }
