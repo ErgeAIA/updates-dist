@@ -36,13 +36,13 @@
 ![downloads](https://img.shields.io/github/downloads/ErgeAIA/updates-dist/total)
 ![版本](https://img.shields.io/badge/版本-v0.2.6-orange)
 
-**最新版本**：v0.2.6
+**最新版本**：v0.2.7
 
 | 平台 | 安装包 |
 |------|--------|
-| Windows x64 | [AI-Vault_0.2.6_x64-setup.exe](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.6/AI-Vault_0.2.6_x64-setup.exe) |
-| macOS Apple Silicon | [AI-Vault_0.2.6_aarch64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.6/AI-Vault_0.2.6_aarch64.app.tar.gz) |
-| macOS Intel | [AI-Vault_0.2.6_x86_64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.6/AI-Vault_0.2.6_x86_64.app.tar.gz) |
+| Windows x64 | [AI-Vault_0.2.7_x64-setup.exe](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.7/AI-Vault_0.2.7_x64-setup.exe) |
+| macOS Apple Silicon | [AI-Vault_0.2.7_aarch64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.7/AI-Vault_0.2.7_aarch64.app.tar.gz) |
+| macOS Intel | [AI-Vault_0.2.7_x86_64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.7/AI-Vault_0.2.7_x86_64.app.tar.gz) |
 
 > **macOS 平台说明**：未启用 Apple 代码签名（免费软件策略），首次打开请 **右键 → 打开** 绕过 Gatekeeper。
 
