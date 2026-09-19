@@ -13,7 +13,7 @@
 | [**AI Vault**](#ai-vault) | 本地优先的 AI 创作者工作台：Skill / Prompt / MCP / 工作流 / 模型统一管理，分发到 46+ Agent | [本仓下载](#ai-vault) · [官网 / 文档](https://ergeaia.github.io/aivault-site/) | ![downloads](https://img.shields.io/github/downloads/ErgeAIA/updates-dist/total) |
 | [**ErgeMD**](#ergemd) | 专注 Markdown 阅读的桌面应用：极致渲染 + 丝滑阅读 + Mermaid 兼容 | [仓库](https://github.com/ErgeAIA/ErgeMD) | ![downloads](https://img.shields.io/github/downloads/ErgeAIA/ErgeMD/total) |
 | [**ErgeHash**](#ergehash) | 跨平台文件哈希校验：本地优先、零上传、批量极速 | [仓库 / 下载](https://github.com/ErgeAIA/ErgeHash) | ![downloads](https://img.shields.io/github/downloads/ErgeAIA/ErgeHash/total) |
-| [**Catapult-CN**](#catapult-cn) | llama.cpp 桌面启动器（汉化分支，已停更）→ 继任者 [AI Vault](#ai-vault) | [仓库](https://github.com/ErgeAIA/catapult-cn) |
+| [**Catapult-CN**](#catapult-cn) | llama.cpp 桌面启动器（汉化分支，已停更）→ 继任者 [AI Vault](#ai-vault) | [仓库](https://github.com/ErgeAIA/catapult-cn) | ![downloads](https://img.shields.io/github/downloads/ErgeAIA/catapult-cn/total) |
 
 
 ---
@@ -161,6 +161,7 @@
 <sub>用 ❤️ 和 Tauri 制作</sub>
 
 </div>
+
 
 
 
