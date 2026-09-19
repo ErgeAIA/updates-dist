@@ -8,12 +8,14 @@
 
 ## 产品一览
 
-| 产品 | 一句话 | 获取 | 下载量 |
+| 产品 | 一句话 | 获取 | 累计下载 |
 |------|--------|------|--------|
-| [**AI Vault**](#ai-vault) | 本地优先的 AI 创作者工作台：Skill / Prompt / MCP / 工作流 / 模型统一管理，分发到 46+ Agent | [本仓下载](#ai-vault) · [官网 / 文档](https://ergeaia.github.io/aivault-site/) | ![AI Vault 下载](https://img.shields.io/github/downloads/ErgeAIA/updates-dist/total?label=AI%20Vault%20下载) |
-| [**ErgeMD**](#ergemd) | 专注 Markdown 阅读的桌面应用：极致渲染 + 丝滑阅读 + Mermaid 兼容 | [仓库](https://github.com/ErgeAIA/ErgeMD) | ![ErgeMD 下载](https://img.shields.io/github/downloads/ErgeAIA/ErgeMD/total?label=ErgeMD%20下载) |
-| [**ErgeHash**](#ergehash) | 跨平台文件哈希校验：本地优先、零上传、批量极速 | [仓库 / 下载](https://github.com/ErgeAIA/ErgeHash) | ![ErgeHash 下载](https://img.shields.io/github/downloads/ErgeAIA/ErgeHash/total?label=ErgeHash%20下载) |
-| [**Catapult-CN**](#catapult-cn) | llama.cpp 桌面启动器（汉化分支，已停更）→ 继任者 [AI Vault](#ai-vault) | [仓库](https://github.com/ErgeAIA/catapult-cn) | ![Catapult-CN 下载](https://img.shields.io/github/downloads/ErgeAIA/catapult-cn/total?label=Catapult-CN%20下载) |
+| [**AI Vault**](#ai-vault) | 本地优先的 AI 创作者工作台：Skill / Prompt / MCP / 工作流 / 模型统一管理，分发到 46+ Agent | [本仓下载](#ai-vault) · [官网 / 文档](https://ergeaia.github.io/aivault-site/) | ![AI Vault 累计下载](https://img.shields.io/github/downloads/ErgeAIA/updates-dist/total?label=AI%20Vault%20累计下载) |
+| [**ErgeMD**](#ergemd) | 专注 Markdown 阅读的桌面应用：极致渲染 + 丝滑阅读 + Mermaid 兼容 | [仓库](https://github.com/ErgeAIA/ErgeMD) | ![ErgeMD 累计下载](https://img.shields.io/github/downloads/ErgeAIA/ErgeMD/total?label=ErgeMD%20累计下载) |
+| [**ErgeHash**](#ergehash) | 跨平台文件哈希校验：本地优先、零上传、批量极速 | [仓库 / 下载](https://github.com/ErgeAIA/ErgeHash) | ![ErgeHash 累计下载](https://img.shields.io/github/downloads/ErgeAIA/ErgeHash/total?label=ErgeHash%20累计下载) |
+| [**Catapult-CN**](#catapult-cn) | llama.cpp 桌面启动器（汉化分支，已停更）→ 继任者 [AI Vault](#ai-vault) | [仓库](https://github.com/ErgeAIA/catapult-cn) |
+
+> **统计口径**：GitHub Releases **全量累计**下载（该仓全部 Release 全部资产之和），非单版本。AI Vault 计 `updates-dist` 本仓；其余计各自源仓。 ![Catapult-CN 累计下载](https://img.shields.io/github/downloads/ErgeAIA/catapult-cn/total?label=Catapult-CN%20累计下载) |
 
 ---
 
@@ -32,7 +34,7 @@
 - 密钥安全：API Key 以 AES-256-GCM 加密落盘
 - 双语界面：简体中文 / English
 
-![AI Vault 下载](https://img.shields.io/github/downloads/ErgeAIA/updates-dist/total?label=AI%20Vault%20下载)
+![AI Vault 累计下载](https://img.shields.io/github/downloads/ErgeAIA/updates-dist/total?label=AI%20Vault%20累计下载)
 ![版本](https://img.shields.io/badge/版本-v0.2.6-orange)
 
 **最新版本**：v0.2.6
@@ -65,7 +67,7 @@
 - 工作区：多标签、文件树、书签；一键打开原文件位置
 - 导出：HTML / Word / Mermaid 图 SVG
 
-![ErgeMD 下载](https://img.shields.io/github/downloads/ErgeAIA/ErgeMD/total?label=ErgeMD%20下载)
+![ErgeMD 累计下载](https://img.shields.io/github/downloads/ErgeAIA/ErgeMD/total?label=ErgeMD%20累计下载)
 ![ErgeMD Release](https://img.shields.io/github/v/release/ErgeAIA/ErgeMD?label=ErgeMD%20版本)
 
 **获取安装包与更新说明** → 源仓库 **[github.com/ErgeAIA/ErgeMD](https://github.com/ErgeAIA/ErgeMD)**（本仓亦提供 `ergemd/updates.json` 自动更新清单，安装包与完整文档以源仓库为准）
@@ -86,7 +88,7 @@
 - 结果可溯：树形列表展示算法 / 哈希 / 耗时，可复制、导出 CSV
 - 跨平台：Tauri 2，Windows 与 macOS（Apple Silicon）
 
-![ErgeHash 下载](https://img.shields.io/github/downloads/ErgeAIA/ErgeHash/total?label=ErgeHash%20下载)
+![ErgeHash 累计下载](https://img.shields.io/github/downloads/ErgeAIA/ErgeHash/total?label=ErgeHash%20累计下载)
 ![ErgeHash Release](https://img.shields.io/github/v/release/ErgeAIA/ErgeHash?label=ErgeHash%20版本)
 
 **下载与文档** → **[github.com/ErgeAIA/ErgeHash](https://github.com/ErgeAIA/ErgeHash)**（Releases 提供安装包）
@@ -105,7 +107,7 @@
 - **本项目已停止维护**；功能更完整的继任者是 [**AI Vault**](#ai-vault)（本地引擎 + 资产管理）
 - Windows 为主；参数说明见源仓库文档
 
-![Catapult-CN 下载](https://img.shields.io/github/downloads/ErgeAIA/catapult-cn/total?label=Catapult-CN%20下载)
+![Catapult-CN 累计下载](https://img.shields.io/github/downloads/ErgeAIA/catapult-cn/total?label=Catapult-CN%20累计下载)
 ![Catapult-CN Release](https://img.shields.io/github/v/release/ErgeAIA/catapult-cn?label=Catapult-CN%20版本)
 
 **仓库** → **[github.com/ErgeAIA/catapult-cn](https://github.com/ErgeAIA/catapult-cn)**（请优先改用 AI Vault）
@@ -160,3 +162,4 @@
 <sub>用 ❤️ 和 Tauri 制作</sub>
 
 </div>
+
