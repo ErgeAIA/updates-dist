@@ -21,8 +21,8 @@ YOU MUST 每次只推进一个阶段，完成即停，等用户验证
 
 | 工具 | 精确版本 | 锁定位置 |
 | ---- | -------- | -------- |
-| Tauri updater 清单（AI Vault） | v0.2.6 | aivault/updates.json |
-| Tauri updater 清单（AI Vault Gitee 镜像） | v0.2.6 | aivault/updates-gitee.json |
+| Tauri updater 清单（AI Vault） | v0.2.7 | aivault/updates.json |
+| Tauri updater 清单（AI Vault Gitee 镜像） | v0.2.7 | aivault/updates-gitee.json |
 | Tauri updater 清单（ErgeMD） | v0.4.4 | ergemd/updates.json |
 | 内置资产清单（per-type 日期版） | 20260827 | aivault/builtin/index.json |
 
@@ -71,13 +71,15 @@ YOU MUST 每次只推进一个阶段，完成即停，等用户验证
 | ---- | ---- | ---- |
 | 1. 打 tag 推送 | 人工（AIVault 仓） | tag `vX.Y.Z` |
 | 2. 写 updates.json / updates-gitee.json | CI | `aivault/updates*.json` version + 签名 + 下载 URL |
-| 3. 同步 README 最新版本与三平台链接 | CI（`sync-dist-readme.mjs`） | `README.md` |
+| 3. 同步 README 最新版本、版本徽章与三平台链接 | CI（`sync-dist-readme.mjs`）+ **人工核对** | `README.md` 文字版与 badge 均为 vX.Y.Z |
 | 4. 清理/阻断 `aivault/aivault` | CI（release.yml 内 rm + 断言） | 仅保留 `aivault/builtin/` |
 | 5. 推 GitHub + Gitee main | CI | 双源清单一致 |
-| 6. 布局校验 | 人工或 CI 后置 | `bash scripts/verify-dist-layout.sh` |
+| 6. 布局与版本校验 | 发版后必跑 | `bash scripts/verify-dist-layout.sh` |
 | 7. AGENTS.md Toolchain 版本登记 | 人工 | Toolchain 表改为 vX.Y.Z + agents-changelog 留痕 |
 
-手动补发/改清单时：先改 `updates*.json`，再跑 `node ../AIVault/scripts/sync-dist-readme.mjs README.md <ver>`（或等价替换），最后 `verify-dist-layout.sh`。
+手动补发/改清单时：先改 `updates*.json`，再跑 `node ../AIVault/scripts/sync-dist-readme.mjs README.md <ver>`（并确认 README 内 shields 版本徽章同步），最后 `verify-dist-layout.sh`。
+
+**红线**：AI Vault 发版（应用 / 官网 / 清单）未完成前，若本 README「最新版本」或版本徽章仍为旧号，视为发版未收尾；必须以 `aivault/updates.json` 的 `version` 为准改到一致。
 
 ## Self-Maintenance
 
@@ -86,3 +88,4 @@ YOU MUST 每次只推进一个阶段，完成即停，等用户验证
 3. 命令更名、重构后，提交前核对本文件并更新过期示例
 4. 随发布或固定周期清除失效条目
 5. 本文件修改走 PR/Review，与代码同等纪律
+

@@ -34,7 +34,7 @@
 - 双语界面：简体中文 / English
 
 ![downloads](https://img.shields.io/github/downloads/ErgeAIA/updates-dist/total)
-![版本](https://img.shields.io/badge/版本-v0.2.6-orange)
+![版本](https://img.shields.io/badge/版本-v0.2.7-orange)
 
 **最新版本**：v0.2.7
 
@@ -161,6 +161,8 @@
 <sub>用 ❤️ 和 Tauri 制作</sub>
 
 </div>
+
+
 
 
 
