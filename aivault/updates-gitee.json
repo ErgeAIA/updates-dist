@@ -1,19 +1,19 @@
 {
-  "version": "0.2.7",
-  "notes": "### 新增\n\n- **自定义运行时支持第三方 llama.cpp 变体**：引擎页「自定义运行时」升级为选择目录，自动扫描并默认选中启动程序（官方 llama-server 优先、可改选），自动识别 CUDA / Vulkan 后端并显示导入日期；第三方运行时（如 llama-kvmem-server）的残留进程清理与「释放资源」保护同步兼容。\n- **运行时选择面板应用内操作**：不再弹系统文件夹对话框——面板内浏览目录（只显示文件夹与可执行文件、支持返回上级），或直接**把文件夹 / exe 拖入窗口**自动定位扫描；候选行显示完整路径，后端徽章标注 CUDA / Vulkan。",
-  "pub_date": "2026-09-19T16:35:29.783Z",
+  "version": "0.2.8",
+  "notes": "感谢 B 站用户「宸子錒」的反馈。\n\n### 修复\n\n- **自定义数据目录**：数据库、密钥、备份与资产都在所选目录下；用户配置目录只保存引导指针。重启不再重复进入新手引导；目录不可用时提示专用错误（不会当成首次安装）。\n- **首次引导**：创建 Vault 后直接进入主界面，不再多一步确认页；仅识别用户目录下已安装的内置 Agent，不在用户目录生成 skills 目录。\n- **加密密钥**：建库时在 Vault 根目录生成 `vault.key`，与数据库同目录便于备份。\n- **设置页存储信息**：Vault 根目录 / 引导目录 / 数据库 / 密钥等路径与实际落盘位置一致。\n- **技能备份**：备份列表名称不再出现重复的来源前缀；删除备份后不再残留空文件夹。\n- **同步内置资产**：修复特定操作后同步内置资产可能失败并提示数据库错误的问题。\n- **重置 Vault**：修复重置后可能不回到首次引导的问题；自定义目录下重置会保留数据库恢复备份。\n- **ModelScope 在线搜索文件列表**：修复子目录中的模型权重（如 Comfy-Org 系列的 diffusion_models / vae / text_encoders 目录）不显示、展开只剩 configuration.json 的问题。\n\n### 文档\n\n- **本地模型评测提示词**：官网文档新增独立页（本地引擎分组），面向本地部署后的模型评测与调参：快速上手 → 按目标选测（数学 / 幻觉 / 指令遵循 / 工具调用 / 多轮 / 性能等）→ 主题详情可折叠；提示词一键复制正文，公开评测集给出出处与链接。\n- **文档站双语与变更日志时间**：官网落地页与文档站支持中文 / English；本文件各版本补齐完整发布时间（含时分秒），文档站更新日志页同步解析展示。\n- **下载说明**：官网下载入口指向分发仓主页（GitHub / Gitee），安装包以 Releases 为准。",
+  "pub_date": "2026-09-20T17:02:28.573Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUW9EY1I4bWc4cm1FL0pFQ3c3RWc4bmtVbFNha0I0Q3JCdTNOSFFZbkkrdnloeEZXbG95MlA0QzZtcEFLZitaYnFha1FrcWtqNkZHL1pvdCtBclVyckFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5ODM0MTU2CWZpbGU6QUkgVmF1bHRfMC4yLjdfeDY0LXNldHVwLmV4ZQpPNTEyUWp6dkpxYjlTbjRqMS94OHR2ejJYVm9wU3hjWmgzSzRpOUovaWhqUkVzR2t4Ri84RW9ZeUZXSXVOMi9qOFkxeGZEaEJOZC9LZ1F3ZERSZDFCdz09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.7/AI-Vault_0.2.7_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXZtY1dscVo4czhidlBrbTRhbDVQaFlqWllqNmFPaUpQamZadHhNZVIyOHhYSkwzZXBTYm1tTmxpOHE2V0x5TG5leUhKd1lmdUpFME1TVFA4ajJiaUE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5OTIyNjMzCWZpbGU6QUkgVmF1bHRfMC4yLjhfeDY0LXNldHVwLmV4ZQo4RjBjclgxZVdHcUM3NXdpZWE3VjN1ZERxcmp2ekdWbmJxYmdjSXV6WURRcFo5ZDJLdXM2cWhWSndjTk1qQTlsY3ZHY0Rxb2ozYTYxWTJtbXNaeVRBUT09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.8/AI-Vault_0.2.8_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWgvdG5KMkZiUGw3VGROZ1BqY3c0UThJMlhjek95ak9VQWcxZ2JLTWVhWkIzeTErZ3F4NHVNcTZjT2ZGSzRNSFZUeHM0Z2QxVitoeEk3MEpFenNNckE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5ODMzMTg2CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpKWUtQRERWSkdvWjl5NTZ5ZDYwN1lPbHRQZ0RCbW9oREVpVmtVOFNqMytLRmo5UnlqQ1Q3dTdBRG5PN1h1VWpaYW12SW53UmdjWVNZeDMwdFp0TWZCQT09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.7/AI-Vault_0.2.7_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUW1RVWZNQjdHRGxQWkQvU3dQeU5PQklIcXZGY3UxYmdFUWo0L3JNQTdOMzlFSGtNdkh1M2ZhUWM2WUJQbU1lZlhEZmp6MmpjVU1ucFFoTm1vK1Q2T0E0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5OTIxODk4CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negovMmdvWHU0bkZMVHkzUS9BMDdIRXhUcmp4b3B4SWRubWx5dTB0TkR6VXJYQmtHUzVtRms0RStrRVdabWhnWDBlakJqczhPMmRwMEVFRDVoWmthdlVEZz09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.8/AI-Vault_0.2.8_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWdLdURTcGdYWndoZmw5RUYwSEV2dTFoV2pLbGZic1BNcnMyd3hZOXRuN09ORnZBOEwrUmVpeTlnbUx4Z1JtemgxQktiZlRqUG1UYytpVHBFd3lLM1FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5ODMzMTg4CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5nego4TDNqNVlxQS9sWCt0WEpJK1oxNEpBaGVOcTNvNkFsV0gzdDZId3oxWGN0b3dFU2lBWW9BNHFvQWpLWTY1dVBwaFZidDlOTzhEdkFrVWlQN2JLS1NBQT09Cg==",
-      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.7/AI-Vault_0.2.7_x86_64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXVmNVB1a1ZZM0ZpSnUzNmJ5UkFpUFUweklMMEdKT2xwWkxDd09NVmkvN3VPS2orU1lORTN6NXhwc3pmZU11ejJNdEhNTEJpaW9HS3dEK3ZoUGNKd0FBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5OTIxOTEyCWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negppbXpWN0dOeW8vekZxRjhUeCtQZXE2YWV1STQ3OTdrbGRxY0tPWjhzbGlkd0phM09kV2d3R3ViTmxjQVVscHROK0JNQm1LVTM4b0dYMlgvd0hOZEFDZz09Cg==",
+      "url": "https://gitee.com/ergeaia/updates-dist/releases/download/aivault-v0.2.8/AI-Vault_0.2.8_x86_64.app.tar.gz"
     }
   }
 }
