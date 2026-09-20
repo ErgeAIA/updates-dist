@@ -2,7 +2,7 @@
 title: Project Progress
 type: project-progress
 project: updates-dist
-updated: 2026-09-17
+updated: 2026-09-20
 description: >
   项目开发进度实时记录：阶段、分支、代码状态、最近进展。每次会话更新。
   AI 在本文件新增进展或修改当前状态后，必须同步更新 frontmatter 的 updated 字段为当日日期（YYYY-MM-DD）。
@@ -18,9 +18,17 @@ description: >
 ## 当前状态
 
 - **当前分支**：main
-- **阶段**：<当前阶段>
-- **代码**：本仓为清单仓，已发布 aivault 更新清单 v0.2.5（GitHub / Gitee 双份）、ergemd 更新清单 v0.4.4、aivault/builtin 内置资产清单（7 类型 + index.json）；README 为多产品橱窗（个人站 + 四产品）
+- **阶段**：清单拉取与 macOS 本地部署验证
+- **代码**：本仓为清单仓，已发布 aivault 更新清单 v0.2.7（GitHub / Gitee 双份）、ergemd 更新清单 v0.4.4、aivault/builtin 内置资产清单（7 类型 + index.json）；README 为多产品橱窗
 - **工具链**：无构建命令；校验用 `scripts/verify-dist-layout.sh`
+- **最后更新**：2026-09-20 仓库拉取与 macOS 原生应用就绪核验
+  - 从 `https://github.com/ErgeAIA/updates-dist.git` 完成完整拉取并快进至 main（commit 4b9ffb5）
+  - 确认本仓架构为 Tauri updater 清单与资产分发仓（无本地编译源码），所分发产品均已原生支持 macOS
+  - 针对 macOS Apple Silicon (arm64) 环境，已下载并解包安装本仓托管的两款原生应用至 `/Applications/`：
+    - `AI Vault.app`（v0.2.7，`AI-Vault_0.2.7_aarch64.app.tar.gz`）
+    - `ErgeMD.app`（v0.4.4，`ErgeMD_0.4.4_aarch64.app.tar.gz`）
+  - 对两款应用执行 `xattr -cr` 清除 Gatekeeper 隔离属性，并通过 `spctl` 与 `codesign` 验证
+  - 执行 `scripts/verify-dist-layout.sh` 布局与版本校验通过
 - **最后更新**：2026-09-17 README 多产品橱窗
   - 顶部个人网站 https://ergeaia.github.io/；产品一览表互链
   - 区块：AI Vault（本仓下载表 v0.2.5）/ ErgeMD（引流源仓）/ ErgeHash / Catapult-CN（停更指路 AI Vault）
