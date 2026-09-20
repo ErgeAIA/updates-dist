@@ -44,7 +44,12 @@
 | macOS Apple Silicon | [AI-Vault_0.2.7_aarch64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.7/AI-Vault_0.2.7_aarch64.app.tar.gz) |
 | macOS Intel | [AI-Vault_0.2.7_x86_64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.2.7/AI-Vault_0.2.7_x86_64.app.tar.gz) |
 
-> **macOS 平台说明**：未启用 Apple 代码签名（免费软件策略），首次打开请 **右键 → 打开** 绕过 Gatekeeper。
+> **macOS 平台说明**：
+> - **安装方式**：当前 Releases 分发格式为应用更新归档（`.app.tar.gz`），下载后双击解压，将解压出的 `AI Vault.app` **拖拽至「访达 → 应用程序 (/Applications)」** 即可使用（建议后续发版补充开箱即用的 `.dmg` 磁盘映像）。
+> - **安全拦截解决**：未启用 Apple 商业证书签名（免费软件策略），首次打开若遇 Gatekeeper 拦截（提示「无法打开」或「已损坏」），请在「应用程序」目录中 **右键 → 打开**，或在终端执行命令解除隔离：
+>   ```bash
+>   xattr -cr "/Applications/AI Vault.app"
+>   ```
 
 **软件自动更新**：客户端启动时静默检查 `aivault/updates.json`，发现新版本后侧边栏显示更新徽章，一键下载安装并重启。
 

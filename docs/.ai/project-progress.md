@@ -21,13 +21,15 @@ description: >
 - **阶段**：清单拉取与 macOS 本地部署验证
 - **代码**：本仓为清单仓，已发布 aivault 更新清单 v0.2.7（GitHub / Gitee 双份）、ergemd 更新清单 v0.4.4、aivault/builtin 内置资产清单（7 类型 + index.json）；README 为多产品橱窗
 - **工具链**：无构建命令；校验用 `scripts/verify-dist-layout.sh`
-- **最后更新**：2026-09-20 仓库拉取与 macOS 原生应用就绪核验
+- **最后更新**：2026-09-20 仓库拉取、macOS 原生应用就绪与分发指引优化
   - 从 `https://github.com/ErgeAIA/updates-dist.git` 完成完整拉取并快进至 main（commit 4b9ffb5）
   - 确认本仓架构为 Tauri updater 清单与资产分发仓（无本地编译源码），所分发产品均已原生支持 macOS
   - 针对 macOS Apple Silicon (arm64) 环境，已下载并解包安装本仓托管的两款原生应用至 `/Applications/`：
     - `AI Vault.app`（v0.2.7，`AI-Vault_0.2.7_aarch64.app.tar.gz`）
     - `ErgeMD.app`（v0.4.4，`ErgeMD_0.4.4_aarch64.app.tar.gz`）
   - 对两款应用执行 `xattr -cr` 清除 Gatekeeper 隔离属性，并通过 `spctl` 与 `codesign` 验证
+  - 优化 README.md 针对 macOS 用户的安装引导：明确 `.app.tar.gz` 解压拖拽至 `/Applications` 的步骤，补充 Gatekeeper `xattr -cr` 绕过指令
+  - 提交 PR 反馈上游：针对原 Releases 仅提供 updater `.app.tar.gz` 导致用户误以为「无 Mac 安装包」的痛点，建议发版补充 `.dmg` 产物
   - 执行 `scripts/verify-dist-layout.sh` 布局与版本校验通过
 - **最后更新**：2026-09-17 README 多产品橱窗
   - 顶部个人网站 https://ergeaia.github.io/；产品一览表互链
