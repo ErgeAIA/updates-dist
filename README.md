@@ -41,10 +41,14 @@
 | 平台 | 安装包 |
 |------|--------|
 | Windows x64 | [AI-Vault_0.3.1_x64-setup.exe](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.3.1/AI-Vault_0.3.1_x64-setup.exe) |
-| macOS Apple Silicon | [AI-Vault_0.3.1_aarch64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.3.1/AI-Vault_0.3.1_aarch64.app.tar.gz) |
-| macOS Intel | [AI-Vault_0.3.1_x86_64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.3.1/AI-Vault_0.3.1_x86_64.app.tar.gz) |
+| macOS Apple Silicon | 首次安装：[AI-Vault_0.3.1_aarch64.dmg](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.3.1/AI-Vault_0.3.1_aarch64.dmg) ｜ 自动更新包：[AI-Vault_0.3.1_aarch64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.3.1/AI-Vault_0.3.1_aarch64.app.tar.gz) |
+| macOS Intel | 首次安装：[AI-Vault_0.3.1_x86_64.dmg](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.3.1/AI-Vault_0.3.1_x86_64.dmg) ｜ 自动更新包：[AI-Vault_0.3.1_x86_64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.3.1/AI-Vault_0.3.1_x86_64.app.tar.gz) |
 
-> **macOS 平台说明**：未启用 Apple 代码签名（免费软件策略），首次打开请 **右键 → 打开** 绕过 Gatekeeper。
+> **macOS 两个文件用途不同**：**`.dmg` 给「人」**——双击挂载后把 AI Vault 拖进 Applications，首次安装选它；**`.app.tar.gz` 给「程序」**——应用内自动更新只认这个格式（下载后解压替换 `/Applications` 里的旧版本），不用手动下载。Windows 的 `setup.exe` 一个文件身兼两职，macOS 拆成两个。
+>
+> `.dmg` 自 **v0.3.2** 起随每次发版一同提供（此前的版本只有 `.app.tar.gz`；老用户走应用内更新，无需重装）。
+
+> **macOS 平台说明**：未启用 Apple 代码签名（免费软件策略），首次打开请 **右键 → 打开** 绕过 Gatekeeper。若右键仍被拦，到 **系统设置 → 隐私与安全性** 底部点 **「仍要打开」**。
 
 **软件自动更新**：客户端启动时静默检查 `aivault/updates.json`，发现新版本后侧边栏显示更新徽章，一键下载安装并重启。
 
