@@ -1,5 +1,5 @@
 {
-  "version": "20260827",
+  "version": "20261016",
   "items": [
     {
       "builtin_key": "model-qwen-image-2512",
@@ -23,6 +23,31 @@
       "notes": "建议网盘，模型齐全",
       "tags": [
         "model-文生图"
+      ]
+    },
+    {
+      "builtin_key": "model-qwen38-27b-uncensored-iq4xs-mtp",
+      "name": "Qwen3.8-27B-Uncensored-IQ4-XS-MTP-16GB-VRAM-GGUF",
+      "description": "Qwen3.8-27B Uncensored IQ4_XS 量化模型（适配 16GB 显存） 本模型基于 Qwen3.8-27B Uncensored 进行 IQ4_XS 量化（4‑bit），文件体积为 12.9 GiB，专为 16GB 显存 的显卡优化，在保持较低困惑度的同时，兼顾推理速度和显存占用。",
+      "source_url": "[{\"url\":\"https://pan.quark.cn/s/af33bb97ef08?pwd=zKdw\",\"type\":\"netdisk\"},{\"url\":\"https://huggingface.co/Bucoid/Qwen3.8-27B-Uncensored-IQ4-XS-MTP-16GB-VRAM-GGUF\",\"type\":\"huggingface\"}]",
+      "source_type": "netdisk",
+      "cover_color": "brand",
+      "notes": "与同体积的 UD_IQ3_K_XL（12.5 GiB）量化方案进行了全面对比，评估指标如下。\n\n📊 量化质量对比\n\n评估指标\tIQ4_XS (本模型)\tUD_IQ3_K_XL (对比)\n文件大小\t12.9 GB\t12.5 GB\n量化精度\tIQ4_XS (4‑bit)\tUD_IQ3_K_XL (约 3‑bit?)\n量化模型困惑度 (Mean PPL)\t7.1481 ± 0.0465\t7.1117 ± 0.0459\n与基座模型 PPL 相关性\t99.28%\t99.31%\n平均 KL 散度 (Mean KLD)\t0.03268 ± 0.00030\t0.03130 ± 0.00032\n最大 KL 散度 (Max KLD)\t16.017（更小）\t21.409\n99.9% KL 分位数\t1.075\t1.219\nTop‑1 一致率 (Same top p)\t91.655% ± 0.072%\t92.419% ± 0.069%\n平均概率变化 (Mean Δp)\t-0.343% ± 0.013%（更接近 0）\t-0.738% ± 0.013%\nRMS 概率变化 (RMS Δp)\t4.986% ± 0.039%（更小）\t5.120% ± 0.046%\n在不启用MTP的情况下可以做到16GiB净空VRAM（不作为Windows的显示显卡）的情况下110k上下文\n\n开启MTP大概80k上下文。",
+      "tags": [
+        "model-无审查"
+      ]
+    },
+    {
+      "builtin_key": "model-qwen38-27b-heretic-ara-iq4xs-mtp",
+      "name": "Qwen3.8-27B-Heretic-Ara-16GB-VRAM-IQ4-XS-MTP-GGUF",
+      "description": "Qwen 3.8 27B Heretic‑Ara IQ4_XS 量化模型（适配 16GB 显存）\n本模型基于 Qwen 3.8 27B Heretic‑Ara BF16 进行 IQ4_XS 量化（4‑bit），文件体积为 12.7-13.3 GiB，专为 16GB 显存的显卡优化",
+      "source_url": "https://huggingface.co/Bucoid/Qwen3.8-27B-Heretic-Ara-16GB-VRAM-IQ4-XS-MTP-GGUF",
+      "source_type": "huggingface",
+      "cover_color": "brand",
+      "notes": "8/22 更新修复思考的问题，模型性能没有变化 大概还需要1天我会更新MTP的版本\n\n8/22 Updated and fixed the issues with thinking; model performance remains unchanged It will probably take about another day for me to update the MTP version.\n\n8/23 更新，对模型本身的性能进行一定优化，体积略微变大，无MTP版本13Gib，MTP版本13.3Gib 8/23 Update: The model's performance has been slightly optimized, resulting in a slight increase in size The non-MTP version is 13GiB, while the MTP version is 13.3GiB\n\n与同体积的 Heretic‑Ara‑Q3_K_M（12.4 GiB）量化方案进行了全面对比\n\n本模型使用Heretic Arbitrary-Rank Ablation做到的无审查\n\n📊 量化质量对比\n\n评估指标\tHeretic-Ara BF16 (base)\tIQ4_XS-3.0\tIQ4_XS-2.0\tHeretic-Ara-Q3_K_M\n文件大小\t50.1 GiB\t13 GiB (带MTP 13.3 GiB)\t12.7 GiB\t12.4 GiB\n量化精度\tBF16\tIQ4_XS (4‑bit)\tIQ4_XS (4‑bit)\tQ3_K_M (约 3‑bit)\n模型困惑度 (Mean PPL)\t7.008212 ± 0.045362\t7.046980 ± 0.045498\t7.102940 ± 0.046017\t7.403971 ± 0.048924\n与基座模型 PPL 相关性\t100%\t99.34%\t99.26%\t98.31%\n平均 KL 散度 (Mean KLD)\t0\t0.027832 ± 0.000324\t0.033398 ± 0.000308\t0.076034 ± 0.000554\n最大 KL 散度 (Max KLD)\t0\t18.317436\t15.094215\t17.866985\n99.9% KL 分位数\t0\t1.162850\t1.130034\t2.448278\nTop‑1 一致率 (Same top p)\t100%\t92.867% ± 0.067%\t91.619% ± 0.072%\t88.152% ± 0.084%\n平均概率变化 (Mean Δp)\t0%\t-0.243% ± 0.012%\t-0.306% ± 0.013%\t-0.490% ± 0.020%\nRMS 概率变化 (RMS Δp)\t0%\t4.538% ± 0.045%\t4.952% ± 0.041%\t7.560% ± 0.054%\n注：基座（BF16）的 KL 散度、Δp 等指标均为 0（自身对比），一致率为 100%。\n\n在不启用 MTP 的情况下，IQ4_XS 模型在 16 GiB 无显存占用（不作为 Windows 显示显卡）下可支持约 110k 上下文\n\n开启 MTP 后约为 80k",
+      "tags": [
+        "model-Qwen3.8",
+        "model-无审查"
       ]
     }
   ]

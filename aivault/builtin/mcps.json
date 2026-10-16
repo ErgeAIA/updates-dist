@@ -1,5 +1,5 @@
 {
-  "version": "20260827",
+  "version": "20261016",
   "items": [
     {
       "builtin_key": "mcp-sequential-thinking",
@@ -120,6 +120,30 @@
       "notes": "**设计工具**。需要在 Figma → Settings → Personal access tokens 生成 API Key，替换 `YOUR-KEY`。",
       "tags": [
         "mcp-工具"
+      ]
+    },
+    {
+      "builtin_key": "mcp-docs-mcp-server",
+      "name": "docs-mcp-server",
+      "description": "Open Code Review (OCR) MCP",
+      "config_json": "{\n  \"mcp_servers\": {\n    \"local-docs\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@acme/docs-mcp-server\"],\n      \"env\": [\"DOCS_TOKEN=secret_value\"],\n      \"tools\": [\"search_docs\", \"get_page\"]\n    }\n  }\n}",
+      "source": "custom",
+      "market_url": "https://open-codereview.ai/docs/mcp",
+      "notes": "https://open-codereview.ai/docs/mcp",
+      "tags": [
+        "mcp-Code Review"
+      ]
+    },
+    {
+      "builtin_key": "mcp-codegraph",
+      "name": "codegraph",
+      "description": "CodeGraph MCP Server（github.com/colbymchenry/codegraph）：把代码库索引为图谱后供 AI 查询，提供代码检索（codegraph_search）、上下文（codegraph_context）、调用方 / 被调用方（codegraph_callers / codegraph_callees）、影响面（codegraph_impact）与节点 / 文件查询等工具。需先安装 codegraph CLI，再以 `codegraph serve --mcp` 接入。",
+      "config_json": "{\n  \"mcpServers\": {\n    \"codegraph\": {\n      \"type\": \"stdio\",\n      \"command\": \"codegraph\",\n      \"args\": [\"serve\", \"--mcp\"]\n    }\n  }\n}",
+      "source": "custom",
+      "market_url": "https://github.com/colbymchenry/codegraph",
+      "notes": "~/.claude/settings.json 中添加自动权限：\n{\n  \"permissions\": {\n    \"allow\": [\n      \"mcp__codegraph__codegraph_search\",\n      \"mcp__codegraph__codegraph_context\",\n      \"mcp__codegraph__codegraph_callers\",\n      \"mcp__codegraph__codegraph_callees\",\n      \"mcp__codegraph__codegraph_impact\",\n      \"mcp__codegraph__codegraph_node\",\n      \"mcp__codegraph__codegraph_status\",\n      \"mcp__codegraph__codegraph_files\"\n    ]\n  }\n}",
+      "tags": [
+        "mcp-代码图谱"
       ]
     }
   ]

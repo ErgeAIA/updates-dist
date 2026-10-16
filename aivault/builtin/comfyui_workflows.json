@@ -1,4 +1,119 @@
 {
-  "version": "20260827",
-  "items": []
+  "version": "20261006",
+  "items": [
+    {
+      "builtin_key": "workflow-文生图-krea2超写实-高清大图",
+      "name": "文生图 Krea2超写实 高清大图",
+      "description": "文生图 Krea2超写实 高清大图，作者：灵辉AI",
+      "cover_color": "brand",
+      "rh_url": "https://www.runninghub.cn/workflow/2107139455793586178/?inviteCode=rh-v1434",
+      "tags": [
+        "comfyui-Krea2",
+        "comfyui-图片生成"
+      ]
+    },
+    {
+      "builtin_key": "workflow-krea2超写实4k文生图",
+      "name": "Krea2超写实4K文生图",
+      "description": "作者：CYZS-AI",
+      "cover_color": "brand",
+      "rh_url": "https://www.runninghub.cn/workflow/2107140477085634561?inviteCode=rh-v1434",
+      "tags": [
+        "comfyui-Krea2",
+        "comfyui-图片生成"
+      ]
+    },
+    {
+      "builtin_key": "workflow-krea2上传剧本自动提取生成角色资产",
+      "name": "krea2上传剧本自动提取生成角色资产",
+      "description": "krea2角色资产生成-上传剧本即可一键提取自动化生成。作者：没什么说的",
+      "cover_color": "brand",
+      "rh_url": "https://www.runninghub.cn/workflow/2107140601807466498?inviteCode=rh-v1434",
+      "tags": [
+        "comfyui-Krea2",
+        "comfyui-图片生成",
+        "comfyui-角色设计"
+      ]
+    },
+    {
+      "builtin_key": "workflow-krea2-afterlight",
+      "name": "Krea2-Afterlight",
+      "description": "开源版 Midjourney！作者：神棍(SGUN)",
+      "cover_color": "amber",
+      "rh_url": "https://www.runninghub.cn/workflow/2107140348920295426?inviteCode=rh-v1434",
+      "tags": [
+        "comfyui-Krea2",
+        "comfyui-图片生成"
+      ]
+    },
+    {
+      "builtin_key": "workflow-minimax-h3-最优官流",
+      "name": "MiniMax-H3-最优官流",
+      "description": "MiniMax-H3-最优官流，作者：神棍(SGUN)",
+      "cover_color": "brand",
+      "rh_url": "https://www.runninghub.cn/workflow/2107148732868423681/?inviteCode=rh-v1434",
+      "tags": [
+        "comfyui-视频生成",
+        "comfyui-MiniMax-H3"
+      ]
+    },
+    {
+      "builtin_key": "workflow-z-image-超写实人像v2",
+      "name": "Z-Image-超写实人像V2",
+      "description": "Z-Image-超写实人像V2.作者：神棍(SGUN)",
+      "cover_color": "brand",
+      "rh_url": "https://www.runninghub.cn/workflow/2107141102573805569?inviteCode=rh-v1434",
+      "tags": [
+        "comfyui-Z-Image",
+        "comfyui-图片生成"
+      ]
+    },
+    {
+      "builtin_key": "workflow-minimax-h3-t2v-创意时装大片文生视频",
+      "name": "Minimax H3-t2v 创意时装大片文生视频",
+      "description": "Minimax H3-t2v 创意时装大片文生视频。作者：Design Aesthetics",
+      "cover_color": "brand",
+      "rh_url": "https://www.runninghub.cn/workflow/2107140732292263938?inviteCode=rh-v1434",
+      "notes": "3:4竖向比例、时装大片、亚洲美女+东北虎互动、高动态特效** 的创意视频脚本。\n\n方向定位：\n**「东方野性美学 × 高级时装 × 东北虎守护者」**\n视觉参考：高端时尚广告 + 东方幻想电影 + AI特效大片\n要求：**无远景镜头，全程近景/中近景/特写，突出人物、虎、服装细节与互动。**\n\n---\n\n# 《虎纹觉醒 · Wild Elegance》\n\n## 3:4竖屏创意时装特效视频脚本\n\n**时长：12秒**\n**镜头数量：4个**\n**每镜头约3秒**\n**剪辑方式：高级感硬切 + 动态转场**\n\n---\n\n## 整体视觉设定\n\n画面比例：\n3:4竖向构图\n\n拍摄风格：\n高端时尚杂志广告摄影，真实摄影质感 + 东方奇幻特效。\n\n主体：\n一位拥有**波波头短发的亚洲时装美女**，\n穿着未来感东方高级定制服装，\n服装融合：\n\n* 东北虎橙黑纹理元素\n* 金属流线装饰\n* 半透明纱质结构\n* 高级皮革材质\n\n人物气质：\n冷艳、自信、优雅。\n\n东北虎：\n真实成年东北虎，\n毛发细节清晰，\n眼神温柔但具有力量感，\n与人物形成“人与自然共生”的高级关系。\n\n整体色彩：\n暖金色阳光 + 冰蓝环境光，\n橙黑虎纹与高级服装形成强烈视觉冲击。\n\n---\n\n# 镜头1（0-3秒）\n\n## 「虎纹觉醒」\n\n### 画面\n\n近距离时尚肖像。\n\n波波头短发亚洲美女站在雪原与森林交界的极简场景中。\n\n镜头从肩部特写开始。\n\n她穿着黑色高级时装，\n衣服上的虎纹刺绣随着微风轻轻移动。\n\n东北虎从画面右侧缓慢靠近，\n头部靠近她的肩膀。\n\n美女轻轻转头，\n与东北虎对视。\n\n眼神坚定又温柔。\n\n### 特效变化\n\n类似“画笔转换”的视觉方式：\n\n空气中出现一条金色光线，\n像无形画笔划过虎纹服装。\n\n经过的位置：\n\n真实布料 →\n逐渐变成动态手绘虎纹动画。\n\n虎纹像铅笔线稿一样在衣服表面生长。\n\n黑色粗线条、\n金色彩铅纹理、\n手绘笔触轻微抖动。\n\n但：\n人物脸部、\n背景、\n东北虎保持真实摄影。\n\n### 台词\n\n美女轻声：\n\n**“野性，也可以很优雅。”**\n\n---\n\n# 镜头2（3-6秒）\n\n## 「人与虎的共舞」\n\n### 画面\n\n中近景。\n\n美女缓慢向前走，\n东北虎同步跟随。\n\n她伸手轻轻触碰东北虎额头。\n\n东北虎闭眼享受触碰。\n\n镜头快速推进，\n捕捉：\n\n* 美女波波头发丝飞动\n* 虎毛被风吹起\n* 手指触碰虎毛瞬间\n\n### 特效变化\n\n手指接触的位置产生类似手绘扩散效果。\n\n东北虎身体局部：\n\n真实毛发 →\n变成粗糙手绘动画纹理。\n\n橙色毛发变成：\n蜡笔橙色涂抹。\n\n黑色条纹变成：\n粗黑线条。\n\n转换区域随着虎呼吸轻微波动。\n\n其他部分保持真实。\n\n形成：\n“一半现实、一半绘画”的奇幻效果。\n\n---\n\n# 镜头3（6-9秒）\n\n## 「虎影时装秀」\n\n### 画面\n\n低机位近距离跟拍。\n\n美女穿着高级虎纹长裙旋转。\n\n裙摆展开。\n\n东北虎围绕她缓慢移动。\n\n镜头捕捉：\n\n* 裙摆动态\n* 高跟鞋落地\n* 虎爪踩过雪地\n* 发丝飘动\n\n没有远景。\n\n始终保持人物和虎的近距离视觉冲击。\n\n### 特效变化\n\n裙摆旋转瞬间：\n\n真实高级面料 →\n转换为东方手绘动画布料。\n\n出现：\n\n黑色手绘轮廓线，\n金橙色蜡笔纹理，\n局部留白纸张质感。\n\n裙摆像一本会动的时装插画。\n\n东北虎仍保持真实。\n\n---\n\n# 镜头4（9-12秒）\n\n## 「王者凝视」\n\n### 画面\n\n超近距离双主体肖像。\n\n美女站在东北虎旁边。\n\n两者面对镜头。\n\n美女波波头被风吹动。\n\n东北虎缓慢抬头。\n\n两双眼睛同时看向镜头。\n\n高级时尚大片定格感。\n\n### 特效高潮\n\n东北虎眼睛闪过金色光芒。\n\n周围空气出现手绘线条。\n\n虎身轮廓短暂变成：\n\n黑色手绘线稿 →\n恢复真实东北虎。\n\n美女服装上的虎纹也同步闪耀。\n\n最终形成：\n\n真实人物 + 真实东北虎 + 手绘东方纹样融合。\n\n---\n\n# 音乐与声音设计\n\nBGM：\n高级东方电子音乐。\n\n元素：\n\n* 低沉鼓点\n* 大气弦乐\n* 东方笛声\n* 空灵女声吟唱\n\n节奏：\n\n0-3秒：\n神秘低频进入\n\n3-9秒：\n鼓点增强，动作加速\n\n9-12秒：\n音乐爆发，形成时尚大片高潮\n\n环境音：\n\n* 风吹森林声\n* 虎低沉呼吸声\n* 服装布料摩擦声\n\n---\n\n# AI视频生成限制词\n\n禁止：\n\n* 远景\n* 航拍\n* 巨大场景展示\n* 卡通人物\n* 3D动物\n* 毛绒玩具虎\n* 人虎融合怪物\n* 多只老虎\n* 人物脸部变化\n* 手指异常\n* 五官变形\n* 服装随机变化\n\n保持：\n\n* 亚洲美女\n* 波波头短发\n* 高级时装摄影\n* 真实东北虎\n* 电影级光影\n* 近距离互动\n* 时尚广告质感",
+      "tags": [
+        "comfyui-视频生成",
+        "comfyui-MiniMax-H3"
+      ]
+    },
+    {
+      "builtin_key": "workflow-krea2-musebystable-单图文生图-批量文生图",
+      "name": "Krea2 MuseByStable 单图文生图+批量文生图",
+      "description": "作者：Design Aesthetics",
+      "cover_color": "brand",
+      "rh_url": "https://www.runninghub.cn/workflow/2107140243081228289?inviteCode=rh-v1434",
+      "tags": [
+        "comfyui-人像写真",
+        "comfyui-Krea2",
+        "comfyui-图片生成"
+      ]
+    },
+    {
+      "builtin_key": "workflow-换装-换衣-电商服装展示-firered-image-edit-小红书",
+      "name": "换装 换衣 电商服装展示 FireRed-Image-Edit 小红书",
+      "description": "作者：小灰机AI",
+      "cover_color": "brand",
+      "rh_url": "https://www.runninghub.cn/workflow/2107140045357539329/?inviteCode=rh-v1434",
+      "tags": [
+        "comfyui-FireRed-Image-Edit",
+        "comfyui-换装换衣"
+      ]
+    },
+    {
+      "builtin_key": "workflow-minimaxh3-电商-多参生视频",
+      "name": "MinimaxH3-「电商」-多参生视频",
+      "description": "作者：魅力创意\nMinimax H3「电商」多参生视频实测。\n\n这次主要体验的是多参考图生成视频的工作流：人物、穿搭、场景、多角度等参考素材可以一起输入，让模型获得更完整的信息，再直接生成视频。\n\n同时加入了自动提示词生成，不需要自己从头写复杂、详细的提示词。准备好参考素材后，就能快速完成生成，整体流程更适合电商服装、模特展示、产品种草等场景。\n\n本次内容：\n\n多参考图直接生成视频\n人物 / 穿搭 / 场景等多维参考\n自动生成提示词，无需手写复杂提示词\n约 3 分钟快速预览生成效果\n实测电商类素材的生成流程与效果",
+      "cover_color": "brand",
+      "rh_url": "https://www.runninghub.cn/workflow/2107140949632708610?inviteCode=rh-v1434",
+      "tags": [
+        "comfyui-视频生成",
+        "comfyui-电商产品",
+        "comfyui-MiniMax-H3"
+      ]
+    }
+  ]
 }
