@@ -43,10 +43,11 @@
 | Windows x64 | [AI-Vault_0.4.0_x64-setup.exe](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.4.0/AI-Vault_0.4.0_x64-setup.exe) |
 | macOS Apple Silicon | 首次安装：[AI-Vault_0.4.0_aarch64.dmg](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.4.0/AI-Vault_0.4.0_aarch64.dmg) ｜ 自动更新包：[AI-Vault_0.4.0_aarch64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.4.0/AI-Vault_0.4.0_aarch64.app.tar.gz) |
 | macOS Intel | 首次安装：[AI-Vault_0.4.0_x86_64.dmg](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.4.0/AI-Vault_0.4.0_x86_64.dmg) ｜ 自动更新包：[AI-Vault_0.4.0_x86_64.app.tar.gz](https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.4.0/AI-Vault_0.4.0_x86_64.app.tar.gz) |
+| 国内网盘 | [夸克网盘（提取码 s9mG）](https://pan.quark.cn/s/a23f244661b4?pwd=s9mG)，与 Releases 同步上传 |
 
 > **macOS 两个文件用途不同**：**`.dmg` 给「人」**——双击挂载后把 AI Vault 拖进 Applications，首次安装选它；**`.app.tar.gz` 给「程序」**——应用内自动更新只认这个格式（下载后解压替换 `/Applications` 里的旧版本），不用手动下载。Windows 的 `setup.exe` 一个文件身兼两职，macOS 拆成两个。
 >
-> `.dmg` 自 **v0.3.2** 起随每次发版一同提供（此前的版本只有 `.app.tar.gz`；老用户走应用内更新，无需重装）。
+> `.dmg` 自 **v0.4.0** 起随每次发版一同提供（v0.3.1 及更早只有 `.app.tar.gz`——收集路径缺陷，BUG-088；老用户走应用内更新，无需重装）。
 
 > **macOS 平台说明**：未启用 Apple 代码签名（免费软件策略）。首次打开若被 Gatekeeper 拦住（提示「无法打开」或「已损坏」），先在 Applications 里 **右键 → 打开**；右键仍无效时，到 **系统设置 → 隐私与安全性** 底部点 **「仍要打开」**，或在终端解除隔离标记：
 >
@@ -56,7 +57,7 @@
 >
 > （该命令去掉 `.app` 上的 quarantine 扩展属性；此指引由 37chengshan 在真机上验证并提 PR 反馈。）
 
-**软件自动更新**：客户端启动时静默检查 `aivault/updates.json`，发现新版本后侧边栏显示更新徽章，一键下载安装并重启。
+**软件自动更新**：客户端启动时静默检查 `aivault/updates.json`，发现新版本后侧边栏显示更新徽章，一键下载安装并重启。国内网络下 GitHub 不稳时，从上方网盘链接手动下载安装包覆盖安装即可。
 
 - 官网 / 文档：[ergeaia.github.io/aivault-site](https://ergeaia.github.io/aivault-site/) · [使用文档](https://ergeaia.github.io/aivault-site/docs/)
 
@@ -127,11 +128,11 @@
 
 | 约定 | 说明 |
 |------|------|
-| 自动更新清单 | `aivault/updates.json`、`aivault/updates-gitee.json`、`ergemd/updates.json` |
+| 自动更新清单 | `aivault/updates.json`、`ergemd/updates.json` |
 | 内置资产 | `aivault/builtin/`（per-type 日期版本 + `index.json`） |
 | 安装包 | 只挂在 [Releases](https://github.com/ErgeAIA/updates-dist/releases)，不进 git 文件树 |
 | 路径红线 | 禁止出现 `aivault/aivault/` 冗余路径；发版后可跑 `scripts/verify-dist-layout.sh` |
-| 双源 | GitHub raw 为默认；Gitee 为镜像（国内网络） |
+| 更新源 | GitHub raw 单源（Gitee 镜像已移除，2026-10-16） |
 | 版本同步 | 发版 CI 同步 README「最新版本」与下载链接（见 AGENTS.md 工作流） |
 
 ---

@@ -38,15 +38,9 @@ else
   echo "OK: README 与 updates.json 均为 v$MANIFEST_VER"
 fi
 
-GITEE_VER=$(json_version aivault/updates-gitee.json)
-if [ -z "$GITEE_VER" ]; then
-  echo "FAIL: 无法解析 updates-gitee.json 版本"
+if [ -e aivault/updates-gitee.json ]; then
+  echo "FAIL: aivault/updates-gitee.json 仍存在（Gitee 渠道已移除，DEC-264，应删除）"
   fail=1
-elif [ "$MANIFEST_VER" != "$GITEE_VER" ]; then
-  echo "FAIL: updates-gitee.json 版本 ($GITEE_VER) ≠ updates.json ($MANIFEST_VER)"
-  fail=1
-else
-  echo "OK: Gitee 清单同版本 v$MANIFEST_VER"
 fi
 
 if [ "$fail" -eq 0 ]; then
