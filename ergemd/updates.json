@@ -1,19 +1,19 @@
 {
-  "version": "0.4.4",
-  "notes": "\n### 新增\n\n- **应用内自动更新**：接入 Tauri 官方 updater——收到更新提示后可直接在应用内下载（带进度条）并静默安装重启，无需再跳转浏览器下载安装包手动重装；更新清单经 GitHub / Gitee 双源分发（静态镜像，不受 API 限流影响），国内用户走 Gitee 通路；所有更新包均经 minisign 签名验证\n\n### 修复\n\n- **GitHub 更新源规避匿名 API 限流**：本机装有 GitHub CLI（gh）并登录时，更新检查自动复用其登录凭证（认证额度 5000/h 且独立于匿名共享出口 IP 的 60/h 额度）；未安装 gh 时静默回退匿名请求\n\n",
-  "pub_date": "2026-09-10T15:50:08.000Z",
+  "version": "0.5.0",
+  "notes": "\n### 新增\n\n- **思维导图新增「横向逻辑图」布局**：中心节点在左、分支全部朝右展开\n- **思维导图配色可选**：阅读选项新增「思维导图样式」，提供品牌分支 / 层级渐变 / 描边 / 经典四种观感\n- **浮动目录可固定**：移开鼠标不再自动收起，可用面板图钉、阅读选项开关或 `Ctrl/Cmd+Shift+L` 切换\n- **图表悬停高亮**：悬停图元时同类元素淡出、当前项保持清晰，覆盖饼图、甘特图、桑基图、思维导图等 30 余种图表\n\n### 修复\n\n- **图表预览与「另存为 SVG」不再丢失标签文字**\n- **万行级文档目录跳转精准落位**，点击后不再需要二次手动滚动\n- **虚拟滚动下当前章节高亮不再偏移到相邻章节**\n- **多标签页下搜索、清除高亮与全选只作用于当前文档**\n- **切换文档不再出现串到别的文档数据的情况**\n- **含 `|` 的普通段落不再被误判为表格**（如 shell 管道命令），长文档解析更快\n- **阅读进度记录真实字数**（此前恒为 0）\n- **导出结果与屏幕所见一致**：HTML / PDF 导出改用阅读视图的渲染结果，标题配色、图表颜色与思维导图中心节点不再和屏幕上不一致\n- **PDF 中的图表不再被放大或裁切**：色块与桑基彩带正常显示，图表、表格与公式不再跨页断裂\n- **浮动目录观感统一**：面板底色随主题画布，当前章节高亮统一用主题品牌色，固定图钉不再随列表滚走\n- **清除各类图表残留的黑色描边**：甘特图网格线、用户旅程图角色圈、架构图节点、C4 关系线、Git 合并箭头、树状图与饼图等位置不再出现默认黑描边\n- **甘特图任务条改用品牌色**并自动选取可读文字，不再与分区底色相近而发糊，也不再整块发黑\n- **桑基图流量随主题配色**，深色主题下清晰可见，连线不再整体消失\n- **Git 图连接处的多余弧线已去除**\n- **切换主题后所有图表即时更新**，无需手动刷新\n- **看板图卡片在深色主题下文字清晰可读**（不再白底白字）\n- **思维导图配色重做**：默认按层级着色（同层同色、层级间色相递进），底色与文字按对比度自动配对，高饱和主题下不再刺眼；节点字号由中心向外逐级递减，长文字自动换行\n\n### 优化\n\n- **大文档打开更快**：目录与渲染共用同一份解析数据，少一轮全文扫描\n- **多开文档内存更稳**：仅活动、固定与最近 3 个标签页常驻，切回时自动恢复滚动位置\n- **文件树默认折叠**：只展开根层，子目录按需展开\n- **初始窗口更大**：1480×920（最小 900×640）\n- **阅读选项主题区整理**：移除明暗分组，默认品牌双主题置顶，主题改用意象化命名\n- **代码块改用系统等宽字体**：跨平台显示一致，已安装 JetBrains Mono 仍可在设置中选用\n- **标题栏支持中键拖拽**\n- **图表引擎升级至 Mermaid 12.2.0**：观感与既有渲染保持一致。**注意：新引擎需 Safari 17.4+，macOS 11 Big Sur 及更早版本无法渲染图表**（Windows / Linux 不受影响）\n\n### 安全\n\n- **关闭未使用的资源协议**，进一步收缩攻击面\n\n### 移除\n\n- 移除从未被读写的 workspaces 数据表\n\n",
+  "pub_date": "2026-10-22T17:59:02.426Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYWxaTGJyQzZZanNwNDc3WVNHeitETk80dEd6Zndzb3BHL1JqTkNvQkJ2Mm92aTFNK2c5MkxFblhVeFBGZTRUNHV4M3BsQ0xnUWJRdDcxTmt5VmFoY0FnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MDU1MzExCWZpbGU6RXJnZU1EXzAuNC40X3g2NC1zZXR1cC5leGUKL3pFV2FyaFZLN3JGYmV3ajgwVVZpWW5GbXhaTHQ2RXMwSkFUSEgrTTg1eXRJTjFCeVpFdnZaaHpQc0xiWXZUZWh2cXBqVXNVUnFKeXhuaUZ2bVhMQ1E9PQo=",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.4.4/ErgeMD_0.4.4_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYXFKc2xrUkNwMU5zZG1UdDBzWWJqLy9lQzF1aDRUT3daUnRjbkdKZVl6VmRpTmI5Uk1EMCs4SHZsOEpMMFUvNmFkRjEyVjZpbEYrQ2txNjI1blBHTmdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNjkwMzg3CWZpbGU6RXJnZU1EXzAuNS4wX3g2NC1zZXR1cC5leGUKM3VicjJGbEp2SjY1cGZxbU9mTUpNaWdKamhHODJ3dXU1NXlXSUlFTFZnVS96aGRRaHlhYStoMmt5bTJ3ejFkZWpsNW5GSlY0dDE4dmVNeG8rSlJyRFE9PQo=",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.5.0/ErgeMD_0.5.0_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYWhXWjJHZFNrMjNWcWQ0TEVVMWxROUFnL05HcE9Qa2laNnZ3MDVmeE9vSTk1QmJJZVRwRlp1TStqallHSmVVNitoQTIvN0o1QTkrc25KZXJKZGlyR2dvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MDU1Mzg3CWZpbGU6RXJnZU1ELmFwcC50YXIuZ3oKekNQNXRrY3dyVW9CTWljQXgwa245TVlialltdXVHV2ZwUlBhdXFDZTFHRUQ1bURjUlkwbHdBdGh5d0UzR1RnUklhNnN3UVhqWHNQMmdscmlCTjNPQkE9PQo=",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.4.4/ErgeMD_0.4.4_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYXRYc1k2cjJRQjNjL3h6ejhUbEhYWFdXRGZHMjQ0NjFmYXhDVThLN24xSmVLYk9jdkJWWEJKVld3OGxmY09heDQwb1FzWmlKRDRiODhlcXFxWjdwZ0E0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNjkwNDAyCWZpbGU6RXJnZU1ELmFwcC50YXIuZ3oKeTYzMDN4eXh3c1pWdVcxUG4zUjc0ekZubUx5bU9ldTN4R1BRN0hJbHRWQ2VDUk1UQnY1Ynl2eWVwWGhEd3ZwMWhrREllNGN6blB3VDY0enlXTk5oQmc9PQo=",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.5.0/ErgeMD_0.5.0_aarch64.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYXZ2anBXeGRFdGV4bDlLZjJWRjNoMHJRNHhiWGN3WXhxRTQxV2o0QWhRcFJsb3N0SU9PbHF1MGllK2wvL1VhaHhpRWYrS3VvbU1JdVMxNGpVM3g4OXd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5MDU1MzUzCWZpbGU6RXJnZU1EXzAuNC40X2FtZDY0LkFwcEltYWdlCk5HMjVkM24yL1VSS2ltbHAwUnNDYnhWdHdLQXNCWEtSM0lYdEgva2dVWGRwcjhPMkVjVUEwblBrRkt6Wi9sNnVKWlp5c3psazYwWVJNazhkaWRkSEFBPT0K",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.4.4/ErgeMD_0.4.4_amd64.AppImage"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYWdUSGNpalRkTWtjRG5xOHdwTFVodEtQT082d1hXZGtlZDFiTXJpS2hsWVZjK1VVbXNqTUtkRmdnRmtiTEl4M2RhcEh2WEVQSXJFT2huZXVuQ0ZXQ2cwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNjkxODk4CWZpbGU6RXJnZU1EXzAuNS4wX2FtZDY0LkFwcEltYWdlCnVQMWV1Z0dFTnd4b1ZRRzBaQ2w0L20zNFlxNmFvWEpSck1kTDJxZEVqdjFNTEJEY2RnQWVlcnRlQzV2YlhiMmx4NzBKOEUyVHZOQkN2bC9JeXlBeERRPT0K",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.5.0/ErgeMD_0.5.0_amd64.AppImage"
     }
   }
 }
