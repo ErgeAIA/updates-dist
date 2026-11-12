@@ -1,0 +1,2512 @@
+{
+  "version": "20261116.3",
+  "models": [
+    {
+      "builtin_key": "rec-gemma4-e4b",
+      "name": "Gemma 4 E4B",
+      "params_b": 4,
+      "quant": "Q4_0",
+      "size_bytes": 3435973837,
+      "size_label": "~3.2 GB",
+      "ctx_tokens": 131072,
+      "use_cases": [
+        "chat"
+      ],
+      "runtime_requirement": "official",
+      "artifact": "gguf",
+      "runtime_hint": "稠密架构：UD-IQ2_M 的文件头无 expert_count / expert_used_count / expert_feed_forward_length，张量表无 _exps 与 ffn_gate_inp 路由张量，可分层部分为 0。",
+      "component": false,
+      "vram_need_mb": 3325,
+      "min_ram_gb": 8,
+      "vram_tier": "low",
+      "description_zh": "通用对话：sub-8GB 公认王者，Google 官方 QAT 量化，128K 上下文",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 3277,
+        "dense_weights_mb": 3277,
+        "layerable_weights_mb": 0,
+        "assumed_ctx_tokens": 16384,
+        "kv_cache_mb": 48,
+        "required_resident_mb": 3325,
+        "overflow": "none",
+        "overflow_mb": 0,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "derived",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "derived",
+        "size_bytes": "derived",
+        "vram_need_mb": "derived",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/gemma-4-E4B-it-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 0,
+      "entry_kind": "static_recommended",
+      "reference_vram_gb": null,
+      "vram_floor_gb": null,
+      "ram_need_gb": null,
+      "row_bytes": null,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": null,
+      "families": [],
+      "platform": [],
+      "upstream": null,
+      "source_tier": "local"
+    },
+    {
+      "builtin_key": "rec-minicpm5-1b",
+      "name": "MiniCPM5-1B",
+      "params_b": 1,
+      "quant": "Q8_0",
+      "size_bytes": 1395864371,
+      "size_label": "~1.3 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat"
+      ],
+      "runtime_requirement": "official",
+      "artifact": "gguf",
+      "runtime_hint": null,
+      "component": false,
+      "vram_need_mb": 1715,
+      "min_ram_gb": 8,
+      "vram_tier": "low",
+      "description_zh": "端侧轻量：AA 认证 1B 级开源最强（面壁小钢炮）",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 1331,
+        "dense_weights_mb": 1331,
+        "layerable_weights_mb": 0,
+        "assumed_ctx_tokens": 16384,
+        "kv_cache_mb": 384,
+        "required_resident_mb": 1715,
+        "overflow": "none",
+        "overflow_mb": 0,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "derived",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "derived",
+        "vram_need_mb": "derived",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/openbmb/MiniCPM5-1B-GGUF",
+      "ms_url": "https://modelscope.cn/models/OpenBMB/MiniCPM5-1B-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 1,
+      "entry_kind": "static_recommended",
+      "reference_vram_gb": null,
+      "vram_floor_gb": null,
+      "ram_need_gb": null,
+      "row_bytes": null,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": null,
+      "families": [],
+      "platform": [],
+      "upstream": null,
+      "source_tier": "local"
+    },
+    {
+      "builtin_key": "rec-phi4-mini",
+      "name": "Phi-4-mini-instruct",
+      "params_b": 3.8,
+      "quant": "Q4_K_M",
+      "size_bytes": 2469606195,
+      "size_label": "~2.3 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat"
+      ],
+      "runtime_requirement": "official",
+      "artifact": "gguf",
+      "runtime_hint": "CPU 推理不需要独显；这里列的是 GPU 全量驻留的显存门槛，不是运行前提。",
+      "component": false,
+      "vram_need_mb": 3123,
+      "min_ram_gb": 8,
+      "vram_tier": "low",
+      "description_zh": "CPU 推理首选：无需独显，30-50 tok/s",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 2355,
+        "dense_weights_mb": 2355,
+        "layerable_weights_mb": 0,
+        "assumed_ctx_tokens": 8192,
+        "kv_cache_mb": 768,
+        "required_resident_mb": 3123,
+        "overflow": "none",
+        "overflow_mb": 0,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "derived",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "derived",
+        "vram_need_mb": "derived",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/Phi-4-mini-instruct-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/Phi-4-mini-instruct-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 2,
+      "entry_kind": "static_recommended",
+      "reference_vram_gb": null,
+      "vram_floor_gb": null,
+      "ram_need_gb": null,
+      "row_bytes": null,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": null,
+      "families": [],
+      "platform": [],
+      "upstream": null,
+      "source_tier": "local"
+    },
+    {
+      "builtin_key": "rec-qwen35-9b",
+      "name": "Qwen3.5-9B",
+      "params_b": 9,
+      "quant": "Q4_K_M",
+      "size_bytes": 6227702579,
+      "size_label": "~5.8 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat"
+      ],
+      "runtime_requirement": "official",
+      "artifact": "gguf",
+      "runtime_hint": "8GB 卡能否全量取决于运行上下文；账本按 16K 估算，边界需按实际上下文复核。",
+      "component": false,
+      "vram_need_mb": 7988,
+      "min_ram_gb": 16,
+      "vram_tier": "low",
+      "description_zh": "通用对话：sub-10B 级推理最强，中文能力优秀",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 5940,
+        "dense_weights_mb": 5940,
+        "layerable_weights_mb": 0,
+        "assumed_ctx_tokens": 16384,
+        "kv_cache_mb": 2048,
+        "required_resident_mb": 7988,
+        "overflow": "none",
+        "overflow_mb": 0,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "derived",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "derived",
+        "vram_need_mb": "derived",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/Qwen3.5-9B-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/Qwen3.5-9B-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 3,
+      "entry_kind": "static_recommended",
+      "reference_vram_gb": null,
+      "vram_floor_gb": null,
+      "ram_need_gb": null,
+      "row_bytes": null,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": null,
+      "families": [],
+      "platform": [],
+      "upstream": null,
+      "source_tier": "local"
+    },
+    {
+      "builtin_key": "rec-gemma4-12b",
+      "name": "Gemma 4 12B",
+      "params_b": 12,
+      "quant": "Q4_0",
+      "size_bytes": 7516192768,
+      "size_label": "~7 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "multimodal",
+        "chat"
+      ],
+      "runtime_requirement": "official",
+      "artifact": "gguf",
+      "runtime_hint": null,
+      "component": false,
+      "vram_need_mb": 7936,
+      "min_ram_gb": 16,
+      "vram_tier": "low",
+      "description_zh": "多模态：原生视觉+音频，Google 官方 QAT 量化",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 7168,
+        "dense_weights_mb": 7168,
+        "layerable_weights_mb": 0,
+        "assumed_ctx_tokens": 8192,
+        "kv_cache_mb": 768,
+        "required_resident_mb": 7936,
+        "overflow": "none",
+        "overflow_mb": 0,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "derived",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "derived",
+        "vram_need_mb": "derived",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/gemma-4-12b-it-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/gemma-4-12b-it-GGUF",
+      "quark_url": "https://pan.quark.cn/s/65ac0dc1128f?pwd=Bq7m",
+      "baidu_url": "",
+      "sort_order": 4,
+      "entry_kind": "static_recommended",
+      "reference_vram_gb": null,
+      "vram_floor_gb": null,
+      "ram_need_gb": null,
+      "row_bytes": null,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": null,
+      "families": [],
+      "platform": [],
+      "upstream": null,
+      "source_tier": "local"
+    },
+    {
+      "builtin_key": "rec-granite41-8b",
+      "name": "Granite 4.1 8B",
+      "params_b": 8,
+      "quant": "Q4_K_M",
+      "size_bytes": 5046586573,
+      "size_label": "~4.7 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "coding"
+      ],
+      "runtime_requirement": "official",
+      "artifact": "gguf",
+      "runtime_hint": null,
+      "component": false,
+      "vram_need_mb": 6093,
+      "min_ram_gb": 16,
+      "vram_tier": "low",
+      "description_zh": "编码/RAG：同级 HumanEval 最高（IBM，Apache 2.0）",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 4813,
+        "dense_weights_mb": 4813,
+        "layerable_weights_mb": 0,
+        "assumed_ctx_tokens": 8192,
+        "kv_cache_mb": 1280,
+        "required_resident_mb": 6093,
+        "overflow": "none",
+        "overflow_mb": 0,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "derived",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "derived",
+        "vram_need_mb": "derived",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/granite-4.1-8b-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/granite-4.1-8b-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 5,
+      "entry_kind": "static_recommended",
+      "reference_vram_gb": null,
+      "vram_floor_gb": null,
+      "ram_need_gb": null,
+      "row_bytes": null,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": null,
+      "families": [],
+      "platform": [],
+      "upstream": null,
+      "source_tier": "local"
+    },
+    {
+      "builtin_key": "rec-qwen38-27b",
+      "name": "Qwen3.8-27B",
+      "params_b": 27,
+      "quant": "Q4_K_M",
+      "size_bytes": 17716740096,
+      "size_label": "~16.5 GB",
+      "ctx_tokens": 1048576,
+      "use_cases": [
+        "chat",
+        "multimodal",
+        "long-context"
+      ],
+      "runtime_requirement": "official",
+      "artifact": "gguf",
+      "runtime_hint": "1M 是模型原生上下文上限；账本按 32K 运行上下文估算。",
+      "component": false,
+      "vram_need_mb": 22466,
+      "min_ram_gb": 32,
+      "vram_tier": "high",
+      "description_zh": "通用旗舰：当前综合榜第 1，原生视觉，1M 上下文",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 16896,
+        "dense_weights_mb": 16896,
+        "layerable_weights_mb": 0,
+        "assumed_ctx_tokens": 32768,
+        "kv_cache_mb": 5570,
+        "required_resident_mb": 22466,
+        "overflow": "none",
+        "overflow_mb": 0,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "derived",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "derived",
+        "size_bytes": "derived",
+        "vram_need_mb": "derived",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/Qwen3.8-27B-GGUF",
+      "quark_url": "https://pan.quark.cn/s/65ac0dc1128f?pwd=Bq7m",
+      "baidu_url": "",
+      "sort_order": 6,
+      "entry_kind": "static_recommended",
+      "reference_vram_gb": null,
+      "vram_floor_gb": null,
+      "ram_need_gb": null,
+      "row_bytes": null,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": null,
+      "families": [],
+      "platform": [],
+      "upstream": null,
+      "source_tier": "local"
+    },
+    {
+      "builtin_key": "rec-qwen36-35b-a3b-mtp",
+      "name": "Qwen3.6-35B-A3B-MTP",
+      "params_b": 35,
+      "quant": "Q4_K_M",
+      "size_bytes": 22663387424,
+      "size_label": "~21.1 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "coding"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存 + KV 分层：切分取上游 FAMILIES 常量（arena 20.1 / beside 4.7 GiB，显存地板 6.7 GiB）。host KV 按内存档位分配：32GB→8GB、48GB→12GB、64GB 及以上→16GB。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 28,
+      "vram_tier": "any",
+      "description_zh": "速度优选：MoE 3B 激活 + MTP 投机解码",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 21613,
+        "dense_weights_mb": 1031,
+        "layerable_weights_mb": 20582,
+        "assumed_ctx_tokens": 36864,
+        "kv_cache_mb": 3782,
+        "required_resident_mb": 4813,
+        "overflow": "ram",
+        "overflow_mb": 20582,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "derived",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+      "quark_url": "https://pan.quark.cn/s/65ac0dc1128f?pwd=Bq7m",
+      "baidu_url": "",
+      "sort_order": 7,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 6.7,
+      "ram_need_gb": 27,
+      "row_bytes": 22663387424,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj-F16.gguf",
+      "vision_bytes": 899283584,
+      "budget": null,
+      "families": [
+        "qwen36"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+        "revision": "5bc3e238d916f48a861bac2f8a1990a0e9b7e98d",
+        "files": [
+          {
+            "name": "Qwen3.6-35B-A3B-UD-Q4_K_M.gguf",
+            "bytes": 22663387424,
+            "role": "weights",
+            "sha256": "0b21525e972670ed59e1812e170b27c26355381f0656ecc4e25617ece7dac58b"
+          },
+          {
+            "name": "mmproj-F16.gguf",
+            "bytes": 899283584,
+            "role": "mmproj",
+            "local_name": "mmproj-Qwen3.6-35B-A3B-MTP-F16.gguf",
+            "sha256": "71f3cbc1f7cc0f30d09d41cfa924c0060827ebc33bf15ace7e86661e856f0160"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-gemma4-26b-a4b",
+      "name": "Gemma 4 26B-A4B",
+      "params_b": 26,
+      "quant": "UD-Q3_K_M",
+      "size_bytes": 13190264704,
+      "size_label": "~12.3 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "multimodal"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 10.3 / beside 5.8 GiB，显存地板 7.8 GiB）。mmproj 与 MTP 各自独立下载，不计入主权重体积。 KVMem 支持需 kvmem 分支（gemma4-kvmem patch，上游 poly.7）；当前适配版选中会自动关闭 KVMem 参数并提示改用 kvmem 分支。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 19,
+      "vram_tier": "any",
+      "description_zh": "深度推理：26B-A4B（4B 激活）的 Q3 档，显存地板 7.8 GB，内存下限 19 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 12579,
+        "dense_weights_mb": 2032,
+        "layerable_weights_mb": 10547,
+        "assumed_ctx_tokens": 16384,
+        "kv_cache_mb": 3907,
+        "required_resident_mb": 5939,
+        "overflow": "ram",
+        "overflow_mb": 10547,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "derived",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/gemma-4-26B-A4B-it-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 8,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 7.8,
+      "ram_need_gb": 18,
+      "row_bytes": null,
+      "draft": "MTP/mtp-gemma-4-26B-A4B-it-Q8_0.gguf",
+      "draft_bytes": 461766816,
+      "vision": "mmproj-F16.gguf",
+      "vision_bytes": 1193058784,
+      "budget": false,
+      "families": [
+        "gemma4"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "unsloth/gemma-4-26B-A4B-it-GGUF",
+        "revision": "c099eb48e663fd284577b04978a94ffccb261841",
+        "files": [
+          {
+            "name": "gemma-4-26B-A4B-it-UD-Q3_K_M.gguf",
+            "bytes": 12728497888,
+            "role": "weights",
+            "sha256": "811882f6df81c8ea204a5d382f196d6bd601245091786912d4c70df41cdfa052"
+          },
+          {
+            "name": "mmproj-F16.gguf",
+            "bytes": 1193058784,
+            "role": "mmproj",
+            "local_name": "mmproj-Gemma-4-26B-A4B-F16.gguf",
+            "sha256": "418a6d8723067cd712235facbbc5cba6c8fbbd413fc1292d2aace5a027d5a42f"
+          },
+          {
+            "name": "MTP/mtp-gemma-4-26B-A4B-it-Q8_0.gguf",
+            "bytes": 461766816,
+            "role": "mtp",
+            "sha256": "6326fb9f5e487aa8dcdd313a091e3c67724cb2a666ec3b7d2895b5b26d93ed1b"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-glm5-2",
+      "name": "GLM-5.3-Flash",
+      "params_b": null,
+      "quant": "Q4_K_M",
+      "size_bytes": null,
+      "size_label": "~130 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "agentic"
+      ],
+      "runtime_requirement": "official",
+      "artifact": "gguf",
+      "runtime_hint": "需最新 llama.cpp（glm_moe_dsa）；专家约 130 GB，需大内存或 SSD 流式。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 160,
+      "vram_tier": "any",
+      "description_zh": "大内存旗舰：需最新运行时；专家约 130 GB，需大内存或 SSD 流式（许可未取证）",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": null,
+        "dense_weights_mb": null,
+        "layerable_weights_mb": null,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": null,
+        "required_resident_mb": null,
+        "overflow": "ram",
+        "overflow_mb": null,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "unknown",
+          "dense_weights_mb": "unknown",
+          "layerable_weights_mb": "unknown",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "unknown",
+          "required_resident_mb": "unknown",
+          "overflow_mb": "unknown"
+        }
+      },
+      "meta_source": {
+        "params_b": "unknown",
+        "ctx_tokens": "unknown",
+        "size_bytes": "unknown",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/GLM-5.2-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/GLM-5.2-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 9,
+      "entry_kind": "static_recommended",
+      "reference_vram_gb": null,
+      "vram_floor_gb": null,
+      "ram_need_gb": null,
+      "row_bytes": null,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": null,
+      "families": [],
+      "platform": [],
+      "upstream": null,
+      "source_tier": "local"
+    },
+    {
+      "builtin_key": "rec-minimax-m27",
+      "name": "MiniMax-M2.7",
+      "params_b": null,
+      "quant": "Q4_K_M",
+      "size_bytes": null,
+      "size_label": "~130 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "agentic"
+      ],
+      "runtime_requirement": "official",
+      "artifact": "gguf",
+      "runtime_hint": "专家约 130 GB：64GB 内存不够，需大内存或 SSD 流式。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 160,
+      "vram_tier": "any",
+      "description_zh": "agentic 旗舰：「本地 Sonnet 平替」口碑，需大内存或 SSD 流式（专家约 130 GB）",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": null,
+        "dense_weights_mb": null,
+        "layerable_weights_mb": null,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": null,
+        "required_resident_mb": null,
+        "overflow": "ram",
+        "overflow_mb": null,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "unknown",
+          "dense_weights_mb": "unknown",
+          "layerable_weights_mb": "unknown",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "unknown",
+          "required_resident_mb": "unknown",
+          "overflow_mb": "unknown"
+        }
+      },
+      "meta_source": {
+        "params_b": "unknown",
+        "ctx_tokens": "unknown",
+        "size_bytes": "unknown",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/MiniMax-M2.7-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/MiniMax-M2.7-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 10,
+      "entry_kind": "static_recommended",
+      "reference_vram_gb": null,
+      "vram_floor_gb": null,
+      "ram_need_gb": null,
+      "row_bytes": null,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": null,
+      "families": [],
+      "platform": [],
+      "upstream": null,
+      "source_tier": "local"
+    },
+    {
+      "builtin_key": "rec-qwen38-27b-gsq-iq3s-mtp",
+      "name": "Qwen3.8-27B GSQ-RCO",
+      "params_b": 27.3,
+      "quant": "IQ3_S-mtp",
+      "size_bytes": 12120016960,
+      "size_label": "~12.1 GB",
+      "ctx_tokens": 262144,
+      "use_cases": [
+        "chat",
+        "coding",
+        "long-context"
+      ],
+      "runtime_requirement": null,
+      "artifact": "gguf",
+      "runtime_hint": "KVMem 遗留通道（llama.cpp 分支）实际在用；不属于三值运行时枚举。",
+      "component": false,
+      "vram_need_mb": 14679,
+      "min_ram_gb": 32,
+      "vram_tier": "mid",
+      "description_zh": "分支运行时 IQ3 配方的 MTP 版量化，16GB 显存跑 256K 用的就是它",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 11559,
+        "dense_weights_mb": 11559,
+        "layerable_weights_mb": 0,
+        "assumed_ctx_tokens": 12288,
+        "kv_cache_mb": 3120,
+        "required_resident_mb": 14679,
+        "overflow": "none",
+        "overflow_mb": 0,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "derived",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "declared",
+        "ctx_tokens": "declared",
+        "size_bytes": "file_size",
+        "vram_need_mb": "derived",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+      "ms_url": "https://modelscope.cn/models/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+      "quark_url": "https://pan.quark.cn/s/65ac0dc1128f?pwd=Bq7m",
+      "baidu_url": "",
+      "sort_order": 11,
+      "entry_kind": "static_recommended",
+      "reference_vram_gb": null,
+      "vram_floor_gb": null,
+      "ram_need_gb": null,
+      "row_bytes": null,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": null,
+      "families": [],
+      "platform": [],
+      "upstream": null,
+      "source_tier": "local"
+    },
+    {
+      "builtin_key": "rec-qwen38-27b-mmproj-q5k-mix",
+      "name": "Qwen3.8-27B 视觉投影",
+      "params_b": 0.5,
+      "quant": "Q5_K-MIX",
+      "size_bytes": 347213792,
+      "size_label": "~347 MB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "multimodal"
+      ],
+      "runtime_requirement": null,
+      "artifact": "gguf",
+      "runtime_hint": "配套视觉头（mmproj），不能单独当模型启动。",
+      "component": true,
+      "vram_need_mb": null,
+      "min_ram_gb": null,
+      "vram_tier": "any",
+      "description_zh": "与 IQ3 配方配套的现成视觉头（mmproj），已量化，无需本地转换",
+      "description_en": "",
+      "ledger": null,
+      "meta_source": {
+        "params_b": "declared",
+        "ctx_tokens": "unknown",
+        "size_bytes": "file_size",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "unknown",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/HermiHg/Qwen3.8-27B-mmproj-Q5_K-MIX-GGUF",
+      "ms_url": "",
+      "quark_url": "https://pan.quark.cn/s/65ac0dc1128f?pwd=Bq7m",
+      "baidu_url": "",
+      "sort_order": 12,
+      "entry_kind": "static_recommended",
+      "reference_vram_gb": null,
+      "vram_floor_gb": null,
+      "ram_need_gb": null,
+      "row_bytes": null,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": null,
+      "families": [],
+      "platform": [],
+      "upstream": null,
+      "source_tier": "local"
+    },
+    {
+      "builtin_key": "rec-qwen36-35b-a3b-q3km",
+      "name": "Qwen3.6-35B-A3B-MTP",
+      "params_b": 35,
+      "quant": "UD-Q3_K_M",
+      "size_bytes": 17104402720,
+      "size_label": "~15.9 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "coding"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 14.6 / beside 4.8 GiB，显存地板 6.8 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 23,
+      "vram_tier": "any",
+      "description_zh": "速度优选：MoE 3B 激活 + MTP 投机解码，Q3 档更省显存",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 16312,
+        "dense_weights_mb": 1362,
+        "layerable_weights_mb": 14950,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3553,
+        "required_resident_mb": 4915,
+        "overflow": "ram",
+        "overflow_mb": 14950,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+      "quark_url": "https://pan.quark.cn/s/65ac0dc1128f?pwd=Bq7m",
+      "baidu_url": "",
+      "sort_order": 6,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 6.8,
+      "ram_need_gb": 21,
+      "row_bytes": 17104402720,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj-F16.gguf",
+      "vision_bytes": 899283584,
+      "budget": false,
+      "families": [
+        "qwen36"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+        "revision": "5bc3e238d916f48a861bac2f8a1990a0e9b7e98d",
+        "files": [
+          {
+            "name": "Qwen3.6-35B-A3B-UD-Q3_K_M.gguf",
+            "bytes": 17104402720,
+            "role": "weights",
+            "sha256": "8966dd0cd8c543c4228490a2a8b0e0814fc4f1e6a8e199ceed4de6754ae7b8e1"
+          },
+          {
+            "name": "mmproj-F16.gguf",
+            "bytes": 899283584,
+            "role": "mmproj",
+            "local_name": "mmproj-Qwen3.6-35B-A3B-MTP-F16.gguf",
+            "sha256": "71f3cbc1f7cc0f30d09d41cfa924c0060827ebc33bf15ace7e86661e856f0160"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-gemma4-26b-a4b-qat-q4kxl",
+      "name": "Gemma 4 26B-A4B QAT",
+      "params_b": 26,
+      "quant": "QAT-UD-Q4_K_XL",
+      "size_bytes": 14710832704,
+      "size_label": "~13.7 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "multimodal"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 12.8 / beside 4.1 GiB，显存地板 6.1 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。 KVMem 支持需 kvmem 分支（gemma4-kvmem patch，上游 poly.7）；当前适配版选中会自动关闭 KVMem 参数并提示改用 kvmem 分支。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 21,
+      "vram_tier": "any",
+      "description_zh": "深度推理：官方 QAT 量化（不同仓），质量更稳，显存地板 6.1 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 14029,
+        "dense_weights_mb": 922,
+        "layerable_weights_mb": 13107,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3276,
+        "required_resident_mb": 4198,
+        "overflow": "ram",
+        "overflow_mb": 13107,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/gemma-4-26B-A4B-it-qat-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/gemma-4-26B-A4B-it-qat-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 14,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 6.1,
+      "ram_need_gb": 19,
+      "row_bytes": 14249047104,
+      "draft": "MTP/mtp-gemma-4-26B-A4B-it-Q8_0.gguf",
+      "draft_bytes": 461785600,
+      "vision": "mmproj-F16.gguf",
+      "vision_bytes": 1193058784,
+      "budget": false,
+      "families": [
+        "gemma4"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "unsloth/gemma-4-26B-A4B-it-qat-GGUF",
+        "revision": "7b92b5b28818151e8669af2e45e88d6086f490dd",
+        "files": [
+          {
+            "name": "gemma-4-26B-A4B-it-qat-UD-Q4_K_XL.gguf",
+            "bytes": 14249047104,
+            "role": "weights",
+            "sha256": "a7c5bc715f5ff8e99a3e8901ce7d2b42b402c669bf24f7c5250747633d0f5891"
+          },
+          {
+            "name": "mmproj-F16.gguf",
+            "bytes": 1193058784,
+            "role": "mmproj",
+            "local_name": "mmproj-Gemma-4-26B-A4B-QAT-F16.gguf",
+            "sha256": "d00f211a7d4f7fb19bd9b75d8e9342eccffb5920b08fd9562167560fdfcc5dd1"
+          },
+          {
+            "name": "MTP/mtp-gemma-4-26B-A4B-it-Q8_0.gguf",
+            "bytes": 461785600,
+            "role": "mtp",
+            "local_name": "mtp-gemma-4-26B-A4B-it-QAT-Q8_0.gguf",
+            "sha256": "75f58e20c32281d1adc086c0569d53f147e8d81a7b8493cf4a73a028415f67af"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-clover-35b-a3b-q3km",
+      "name": "Clover-35B-A3B-Preview",
+      "params_b": 35,
+      "quant": "Q3_K_M",
+      "size_bytes": 16767732936,
+      "size_label": "~15.6 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 15.3 / beside 3.4 GiB，显存地板 5.4 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 24,
+      "vram_tier": "any",
+      "description_zh": "写作/长文：35B-A3B，首批里显存地板最低（5.4 GB）",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 15991,
+        "dense_weights_mb": 324,
+        "layerable_weights_mb": 15667,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3158,
+        "required_resident_mb": 3482,
+        "overflow": "ram",
+        "overflow_mb": 15667,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/maternion/Clover-35B-A3B-Preview-GGUF",
+      "ms_url": "https://modelscope.cn/models/maternion/Clover-35B-A3B-Preview-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 17,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 5.4,
+      "ram_need_gb": 20,
+      "row_bytes": 16767725024,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": false,
+      "families": [
+        "clover"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "maternion/Clover-35B-A3B-Preview-GGUF",
+        "revision": "2077d69015d943d8a82fa80bf39b36cf080cd520",
+        "files": [
+          {
+            "name": "Diffuspace-Clover-35B-A3B-Preview-Q3_K_M.gguf",
+            "bytes": 16767725024,
+            "role": "weights",
+            "sha256": "0111b1c86fe647064e2bb3606da63d80f991d8ff56cdb994134a1632439e15a2"
+          },
+          {
+            "name": "chat_template.jinja",
+            "bytes": 7912,
+            "role": "chat_template",
+            "sha256": "01094df7cd8905d1220ea8b31e4f1086dc9bedf0305d3c2fa6578b5fa33b6815",
+            "repo": "Diffuspace/Clover-35B-A3B-Preview",
+            "revision": "4b0402b65e523d0183a14c431955438714cb16ff"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-ornith-15-35b-a3b-mini",
+      "name": "Ornith 1.5 35B-A3B",
+      "params_b": 35,
+      "quant": "APEX-I-MINI",
+      "size_bytes": 14366220832,
+      "size_label": "~13.4 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "multimodal"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 12.9 / beside 3.9 GiB，显存地板 5.9 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 21,
+      "vram_tier": "any",
+      "description_zh": "35B-A3B APEX-I-MINI，带独立视觉投影件",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 13701,
+        "dense_weights_mb": 491,
+        "layerable_weights_mb": 13210,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3503,
+        "required_resident_mb": 3994,
+        "overflow": "ram",
+        "overflow_mb": 13210,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/mudler/Ornith-1.5-35B-A3B-APEX-MTP-GGUF",
+      "ms_url": "https://modelscope.cn/models/mudler/Ornith-1.5-35B-A3B-APEX-MTP-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 18,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 5.9,
+      "ram_need_gb": 18,
+      "row_bytes": 14366220832,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj.gguf",
+      "vision_bytes": 899283200,
+      "budget": false,
+      "families": [
+        "ornith"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "mudler/Ornith-1.5-35B-A3B-APEX-MTP-GGUF",
+        "revision": "4c326713c52d13fdb40983a2a09a46cca8e88739",
+        "files": [
+          {
+            "name": "Ornith-1.5-35B-A3B-APEX-MTP-I-Mini.gguf",
+            "bytes": 14366220832,
+            "role": "weights",
+            "sha256": "09c342594abf0cb0cda9e899977956b61e37da79b5e5ffbe77874512dbe78148"
+          },
+          {
+            "name": "mmproj.gguf",
+            "bytes": 899283200,
+            "role": "mmproj",
+            "sha256": "e277123529451fbcff6d880ad5bd7ada999f9d5e6339ba3639d06c5cef4763b1"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-minicpmv-47-35b-a3b-q3gud",
+      "name": "MiniCPM-V 4.7 35B-A3B",
+      "params_b": 35,
+      "quant": "mix_q3gud_im",
+      "size_bytes": 15503944928,
+      "size_label": "~14.4 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "multimodal"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 13.8 / beside 3.4 GiB，显存地板 5.4 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 22,
+      "vram_tier": "any",
+      "description_zh": "多模态：MiniCPM-V 4.7 35B-A3B，显存地板 5.4 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 14786,
+        "dense_weights_mb": 655,
+        "layerable_weights_mb": 14131,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 2827,
+        "required_resident_mb": 3482,
+        "overflow": "ram",
+        "overflow_mb": 14131,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B-gguf",
+      "ms_url": "https://modelscope.cn/models/openbmb/MiniCPM-V-4.7-35B-A3B-gguf",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 19,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 5.4,
+      "ram_need_gb": 19,
+      "row_bytes": 15503944928,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj-model-f16.gguf",
+      "vision_bytes": 1119575840,
+      "budget": false,
+      "families": [
+        "minicpmv"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "openbmb/MiniCPM-V-4.7-35B-A3B-gguf",
+        "revision": "77f6d8cb08b2b115ce27d2e2ac1359e126921689",
+        "files": [
+          {
+            "name": "MiniCPM-V-4_7-35B-A3B-mix_q3gud_im.gguf",
+            "bytes": 15503944928,
+            "role": "weights",
+            "sha256": "6bfeefbfc723ab6fe557fcea28b31253e14128efe8d8d5774e3256a547b3a946"
+          },
+          {
+            "name": "mmproj-model-f16.gguf",
+            "bytes": 1119575840,
+            "role": "mmproj",
+            "sha256": "bff3b688e14c300eca273092c37c50a0ddfcc2054e079af1a0480edeed5d20f1"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-qwen36-35b-a3b-q2kxl",
+      "name": "Qwen3.6-35B-A3B",
+      "params_b": 35,
+      "quant": "UD-Q2_K_XL",
+      "size_bytes": 13473412000,
+      "size_label": "~12.5 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "coding"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 10.8 / beside 4.2 GiB，显存地板 6.2 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 19,
+      "vram_tier": "any",
+      "description_zh": "Qwen3.6-35B-A3B 的 UD-Q2_K_XL 量化档：参考卡 8 GB，显存地板 6.2 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 11992,
+        "dense_weights_mb": 933,
+        "layerable_weights_mb": 11059,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3368,
+        "required_resident_mb": 4301,
+        "overflow": "ram",
+        "overflow_mb": 11059,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+      "quark_url": "https://pan.quark.cn/s/65ac0dc1128f?pwd=Bq7m",
+      "baidu_url": "",
+      "sort_order": 35,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 6.2,
+      "ram_need_gb": 17,
+      "row_bytes": 13473412000,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj-F16.gguf",
+      "vision_bytes": 899283584,
+      "budget": false,
+      "families": [
+        "qwen36"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+        "revision": "5bc3e238d916f48a861bac2f8a1990a0e9b7e98d",
+        "files": [
+          {
+            "name": "Qwen3.6-35B-A3B-UD-Q2_K_XL.gguf",
+            "bytes": 12574128416,
+            "role": "weights",
+            "sha256": "ed7cda7e38985b4fcff76475865135039641d2bfbac3c169df15ca770f37fb0c"
+          },
+          {
+            "name": "mmproj-F16.gguf",
+            "bytes": 899283584,
+            "role": "mmproj",
+            "local_name": "mmproj-Qwen3.6-35B-A3B-MTP-F16.gguf",
+            "sha256": "71f3cbc1f7cc0f30d09d41cfa924c0060827ebc33bf15ace7e86661e856f0160"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-clover-35b-a3b-apex-nanoplus",
+      "name": "Clover-35B-A3B-Preview",
+      "params_b": 35,
+      "quant": "APEX-I-NANOPLUS",
+      "size_bytes": 12557370304,
+      "size_label": "~11.7 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 10.8 / beside 3.6 GiB，显存地板 5.6 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。 架构归属未取证（上游二进制只有 clover_m… 字面、无独立架构类，疑复用 Qwen35 分支）。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 19,
+      "vram_tier": "any",
+      "description_zh": "Clover-35B-A3B-Preview 的 APEX-I-NANOPLUS 量化档：参考卡 8 GB，显存地板 5.6 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 11976,
+        "dense_weights_mb": 917,
+        "layerable_weights_mb": 11059,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 2769,
+        "required_resident_mb": 3686,
+        "overflow": "ram",
+        "overflow_mb": 11059,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/IsValorum/Clover-35B-A3B-Preview-APEX-I-NanoPlus-V2.1-GGUF",
+      "ms_url": "https://modelscope.cn/models/IsValorum/Clover-35B-A3B-Preview-APEX-I-NanoPlus-V2.1-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 36,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 5.6,
+      "ram_need_gb": 16,
+      "row_bytes": 12557370304,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": false,
+      "families": [
+        "clover"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "IsValorum/Clover-35B-A3B-Preview-APEX-I-NanoPlus-V2.1-GGUF",
+        "revision": "d22b8db8efc6dfe15df84264e2fae26fafe530bb",
+        "files": [
+          {
+            "name": "Clover-35B-A3B-Preview.APEX-I-NanoPlus-V2.1.gguf",
+            "bytes": 12557370304,
+            "role": "weights",
+            "sha256": "30e7ee2268128b662dc0514067faae3abb0609a55f087b1ad0465ea71fe50fce"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-clover-35b-a3b-q4km",
+      "name": "Clover-35B-A3B-Preview",
+      "params_b": 35,
+      "quant": "Q4_K_M",
+      "size_bytes": 21169718752,
+      "size_label": "~19.7 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 19.5 / beside 3.5 GiB，显存地板 5.5 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。 架构归属未取证（上游二进制只有 clover_m… 字面、无独立架构类，疑复用 Qwen35 分支）。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 28,
+      "vram_tier": "any",
+      "description_zh": "Clover-35B-A3B-Preview 的 Q4_K_M 量化档：参考卡 8 GB，显存地板 5.5 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 20189,
+        "dense_weights_mb": 221,
+        "layerable_weights_mb": 19968,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3363,
+        "required_resident_mb": 3584,
+        "overflow": "ram",
+        "overflow_mb": 19968,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/maternion/Clover-35B-A3B-Preview-GGUF",
+      "ms_url": "https://modelscope.cn/models/maternion/Clover-35B-A3B-Preview-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 37,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 5.5,
+      "ram_need_gb": 25,
+      "row_bytes": 21169718752,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": null,
+      "vision_bytes": null,
+      "budget": false,
+      "families": [
+        "clover"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "maternion/Clover-35B-A3B-Preview-GGUF",
+        "revision": "2077d69015d943d8a82fa80bf39b36cf080cd520",
+        "files": [
+          {
+            "name": "Diffuspace-Clover-35B-A3B-Preview-Q4_K_M.gguf",
+            "bytes": 21169718752,
+            "role": "weights",
+            "sha256": "fe113ac0eecfe5aba6103d23a52e71f593034e2aa326afe5af6c4be4d842f58f"
+          },
+          {
+            "name": "chat_template.jinja",
+            "bytes": 7912,
+            "role": "chat_template",
+            "repo": "Diffuspace/Clover-35B-A3B-Preview",
+            "revision": "4b0402b65e523d0183a14c431955438714cb16ff",
+            "sha256": "01094df7cd8905d1220ea8b31e4f1086dc9bedf0305d3c2fa6578b5fa33b6815"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-ornith-15-35b-a3b-compact",
+      "name": "Ornith 1.5 35B-A3B",
+      "params_b": 35,
+      "quant": "APEX-I-COMPACT",
+      "size_bytes": 18337144608,
+      "size_label": "~17.1 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "multimodal"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 15.8 / beside 4.2 GiB，显存地板 6.2 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 24,
+      "vram_tier": "any",
+      "description_zh": "Ornith 1.5 35B-A3B 的 APEX-I-COMPACT 量化档：参考卡 8 GB，显存地板 6.2 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 16630,
+        "dense_weights_mb": 451,
+        "layerable_weights_mb": 16179,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3850,
+        "required_resident_mb": 4301,
+        "overflow": "ram",
+        "overflow_mb": 16179,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/mudler/Ornith-1.5-35B-A3B-APEX-MTP-GGUF",
+      "ms_url": "https://modelscope.cn/models/mudler/Ornith-1.5-35B-A3B-APEX-MTP-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 38,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 6.2,
+      "ram_need_gb": 22,
+      "row_bytes": 18337144608,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj.gguf",
+      "vision_bytes": 899283200,
+      "budget": false,
+      "families": [
+        "ornith"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "mudler/Ornith-1.5-35B-A3B-APEX-MTP-GGUF",
+        "revision": "4c326713c52d13fdb40983a2a09a46cca8e88739",
+        "files": [
+          {
+            "name": "Ornith-1.5-35B-A3B-APEX-MTP-I-Compact.gguf",
+            "bytes": 17437861408,
+            "role": "weights",
+            "sha256": "67e6cdff678e67180d3cd4eef55277277563319057de287b8855c4d1fbff4165"
+          },
+          {
+            "name": "mmproj.gguf",
+            "bytes": 899283200,
+            "role": "mmproj",
+            "sha256": "e277123529451fbcff6d880ad5bd7ada999f9d5e6339ba3639d06c5cef4763b1"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-ornith-15-35b-a3b-quality",
+      "name": "Ornith 1.5 35B-A3B",
+      "params_b": 35,
+      "quant": "APEX-I-QUALITY",
+      "size_bytes": 24617695008,
+      "size_label": "~22.9 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "multimodal"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 21.6 / beside 4.4 GiB，显存地板 6.4 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 30,
+      "vram_tier": "any",
+      "description_zh": "Ornith 1.5 35B-A3B 的 APEX-I-QUALITY 量化档：参考卡 8 GB，显存地板 6.4 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 22620,
+        "dense_weights_mb": 502,
+        "layerable_weights_mb": 22118,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 4004,
+        "required_resident_mb": 4506,
+        "overflow": "ram",
+        "overflow_mb": 22118,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/mudler/Ornith-1.5-35B-A3B-APEX-MTP-GGUF",
+      "ms_url": "https://modelscope.cn/models/mudler/Ornith-1.5-35B-A3B-APEX-MTP-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 39,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 6.4,
+      "ram_need_gb": 28,
+      "row_bytes": 24617695008,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj.gguf",
+      "vision_bytes": 899283200,
+      "budget": false,
+      "families": [
+        "ornith"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "mudler/Ornith-1.5-35B-A3B-APEX-MTP-GGUF",
+        "revision": "4c326713c52d13fdb40983a2a09a46cca8e88739",
+        "files": [
+          {
+            "name": "Ornith-1.5-35B-A3B-APEX-MTP-I-Quality.gguf",
+            "bytes": 23718411808,
+            "role": "weights",
+            "sha256": "2cedb760ebafb9f4943b4eac92628306110fc04eeea45dae2e1396aad626e691"
+          },
+          {
+            "name": "mmproj.gguf",
+            "bytes": 899283200,
+            "role": "mmproj",
+            "sha256": "e277123529451fbcff6d880ad5bd7ada999f9d5e6339ba3639d06c5cef4763b1"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-gemma4-26b-a4b-q2kxl",
+      "name": "Gemma 4 26B-A4B",
+      "params_b": 26,
+      "quant": "UD-Q2_K_XL",
+      "size_bytes": 12201759840,
+      "size_label": "~11.4 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "multimodal"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 8.7 / beside 4.6 GiB，显存地板 6.6 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。 KVMem 支持需 kvmem 分支（gemma4-kvmem patch，上游 poly.7）；当前适配版选中会自动关闭 KVMem 参数并提示改用 kvmem 分支。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 17,
+      "vram_tier": "any",
+      "description_zh": "Gemma 4 26B-A4B 的 UD-Q2_K_XL 量化档：参考卡 8 GB，显存地板 6.6 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 10499,
+        "dense_weights_mb": 1590,
+        "layerable_weights_mb": 8909,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3120,
+        "required_resident_mb": 4710,
+        "overflow": "ram",
+        "overflow_mb": 8909,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/gemma-4-26B-A4B-it-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 40,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 6.6,
+      "ram_need_gb": 15,
+      "row_bytes": 12201759840,
+      "draft": "MTP/mtp-gemma-4-26B-A4B-it-Q8_0.gguf",
+      "draft_bytes": 461766816,
+      "vision": "mmproj-F16.gguf",
+      "vision_bytes": 1193058784,
+      "budget": false,
+      "families": [
+        "gemma4"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "unsloth/gemma-4-26B-A4B-it-GGUF",
+        "revision": "c099eb48e663fd284577b04978a94ffccb261841",
+        "files": [
+          {
+            "name": "gemma-4-26B-A4B-it-UD-Q2_K_XL.gguf",
+            "bytes": 10546934240,
+            "role": "weights",
+            "sha256": "2a1d26dfe6ea00a467940a5728316af6edb366bbdba950d65b85d232392fb658"
+          },
+          {
+            "name": "mmproj-F16.gguf",
+            "bytes": 1193058784,
+            "role": "mmproj",
+            "local_name": "mmproj-Gemma-4-26B-A4B-F16.gguf",
+            "sha256": "418a6d8723067cd712235facbbc5cba6c8fbbd413fc1292d2aace5a027d5a42f"
+          },
+          {
+            "name": "MTP/mtp-gemma-4-26B-A4B-it-Q8_0.gguf",
+            "bytes": 461766816,
+            "role": "mtp",
+            "sha256": "6326fb9f5e487aa8dcdd313a091e3c67724cb2a666ec3b7d2895b5b26d93ed1b"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-gemma4-26b-a4b-q4km",
+      "name": "Gemma 4 26B-A4B",
+      "params_b": 26,
+      "quant": "UD-Q4_K_M",
+      "size_bytes": 18602367328,
+      "size_label": "~17.3 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "multimodal"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 14.3 / beside 5.3 GiB，显存地板 7.3 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。 KVMem 支持需 kvmem 分支（gemma4-kvmem patch，上游 poly.7）；当前适配版选中会自动关闭 KVMem 参数并提示改用 kvmem 分支。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 23,
+      "vram_tier": "any",
+      "description_zh": "Gemma 4 26B-A4B 的 UD-Q4_K_M 量化档：参考卡 8 GB，显存地板 7.3 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 16603,
+        "dense_weights_mb": 1960,
+        "layerable_weights_mb": 14643,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3467,
+        "required_resident_mb": 5427,
+        "overflow": "ram",
+        "overflow_mb": 14643,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF",
+      "ms_url": "https://modelscope.cn/models/unsloth/gemma-4-26B-A4B-it-GGUF",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 41,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 7.3,
+      "ram_need_gb": 21,
+      "row_bytes": 18602367328,
+      "draft": "MTP/mtp-gemma-4-26B-A4B-it-Q8_0.gguf",
+      "draft_bytes": 461766816,
+      "vision": "mmproj-F16.gguf",
+      "vision_bytes": 1193058784,
+      "budget": false,
+      "families": [
+        "gemma4"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "unsloth/gemma-4-26B-A4B-it-GGUF",
+        "revision": "c099eb48e663fd284577b04978a94ffccb261841",
+        "files": [
+          {
+            "name": "gemma-4-26B-A4B-it-UD-Q4_K_M.gguf",
+            "bytes": 16947541728,
+            "role": "weights",
+            "sha256": "f2c28b3dc4776931ac6f879e11f203dec637ea0f14267a86ec8f6165f63f293f"
+          },
+          {
+            "name": "mmproj-F16.gguf",
+            "bytes": 1193058784,
+            "role": "mmproj",
+            "local_name": "mmproj-Gemma-4-26B-A4B-F16.gguf",
+            "sha256": "418a6d8723067cd712235facbbc5cba6c8fbbd413fc1292d2aace5a027d5a42f"
+          },
+          {
+            "name": "MTP/mtp-gemma-4-26B-A4B-it-Q8_0.gguf",
+            "bytes": 461766816,
+            "role": "mtp",
+            "sha256": "6326fb9f5e487aa8dcdd313a091e3c67724cb2a666ec3b7d2895b5b26d93ed1b"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-tiel-coder-35b-a3b-q3kxl",
+      "name": "Tiel Coder 35B-A3B",
+      "params_b": 35,
+      "quant": "UD-Q3_K_XL",
+      "size_bytes": 18137757664,
+      "size_label": "~16.9 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "coding"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 14.6 / beside 4.7 GiB，显存地板 6.7 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 23,
+      "vram_tier": "any",
+      "description_zh": "Tiel Coder 35B-A3B 的 UD-Q3_K_XL 量化档：参考卡 8 GB，显存地板 6.7 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 16437,
+        "dense_weights_mb": 1487,
+        "layerable_weights_mb": 14950,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3326,
+        "required_resident_mb": 4813,
+        "overflow": "ram",
+        "overflow_mb": 14950,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF-MTP",
+      "ms_url": "https://modelscope.cn/models/peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF-MTP",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 42,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 6.7,
+      "ram_need_gb": 21,
+      "row_bytes": 18137757664,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj-BF16.gguf",
+      "vision_bytes": 902822016,
+      "budget": false,
+      "families": [
+        "tiel"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF-MTP",
+        "revision": "bbe9e566f39e4fc9652ac66b71968289a03c520a",
+        "files": [
+          {
+            "name": "Tiel-Coder-35B-A3B-MTP-UD-Q3_K_XL.gguf",
+            "bytes": 17234935648,
+            "role": "weights",
+            "sha256": "46b8fbeba6e888c9a101e49cc717baa9bb8dfa0d203ec7b3185288159543ec14"
+          },
+          {
+            "name": "mmproj-BF16.gguf",
+            "bytes": 902822016,
+            "role": "mmproj",
+            "sha256": "d9ce31026d1cb1f3f8d5152e2e2a014d9d2b302b6c93a7dc07bb0a0487f52837"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-tiel-coder-35b-a3b-iq3xxs",
+      "name": "Tiel Coder 35B-A3B",
+      "params_b": 35,
+      "quant": "UD-IQ3_XXS",
+      "size_bytes": 14503401440,
+      "size_label": "~13.5 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "coding"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 11.5 / beside 4.4 GiB，显存地板 6.4 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 20,
+      "vram_tier": "any",
+      "description_zh": "Tiel Coder 35B-A3B 的 UD-IQ3_XXS 量化档：参考卡 8 GB，显存地板 6.4 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 12971,
+        "dense_weights_mb": 1195,
+        "layerable_weights_mb": 11776,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3311,
+        "required_resident_mb": 4506,
+        "overflow": "ram",
+        "overflow_mb": 11776,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF-MTP",
+      "ms_url": "https://modelscope.cn/models/peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF-MTP",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 43,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 6.4,
+      "ram_need_gb": 18,
+      "row_bytes": 14503401440,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj-BF16.gguf",
+      "vision_bytes": 902822016,
+      "budget": false,
+      "families": [
+        "tiel"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF-MTP",
+        "revision": "bbe9e566f39e4fc9652ac66b71968289a03c520a",
+        "files": [
+          {
+            "name": "Tiel-Coder-35B-A3B-MTP-UD-IQ3_XXS.gguf",
+            "bytes": 13600579424,
+            "role": "weights",
+            "sha256": "a4d8ffc7f030466c67db289543871a8f9e6d5340241b300c09fbaf16642273ca"
+          },
+          {
+            "name": "mmproj-BF16.gguf",
+            "bytes": 902822016,
+            "role": "mmproj",
+            "sha256": "d9ce31026d1cb1f3f8d5152e2e2a014d9d2b302b6c93a7dc07bb0a0487f52837"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-tiel-coder-35b-a3b-q4kxl",
+      "name": "Tiel Coder 35B-A3B",
+      "params_b": 35,
+      "quant": "UD-Q4_K_XL",
+      "size_bytes": 23652702176,
+      "size_label": "~22 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "coding"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 20 / beside 4.8 GiB，显存地板 6.8 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 28,
+      "vram_tier": "any",
+      "description_zh": "Tiel Coder 35B-A3B 的 UD-Q4_K_XL 量化档：参考卡 8 GB，显存地板 6.8 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 21696,
+        "dense_weights_mb": 1216,
+        "layerable_weights_mb": 20480,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3699,
+        "required_resident_mb": 4915,
+        "overflow": "ram",
+        "overflow_mb": 20480,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF-MTP",
+      "ms_url": "https://modelscope.cn/models/peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF-MTP",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 44,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 6.8,
+      "ram_need_gb": 27,
+      "row_bytes": 23652702176,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj-BF16.gguf",
+      "vision_bytes": 902822016,
+      "budget": false,
+      "families": [
+        "tiel"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "peculiar-ragdoll/Tiel-Coder-35B-A3B-GGUF-MTP",
+        "revision": "bbe9e566f39e4fc9652ac66b71968289a03c520a",
+        "files": [
+          {
+            "name": "Tiel-Coder-35B-A3B-MTP-UD-Q4_K_XL.gguf",
+            "bytes": 22749880160,
+            "role": "weights",
+            "sha256": "54f46c4ce544c225122b0f066c2336f10404be7bc53b0cc94d1dbbc5e826bdc1"
+          },
+          {
+            "name": "mmproj-BF16.gguf",
+            "bytes": 902822016,
+            "role": "mmproj",
+            "sha256": "d9ce31026d1cb1f3f8d5152e2e2a014d9d2b302b6c93a7dc07bb0a0487f52837"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-minicpmv-47-35b-a3b-q4km",
+      "name": "MiniCPM-V 4.7 35B-A3B",
+      "params_b": 35,
+      "quant": "Q4_K_M",
+      "size_bytes": 22285830880,
+      "size_label": "~20.8 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "multimodal"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 19.5 / beside 3.4 GiB，显存地板 5.4 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 28,
+      "vram_tier": "any",
+      "description_zh": "MiniCPM-V 4.7 35B-A3B 的 Q4_K_M 量化档：参考卡 8 GB，显存地板 5.4 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 20186,
+        "dense_weights_mb": 218,
+        "layerable_weights_mb": 19968,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3264,
+        "required_resident_mb": 3482,
+        "overflow": "ram",
+        "overflow_mb": 19968,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B-gguf",
+      "ms_url": "https://modelscope.cn/models/openbmb/MiniCPM-V-4.7-35B-A3B-gguf",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 45,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 5.4,
+      "ram_need_gb": 25,
+      "row_bytes": 22285830880,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj-model-f16.gguf",
+      "vision_bytes": 1119575840,
+      "budget": false,
+      "families": [
+        "minicpmv"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "openbmb/MiniCPM-V-4.7-35B-A3B-gguf",
+        "revision": "77f6d8cb08b2b115ce27d2e2ac1359e126921689",
+        "files": [
+          {
+            "name": "MiniCPM-V-4_7-35B-A3B-Q4_K_M.gguf",
+            "bytes": 21166255040,
+            "role": "weights",
+            "sha256": "c729ae6c7bb16dd5b362cdb925c7fb09d744c95601f62b0f45ce51efb55bfe95"
+          },
+          {
+            "name": "mmproj-model-f16.gguf",
+            "bytes": 1119575840,
+            "role": "mmproj",
+            "sha256": "bff3b688e14c300eca273092c37c50a0ddfcc2054e079af1a0480edeed5d20f1"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    },
+    {
+      "builtin_key": "rec-minicpmv-47-35b-a3b-q6k",
+      "name": "MiniCPM-V 4.7 35B-A3B",
+      "params_b": 35,
+      "quant": "Q6_K",
+      "size_bytes": 29633132512,
+      "size_label": "~27.6 GB",
+      "ctx_tokens": null,
+      "use_cases": [
+        "chat",
+        "multimodal"
+      ],
+      "runtime_requirement": "polystrata",
+      "artifact": "gguf",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 26.4 / beside 3.4 GiB，显存地板 5.4 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。",
+      "component": false,
+      "vram_need_mb": null,
+      "min_ram_gb": 35,
+      "vram_tier": "any",
+      "description_zh": "MiniCPM-V 4.7 35B-A3B 的 Q6_K 量化档：参考卡 8 GB，显存地板 5.4 GB",
+      "description_en": "",
+      "ledger": {
+        "weights_total_mb": 27193,
+        "dense_weights_mb": 159,
+        "layerable_weights_mb": 27034,
+        "assumed_ctx_tokens": null,
+        "kv_cache_mb": 3323,
+        "required_resident_mb": 3482,
+        "overflow": "ram",
+        "overflow_mb": 27034,
+        "over_capacity": "slower",
+        "meta_source": {
+          "weights_total_mb": "derived",
+          "dense_weights_mb": "derived",
+          "layerable_weights_mb": "derived",
+          "assumed_ctx_tokens": "unknown",
+          "kv_cache_mb": "derived",
+          "required_resident_mb": "derived",
+          "overflow_mb": "derived"
+        }
+      },
+      "meta_source": {
+        "params_b": "derived",
+        "ctx_tokens": "unknown",
+        "size_bytes": "declared",
+        "vram_need_mb": "unknown",
+        "min_ram_gb": "derived",
+        "local_match": "not_checked"
+      },
+      "hf_url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B-gguf",
+      "ms_url": "https://modelscope.cn/models/openbmb/MiniCPM-V-4.7-35B-A3B-gguf",
+      "quark_url": "",
+      "baidu_url": "",
+      "sort_order": 46,
+      "entry_kind": "poly_default",
+      "reference_vram_gb": 8,
+      "vram_floor_gb": 5.4,
+      "ram_need_gb": 31,
+      "row_bytes": 29633132512,
+      "draft": null,
+      "draft_bytes": null,
+      "vision": "mmproj-model-f16.gguf",
+      "vision_bytes": 1119575840,
+      "budget": false,
+      "families": [
+        "minicpmv"
+      ],
+      "platform": [
+        "windows",
+        "linux"
+      ],
+      "upstream": {
+        "repo": "openbmb/MiniCPM-V-4.7-35B-A3B-gguf",
+        "revision": "77f6d8cb08b2b115ce27d2e2ac1359e126921689",
+        "files": [
+          {
+            "name": "MiniCPM-V-4_7-35B-A3B-Q6_K.gguf",
+            "bytes": 28513556672,
+            "role": "weights",
+            "sha256": "159ce7d2fe4aab95233096ad007c23d86d99dd6c4a20d3f7c31e990d09aa71b7"
+          },
+          {
+            "name": "mmproj-model-f16.gguf",
+            "bytes": 1119575840,
+            "role": "mmproj",
+            "sha256": "bff3b688e14c300eca273092c37c50a0ddfcc2054e079af1a0480edeed5d20f1"
+          }
+        ],
+        "license": "未取证"
+      },
+      "source_tier": "A"
+    }
+  ]
+}
