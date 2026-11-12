@@ -1,10 +1,10 @@
 {
-  "mcps": "20260827",
-  "prompts": "20260827",
-  "models": "20260827",
+  "mcps": "20261016",
+  "prompts": "20261011",
+  "models": "20261016",
   "platforms": "20260827",
   "skill_repos": "20260827",
   "user_rules": "20260827",
-  "comfyui_workflows": "20260827",
+  "comfyui_workflows": "20261006",
   "llama_recommended": "20261116.3"
 }
