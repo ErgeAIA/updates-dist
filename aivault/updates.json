@@ -1,19 +1,19 @@
 {
-  "version": "0.7.1",
-  "notes": "### 新增\n\n- **空闲自动卸载（Llama.cpp）**：配置里可按分钟设「空闲多久后卸载模型」，到点把显存与内存还给系统，引擎页显示「已休眠」，下个请求自动重新加载；留空 = 永不。该参数是启动参数，改完需重启引擎生效。\n- **空闲自动卸载（PolyStrata）**：分支配置同样支持按分钟设置空闲卸载，到点由应用自动归还显存与内存，运行卡显示「已休眠」，下个请求自动重新加载（约十几秒）；会话上下文不保留，留空 = 永不，改完需重启引擎生效。\n- **选好模型就能看到它的底细**：模型路径下方直接列出架构、上下文长度、层数、专家数、量化与体积，并标明内嵌 MTP 权重在本引擎是否可用、视觉投影件是否匹配；Llama.cpp 与分支配置都有这一行。\n\n### 修复\n\n- **数值输入过滤覆盖全部配置界面**：Llama.cpp 配置的基础区（端口、线程、Fit 余量、温度等采样项、推理预算）与高级区所有数值参数同样只接受数字输入（浮点可输小数点、支持 -1 的参数保留负号），字母一律打不进去；与分支配置（PolyStrata / NInfer）同口径。\n- **配置编辑器的数值输入框不再吃字母**：分支配置（PolyStrata / NInfer）里所有数值参数只接受数字输入，浮点参数可输入小数点，支持 -1 的参数（输出上限、随机种子等）保留负号；此前误输字母会被静默丢弃、重新打开时值凭空消失。\n- **预检结果不再是一次性的**：上次的预检结论与检查时间重启后仍在（配置内容变了会自动作废重查）；点行内的警告图标打开配置会直接落到第一处问题，未解决的问题字段保持高亮、改好一处即撤一处，不再需要手动点「去修改」或再点一次保存才知道改对了。\n\n### 变更\n\n- **悬停提示更克制**：提示文本改为锚定在元素上方（不再跟随鼠标移动），且悬停约半秒才出现——滑过页面不再到处弹提示，停留才会显示。技能卡片的备注预览同步这一行为。\n- **技能包筛选改三态**：管理技能包弹窗的「未入包」按钮升级为「全部 → 包内 → 包外」循环切换，按钮上直接显示当前所处状态；「包内」只看当前所选包的成员，「包外」只看未入任何包的技能，切换包时筛选保持不变。\n- **时间一律按分钟**：Llama.cpp 配置的「超时」从秒改为分钟显示与输入（默认 60 分钟），与空闲卸载同口径；内部换算自动完成，存量配置与启动行为不变。\n- **配置编辑器更好认**：模型选择独占一行，别名挪到配置名称旁；模型下拉与输入框悬停可看到完整路径。\n- **运行时区块标题跟着引擎走**：NInfer / PolyStrata 页显示各自的运行时名称，不再统一叫「分支运行时」。",
-  "pub_date": "2026-11-15T17:25:45.170Z",
+  "version": "0.7.2",
+  "notes": "### 新增\n\n- **技能包可以按自己的习惯排序**：管理技能包弹窗左侧列表加了拖拽手柄，拖到哪就排到哪，重启后顺序保持；键盘同样能操作（空格提起、上下键移动、空格或 Esc 放下），读屏会报出「移到第几位」。\n- **安装版打不开时可一键自救**：本地数据被更高版本写过、安装版因此进不去时，错误页直接给出「回退到升级前备份」，一步回到可用状态，不再只剩重装一条路。\n\n### 修复\n\n- **修「技能管理」点隐藏报「数据库操作失败」**：隐藏技能时写入的订阅快照与本地库结构不一致会直接报错，现已修正；应用启动时还会自动核对并修复这类结构差异，不需要手动处理。\n- **开发版不再改到安装版的数据库**：开发构建改用独立的数据文件，本地调试时的数据库升级不会再让已安装的应用打不开。\n\n### 变更\n\n- **技能包规划提示词升级**：「管理技能包 → ?」指南第三步的提示词换成按「工位」划分的新版——先出一份用夜灯主题打开的 HTML 方案（带组合模拟器可勾选），确认后才生成可导入的技能包清单；信息不足的技能标「待确认」，不再硬猜。",
+  "pub_date": "2026-11-16T10:41:40.443Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXR0bmtPNGtvOWRzYnEwcTNwcS9QN3I3czA1YXJ4YXhEbU42Q2dadHIwTXdlSXJVd21PUS80eERZRlNORE1yQWtRZHV6OEZmbnh3bnpHR0VHWDdEd3dzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzYzMzg0CWZpbGU6QUkgVmF1bHRfMC43LjFfeDY0LXNldHVwLmV4ZQpFVTRVNUZmZkk4ZkVvZ09FejVIN1FWOWI0NTJsc0JqRlBXaURud3hsNlFzaEtRL1VTRnRMTVJGT1hyNTBQYWNLOVVES0RicXFib1JrTnpXK1pNYi9BZz09Cg==",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.1/AI-Vault_0.7.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXYwSnJXZVJzWU1nSGZFc2hpR2Q3bXEvT3RGcjlFNmZRUnFqM1lHSUpwUzNSSW9hWlJwSzlMM2M2cFRmSFZjL0FTalFqVStZSUY0eTVsdWtOUndCMmc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0ODI1NjE2CWZpbGU6QUkgVmF1bHRfMC43LjJfeDY0LXNldHVwLmV4ZQpEcWJlNlhmZTlwNG41NDJ2OHNvRDE5ZnlZR2pZaTBiN3ZuR0NGUVI4YWZYaW10MUxSRjRDc29GaXhrNUkzemtGWW1JWHJJZmlrVEdXL1R2dXFLRWpEQT09Cg==",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.2/AI-Vault_0.7.2_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXU3NDRnK1lYUU83M0l1U1Yzcm1NVklJOWFyQXpGSzVlWU0wUzBoZ3RPZGtRSjVCTzUxemhud2xSOUZsRWpoMGwzTlJlL2YwZWZtTzVHdU5TRU5QTkFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzYyNDYyCWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negplYTZHTzc4RGdEdGU1ajFPZFR0OHQwOFdDazEvWnNCL1U4LzBTTCtyZFVycVBkVHA0NXc4elBVZlVHUDAvRnpEaXlLT3VmMWdTV2cvSDJUaW5DcGhBdz09Cg==",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.1/AI-Vault_0.7.1_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXN0ME5MWTNZM2cwVU9TT08wazhaaFllR1dsQjljT1JKMW4raURUakRIcjgvNFdIeDNvdEt1SkZHVWVBN092aEs0WWN6dll4LzNHZkU0cHlhdk9LcFFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0ODI1MDQ3CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpnQVFiNVVnMktVSlFLMGt5OG5iUEdPZWhaUURxak1NNmpncGk3ZFFYYlFjVXluUHlneEpxNjdEVWQwOWRUV2ZjYzhCaHZoR2VPYXZCTnhxQU9OWmNCQT09Cg==",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.2/AI-Vault_0.7.2_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWhQaDFDNThBZmhVREFFcjNvT2pkQVczd1ZoZDBMWnl5QnNjMEJ4N0lGNzV4ODN5M3B1bjBQdEZDQ1JDakxhTnQyZU85YitobzZCUUVLRTZwV2dJcFFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzYyNDM4CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpmUWttc0pTSkNiZkxLVXdTN1MyN0YyTWR3N21DeUNUQ0kxSGJiYjlsV1FwUjcyVHQ4NmE3cUZRUk9VRVBzbCtCWnBRK2tUdGFzeWpXKzhxNUZTZFNCdz09Cg==",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.1/AI-Vault_0.7.1_x86_64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXQ0aW90T3hDQlkwMmVWWThHaGdGV1NITUxlMUdkWnhiUDVSYm04d2hBZnpMYVl2c01Nc1NDd1QzbzJjY2tRTXZJUHpGY1JoWCtrUHRON0JSRW5ObHdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0ODI1MDQ2CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpweWk0Q3N5U1drNStLakR4ZU9pV1JBYWJRcEVQRXpFRHZRcWdwMXZTVHNQR3loK1lvK0tuRURVSkNBRnNET3c5ZjVsd24zbzFPeFc5NWxTTlFoREZEdz09Cg==",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.2/AI-Vault_0.7.2_x86_64.app.tar.gz"
     }
   }
 }
