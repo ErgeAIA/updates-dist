@@ -1,5 +1,5 @@
 {
-  "version": "20261116.3",
+  "version": "20261117",
   "models": [
     {
       "builtin_key": "rec-gemma4-e4b",
@@ -587,7 +587,7 @@
       ],
       "runtime_requirement": "polystrata",
       "artifact": "gguf",
-      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 10.3 / beside 5.8 GiB，显存地板 7.8 GiB）。mmproj 与 MTP 各自独立下载，不计入主权重体积。 KVMem 支持需 kvmem 分支（gemma4-kvmem patch，上游 poly.7）；当前适配版选中会自动关闭 KVMem 参数并提示改用 kvmem 分支。",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 10.3 / beside 5.8 GiB，显存地板 7.8 GiB）。mmproj 与 MTP 各自独立下载，不计入主权重体积。 KVMem 支持需上游发布含 gemma4-kvmem 的 PolyStrata 构建（poly.9，尚未发版）；当前内置构建会自动关闭 KVMem 参数并提示；Gemma 的 KV 只支持 f16/int8/int8k。",
       "component": false,
       "vram_need_mb": null,
       "min_ram_gb": 19,
@@ -1035,7 +1035,7 @@
       ],
       "runtime_requirement": "polystrata",
       "artifact": "gguf",
-      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 12.8 / beside 4.1 GiB，显存地板 6.1 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。 KVMem 支持需 kvmem 分支（gemma4-kvmem patch，上游 poly.7）；当前适配版选中会自动关闭 KVMem 参数并提示改用 kvmem 分支。",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 12.8 / beside 4.1 GiB，显存地板 6.1 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。 KVMem 支持需上游发布含 gemma4-kvmem 的 PolyStrata 构建（poly.9，尚未发版）；当前内置构建会自动关闭 KVMem 参数并提示；Gemma 的 KV 只支持 f16/int8/int8k。",
       "component": false,
       "vram_need_mb": null,
       "min_ram_gb": 21,
@@ -1867,7 +1867,7 @@
       ],
       "runtime_requirement": "polystrata",
       "artifact": "gguf",
-      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 8.7 / beside 4.6 GiB，显存地板 6.6 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。 KVMem 支持需 kvmem 分支（gemma4-kvmem patch，上游 poly.7）；当前适配版选中会自动关闭 KVMem 参数并提示改用 kvmem 分支。",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 8.7 / beside 4.6 GiB，显存地板 6.6 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。 KVMem 支持需上游发布含 gemma4-kvmem 的 PolyStrata 构建（poly.9，尚未发版）；当前内置构建会自动关闭 KVMem 参数并提示；Gemma 的 KV 只支持 f16/int8/int8k。",
       "component": false,
       "vram_need_mb": null,
       "min_ram_gb": 17,
@@ -1966,7 +1966,7 @@
       ],
       "runtime_requirement": "polystrata",
       "artifact": "gguf",
-      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 14.3 / beside 5.3 GiB，显存地板 7.3 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。 KVMem 支持需 kvmem 分支（gemma4-kvmem patch，上游 poly.7）；当前适配版选中会自动关闭 KVMem 参数并提示改用 kvmem 分支。",
+      "runtime_hint": "PolyStrata 走专家缓存：切分取上游 FAMILIES 常量（arena 14.3 / beside 5.3 GiB，显存地板 7.3 GiB）；数值来自上游 setup.py，未读远端张量表，KV 记为 beside − 稠密残差。 KVMem 支持需上游发布含 gemma4-kvmem 的 PolyStrata 构建（poly.9，尚未发版）；当前内置构建会自动关闭 KVMem 参数并提示；Gemma 的 KV 只支持 f16/int8/int8k。",
       "component": false,
       "vram_need_mb": null,
       "min_ram_gb": 23,
