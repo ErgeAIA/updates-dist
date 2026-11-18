@@ -1,19 +1,19 @@
 {
-  "version": "0.6.0",
-  "notes": "\n### 新增\n\n- **文件在别处被改写后会提示**：切回窗口看到「文件已在外部更新 · 重新加载」，点击或 `Ctrl/Cmd+R` 重新读取，不会自动打断阅读\n- **自动识别文件编码**：GBK / GB18030 / UTF-16 编码的文档不再显示乱码，解码方式不是 UTF-8 时会提示一次\n- **大文档也能搜到全文**：长文档使用虚拟滚动时，文内搜索可以命中屏幕外的内容，计数与跳转准确\n- **阅读选项可恢复默认排版**：一键回到默认字号、行距、字距、段距与页宽\n- **阅读选项点空白处自动收起**：调完设置直接继续阅读，不必再点一次开关\n\n### 优化\n\n- **应用启动即自动检查更新**：无需再等待或手动到「关于」页检查；更新提示卡片视觉重设计，更新内容分组更清晰\n- **主题色卡的全部预览色与真实主题一致**\n- **亮色主题的标签、选中、表头与代码标签统一为同一种交互色**\n- **欢迎页星空跟随当前主题配色**，窗口最小化或切到别处时停止绘制；系统开启「减少动态效果」时只显示静态星空\n- **正文层级更清楚**：四到六级标题拉开字号，中文不再出现倾斜的伪斜体，表格与行内代码样式统一\n- **底部状态栏的进度更易看清**\n- **关于页的版本信息合并为一行**：显示当前版本与检查状态，有新版本时点击直达下载\n- **性能级别的说明在英文界面下不再显示中文**\n- **阅读选项把字号、行距等常用项排在主题选择之前**\n\n### 修复\n\n- **清空最近打开列表不再连带删除阅读进度**\n- **首屏快捷键只列出当前真正可用的组合**，去掉按不出来的项与标错的键\n- **最近文件读取完成前不再误报「暂无最近打开的文件」**\n- **关于页的二维码弹窗不再被卡片裁切**，「按 Esc 可关闭」真正生效\n- **主题与滑块获得键盘焦点时可见**\n- **性能级别下拉菜单在窄面板中不再被截断**\n- **欢迎页拖拽框可用键盘打开**\n\n",
-  "pub_date": "2026-11-18T14:11:10.232Z",
+  "version": "0.6.1",
+  "notes": "\n### 优化\n\n- **更新提示改为一条窄条**：默认不压住正文，点「详情」才展开；展开后按组只显示前 3 条，其余折叠为「还有 N 项」\n- **更新卡片配色收敛**：正文改用常规文字色，青色只保留在按钮与进度上；亮色主题改用分主题阴影\n- **更新卡片字号与留白加大**：正文 13px、行高 1.75，四周内距放宽；操作按钮去掉胶囊，统一 5px 小圆角\n- **实心按钮文字色按主题自动选深/浅**，14 套主题全部达到 4.5:1\n- **菜单、提示、错误页与解析失败提示都支持英文界面**（此前这些位置硬编码中文）\n- **目录只保留一个 Tab 停靠点**，并标注当前章节；回车/空格仍可跳转\n- **性能级别收进「高级」折叠**，参数对照默认收起\n\n### 修复\n\n- **分隔线渐变不再重复 DOM id**：同一文档多条分隔线各自独立\n- **关于页去掉重复的 B 站入口**（保留可点击的链接卡）\n- **更新卡片支持 Esc 关闭**，关闭时播放 150ms 收起动画\n- **设置里可清除「已跳过的版本」**，不必再等下一个版本\n- **彩蛋与浮层颜色跟随主题**，不再固定为赛博青\n- **「跳过此版本」可撤销**，并移入「更多操作」菜单\n- **更新安装中不再隐藏进度**：下载时隐藏「收起」，折叠态也显示百分比\n- **亮色主题下更新按钮与说明文字对比度达标**\n\n",
+  "pub_date": "2026-11-18T17:06:51.674Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYW5CclZ1NDFOZGtIZ2NxaHloZjNIZlRrU3V4MHZHaWIrR2tFd2tIZDRjVWYwT3FNMGMvK1JQOGlTWTdOcmZBOWdpZ1JXYUxjbnBXT3FUQW9tVElLVVFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDEwMzE2CWZpbGU6RXJnZU1EXzAuNi4wX3g2NC1zZXR1cC5leGUKUXJpUkVucWJWR3o2WHZDdWk2ejdBOTZVWjNsTk1aNFZORFZIZFVGTjBiZDgwM1VCYWFUNmNtOVEwUmFqSnBjTTNDQTBpa3d5aDdnTDVWSEdvbTZrQlE9PQo=",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.6.0/ErgeMD_0.6.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYW5jWlRLSFZhTjI3YzR2UncvbXdNM2ZZeFNZTllCajc4d0ZKV1dkQ29iWjNPYmZRa3REUGxBMmVFVmk1U3ZYdURNRE1JSUtnRkdldm1NYWdSVEllYndvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDIxNTgxCWZpbGU6RXJnZU1EXzAuNi4xX3g2NC1zZXR1cC5leGUKVjIzMEkxKzc3QjhKcjZKa3NIZXFBb3JoN00rVmJzOGR6MlYzRHJZdFdpRXltNXVhY2kvRGhGcHQ0RGRhVW43a05yakdZS0JuVnpjN3o3T0pYRmVIRGc9PQo=",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.6.1/ErgeMD_0.6.1_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYWdNU2RsTW5memljWUtXZ3BTVlZteDZXWFNmdGg0TEFGYzVRNWdhekh6TnR0REhURVVBY3NGRFA2Tm9WWnFYN0tYL2RzR0hudW5iamVIZVoxV25SZ0EwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDEwOTU4CWZpbGU6RXJnZU1ELmFwcC50YXIuZ3oKTW5JNmtiaE10MWM0akJZWnh4L1NuY0NWdmMwak5DTWZBWVdiaGhsZVVScXpqVHlPdmZ5OVJwNEN5a3JsQ1ZsdWtMN29vbGJydGpidDNsSzc2VEgrQlE9PQo=",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.6.0/ErgeMD_0.6.0_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYW55NEJVaU13VkJ4TmU4cmlnNU53OGNSbzJYZXdOeDlxNzNVUTg1QWNEL1pDdVdwWmNObnNkRDhtRjNISHo0WTZPZTFGYi9ONkxBWWJyUUozd0Rja3dzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDIxMjg4CWZpbGU6RXJnZU1ELmFwcC50YXIuZ3oKclREcEJSNEVHQ1dPeU5naXZxalpPanMwZUNkOTRJYXUrT1FFMnZNR3FyOUF6OUo0MUdHQlgrSFRMYzF0VDJ3bkRyRzFMUDZXQXBmazNUUDM5N1VmRHc9PQo=",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.6.1/ErgeMD_0.6.1_aarch64.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYWovSGlwQWpVdU5XeWEvYWRrckZSTEI0dE9jT0xKNDkwVGNib1ZrN0p1UzJ6TWZjQlJpbGUrb2Z2NWtmMU9yWVRYR3Z4QTc1Y0JlMThZZEpZMmN0TUFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDEwMjg0CWZpbGU6RXJnZU1EXzAuNi4wX2FtZDY0LkFwcEltYWdlClErT1Z6dHc0M3B2RldpekpBMDgrcU1TemZjczZKci9BWlF0Kzl3SGlLUE53YzNKSENyUzg5NTBtdkc5QTBUVEdQS1gydDNhU2dWcFhGWDYzNWN6a0NRPT0K",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.6.0/ErgeMD_0.6.0_amd64.AppImage"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbVJQcmdxSjJKYWliUkRvb0ZvTDVaOUxsait1UlZjNHd3cG5NbnU2MWtTUW9zdC9Vb0g4Q1RyMXBPOW12Q2xRUitEeFpBb2ROYUVpZzliYnhxUFdBaGlHUFpyK1F1aHdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDIxMzk2CWZpbGU6RXJnZU1EXzAuNi4xX2FtZDY0LkFwcEltYWdlClpRTHdGbC9uQmJMTFgyRFozbW1SSEV6VHRYdXNUdlZiaUEzdUQ3OHBjT3VnOHcyd1U5WUMrb1l6amlPdXBCVE4vdVdTVnh1MVpCQ2V1dGxaTUVEWkJnPT0K",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/ergemd-v0.6.1/ErgeMD_0.6.1_amd64.AppImage"
     }
   }
 }
