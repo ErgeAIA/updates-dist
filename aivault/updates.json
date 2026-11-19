@@ -1,19 +1,19 @@
 {
-  "version": "0.7.3",
-  "notes": "### 新增\n\n- **模型下载中断后可继续**：下载页顶部新增「未完成的下载」区，列出已暂停或中断的任务（带百分比与速度），可「继续」「暂停」或删除；关闭窗口时若仍在下载，会先问「后台继续 / 暂停并退出 / 取消」。断点与任务跨重启保留，不必再搜索找回。\n- **下载完成后自动就位**：大文件下载完成后自动去掉 `.part` 后缀并校验哈希；对已完整但未就位的文件再点「下载」会直接完成，不再出现「416 Range Not Satisfiable」。\n\n### 修复\n\n- **下载页立即识别「已下载」**：文件落盘后，下载列表会马上把按钮切成「已下载」，不再要等重新展开仓库才更新。\n\n### 变更\n\n- **PolyStrata 对非兼容模型的提示更准确**：选中 gemma4 等模型时，说明 KVMem 参数将被自动关闭，并提示需等待支持该架构的运行时版本（不再建议使用已下架的 kvmem 分支）。\n- **技能详情的操作收进「⋯」**：分享、部署、删除移入右上角菜单（删除为危险色），标题行只留状态、⋯ 与关闭，删除不再紧挨关闭；技能卡片的「⋯」菜单移除了与单张技能无关的「批量安装」，该入口仍在工具栏与批量操作条。",
-  "pub_date": "2026-11-17T15:05:03.475Z",
+  "version": "0.7.4",
+  "notes": "### 新增\n\n- **搜索历史**：搜过的关键词会记住，点击搜索框可从下拉里重选，也能逐条删除。\n- **下载目录一键打开**：下载页「下载到」与「已下载」的目录标题后可点文件夹图标，直接用系统文件管理器打开目录。\n- **模型下载改为下载队列**：下载中可继续添加新模型，任务按顺序自动排队执行；下载页顶部显示队列与当前任务进度条，可暂停、继续或移除；关闭窗口与重启后队列保留，重启后需手动继续（不会自动联网）。\n- **卡片备注悬停按 Markdown 显示**：备注里的标题、列表、表格与代码块正常排版，不再显示源码。\n\n### 修复\n\n- **同步状态卡不再被长 Agent 名撑破**：卡片按列宽截断名称，不再溢出压住邻居。\n- **同步失败不再显示为已启用**：「已生效」统计不再出现 1/0，失败与成功分开计数。\n\n### 变更\n\n- **关窗提示覆盖排队任务**：有下载中或排队中的任务时，关闭窗口先询问并显示「N 个下载中 · M 个排队中」；「暂停并退出」会暂停全部任务。\n- **发现技能页顶部重组**：批量动作回到「已添加的仓库」行；搜索与标签同一行、放不下的标签收进「…」；仓库行低频动作收进「⋯」并给删除加确认；「添加仓库」改为单入口弹层（单个地址 / 批量粘贴）。\n- **列表页工具栏固定而非吸顶**：技能管理筛选行、发现技能节带移出滚动区；页面不再用分隔线，改由间距区分。\n- **同步状态改用图标 + 短结果词**：去掉无用的同步时间与重复的「已链接 / 未启用」标识，Agent 图标放大。\n- **关于页简介更新**：补本地引擎（llama.cpp / NInfer / PolyStrata）与模型管理能力。",
+  "pub_date": "2026-11-19T06:28:45.392Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWtkTGwwUGcyZVYxdFJZRVdVdmJkMmdJdENGQXlScUZ5bktRN09NOFVsdXNWcEQyRnN2YkxkUUdGdmZsU2tiNGIzb3IvZWJoT09JVEdWeEFlSWEyR3dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0OTI3NzMyCWZpbGU6QUkgVmF1bHRfMC43LjNfeDY0LXNldHVwLmV4ZQprWjhNODhnYnJIRkxXVjZlQVRyQ2lCUzY5L1hlUWRoMDZCd2FHK0NMUGJZdmpyYUZtSGFxaEs5L1VqM1FrN0Q1eWZTYkY0SnVtMk9MUVN0ak50V0NEZz09Cg==",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.3/AI-Vault_0.7.3_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWcrb3hUQ3pCaUZKd3BxZDNqeEFreWl6YjUvSExvYUdhWXVBOXJoZHJtZDI3RnVvM05KTHoyQzIyeWFMelVXYUtaVCtsOG5FeHR3dUg0WVpQR1VsRlFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDY5NjIzCWZpbGU6QUkgVmF1bHRfMC43LjRfeDY0LXNldHVwLmV4ZQorVWxhV0NZQm1HM3pCQzg0UHBHQ3VGYnhwN1oraWlhYVlVSmZ1bzFsTzdrc0FlWkF6SmNvMzM5WnFOd1dmdXhva1M3UnRtRklGamFLU3A4bHBnNVdCdz09Cg==",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.4/AI-Vault_0.7.4_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXRyZ3dERXpmRUhPNmNQS2xFV0FyVEVOdHZuS1NSSEhYLzc2Rk9yZ1BxYVlwc0U1dkFEZWtBKytybVVnTjZLVFZsaUNtK3R0YkdhcWt0anVJRE15cUFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0OTI3MTMyCWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negpXa2dNZFY0Tml3RjJmYkkvQUhnakttSTRYMkY4ZUdxSmhUR2RtQUJrWVdod0pUbDFQUllSZjJZQ1k0bkFDbXFpa1BUV1llekovMXlvV2p0VjN0UytEZz09Cg==",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.3/AI-Vault_0.7.3_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXEwZUQ3TDN4RzJnbVZJdmZMYkl5aDVDcVJpbWtGTGRzRUloOFdsaEZEMWN2ZC9EU2JBcFlSRndMQkJHU1dxbVl3RWxFZlFGUVlFQzdob2NhdWwvUndvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDY5MTAzCWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negp4NmRnVDhQYU1qdSsyUWxtaUZOL2xMRTcybjJtaXdPZ3hQTlFqUWNsRVFVMzhjN0M2dnFiZ2FMU3o5MloxbDRicTh0Y2tOMnZyRkRPZVVFcHIzTGhDQT09Cg==",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.4/AI-Vault_0.7.4_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUXVUZG1rSStDUTM5Nk92OTlpOE9jSHpJODVTcEVHRlVia0dhTHY2dlR2NTRBTU56UnZ2cnFKRVE3cXNCZ3QvL2ZNcFR2Q3lpL0sxMmJJWUpVNDVyTWcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0OTI3MTM4CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5nego0QWY2RWZ6VnBzZ1V4SHE0bHBoZndMZDFjVFpPTzl6ZWx1M3NSZ3BTRWpmbUhDbyt1cmx1STNaQzR1QWxDVS9FUE9EMGZDT3REeVgydmhPaUlYY1pBQT09Cg==",
-      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.3/AI-Vault_0.7.3_x86_64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRSU8xbTVVT3plUWdMUXZMcHpnbGhVc2E0S1BOQVBFMDlzT255MS82SHlGTVVobEthS1hibDdNanVXWHE5WnlIUXJMeWRLSTFGcjRRak9Ud2YzKzFUOGlMa3Nha0l4ZGcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDY5MTM3CWZpbGU6QUkgVmF1bHQuYXBwLnRhci5negowZUlrMmhhVExYTlFBdXRyWks0NlBiUThGajhXWTg4RjB5SmZXQVNPQ29jZ1BZYjdUYm8yYWN4ZkpURUtiYUFmUFk3aFNPdjJ5cloyeGswTjVaQUJEQT09Cg==",
+      "url": "https://github.com/ErgeAIA/updates-dist/releases/download/aivault-v0.7.4/AI-Vault_0.7.4_x86_64.app.tar.gz"
     }
   }
 }
